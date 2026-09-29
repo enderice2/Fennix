@@ -86,6 +86,10 @@ RUN apt-get -y install --no-install-recommends \
 	pip \
 	cmake
 
+# Required packages for vscode
+RUN apt-get -y install --no-install-recommends \
+	ripgrep
+
 # Install git-cliff
 RUN pip install git-cliff --break-system-packages
 
