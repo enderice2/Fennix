@@ -483,7 +483,9 @@ namespace KernelConsole
 
 		std::chrono::nanoseconds nano = std::chrono::nanoseconds(record->TimestampNs);
 		std::chrono::seconds sec = nano;
-		uint64_t frac = nano.count() % 10000000;
+		// uint64_t frac = nano.count() % 10000000;
+		uint64_t frac = nano.count() % 1'000'000'000ULL;
+		frac /= 100;
 
 #if defined(__amd64__) || defined(__aarch64__)
 		snprintf(prefixBuf, sizeof(prefixBuf),
