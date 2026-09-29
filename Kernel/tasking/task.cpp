@@ -240,7 +240,9 @@ namespace Tasking
 	void Task::StartScheduler()
 	{
 		((Scheduler::Base *)Scheduler)->StartScheduler();
-		debug("Tasking Started");
+		/* WARNING: DO NOT ADD ANYTHING HERE */
+
+		// debug("Tasking Started");
 	}
 
 	struct TaskNode : public Inode

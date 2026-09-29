@@ -147,8 +147,9 @@ namespace Interrupt
 		line.lock.unlock();
 
 		if (!dispatched)
+		{
 			debug("unhandled IRQ %u", ctrl->TranslateToLine(Frame->InterruptNumber));
-
+		}
 		ctrl->EOI(Frame->InterruptNumber);
 	}
 
