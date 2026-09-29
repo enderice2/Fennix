@@ -25,7 +25,13 @@ namespace Interrupt
 	{
 		auto &line = RegisteredLines[InterruptLine];
 		line.lock.lock();
+
+		bool wasEmpty = line.Handlers.empty();
 		line.Handlers.push_back({Callback, Virtual, Context});
+
+		if (wasEmpty && !Virtual)
+			ctrl->Unmask(InterruptLine);
+
 		line.lock.unlock();
 	}
 
@@ -33,6 +39,7 @@ namespace Interrupt
 	{
 		auto &line = RegisteredLines[InterruptLine];
 		line.lock.lock();
+
 		for (auto itr = line.Handlers.begin(); itr != line.Handlers.end();)
 		{
 			if (itr->Callback == Callback)
@@ -40,6 +47,10 @@ namespace Interrupt
 			else
 				++itr;
 		}
+
+		if (line.Handlers.empty())
+			ctrl->Mask(InterruptLine);
+
 		line.lock.unlock();
 	}
 
@@ -48,6 +59,7 @@ namespace Interrupt
 		for (auto &&i : RegisteredLines)
 		{
 			i.lock.lock();
+
 			for (auto itr = i.Handlers.begin(); itr != i.Handlers.end();)
 			{
 				if (itr->Callback == Callback)
@@ -55,6 +67,8 @@ namespace Interrupt
 				else
 					++itr;
 			}
+			/* TODO: mask the line */
+
 			i.lock.unlock();
 		}
 	}
@@ -63,7 +77,10 @@ namespace Interrupt
 	{
 		auto &line = RegisteredLines[InterruptLine];
 		line.lock.lock();
+
 		line.Handlers.clear();
+		ctrl->Mask(InterruptLine);
+
 		line.lock.unlock();
 	}
 
@@ -72,7 +89,10 @@ namespace Interrupt
 		for (auto &&i : RegisteredLines)
 		{
 			i.lock.lock();
+
 			i.Handlers.clear();
+			/* TODO: mask the line */
+
 			i.lock.unlock();
 		}
 	}

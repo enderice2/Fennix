@@ -26,7 +26,8 @@
 			"kernel/memory",
 			"kernel/efi",
 			"kernel/bootstrap",
-			"kernel/usb"
+			"kernel/usb",
+			"kernel/interrupt"
 		]
 	}
 }
