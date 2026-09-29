@@ -21,7 +21,6 @@
 #include <cpu.hpp>
 #include <pci.hpp>
 #include <io.h>
-#include <interface/aip.h>
 
 extern Driver::Manager *DriverManager;
 extern PCI::Manager *PCIManager;
@@ -225,6 +224,95 @@ namespace Driver::VMwareToolBox
 				 uint32_t *ecx, uint32_t *edx)
 	{
 		asmv("cpuid" : "=a"(*eax), "=b"(*ebx), "=c"(*ecx), "=d"(*edx) : "a"(Function));
+	}
+
+#define PS2_DATA 0x60
+#define PS2_STATUS 0x64
+#define PS2_CMD PS2_STATUS
+
+#define PS2_CMD_ENABLE_PORT_2 0xA8
+#define PS2_CMD_READ_CONFIG 0x20
+#define PS2_CMD_WRITE_CONFIG 0x60
+#define PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT 0xD4
+#define PS2_MOUSE_CMD_SET_DEFAULTS 0xF6
+#define PS2_MOUSE_CMD_ENABLE_DATA_REPORTING 0xF4
+#define PS2_MOUSE_CMD_DISABLE_DATA_REPORTING 0xF5
+
+	typedef union
+	{
+		struct
+		{
+			uint8_t OutputBufferFull : 1;
+			uint8_t InputBufferFull : 1;
+			uint8_t SystemFlag : 1;
+			uint8_t CommandData : 1;
+			uint8_t Unknown1 : 1;
+			uint8_t Unknown2 : 1;
+			uint8_t TimeoutError : 1;
+			uint8_t ParityError : 1;
+		};
+		uint8_t Raw;
+	} PS2_STATUSES;
+
+	typedef union
+	{
+		struct
+		{
+			uint8_t Port1Interrupt : 1;
+			uint8_t Port2Interrupt : 1;
+			uint8_t SystemFlag : 1;
+			uint8_t Zero0 : 1;
+			uint8_t Port1Clock : 1;
+			uint8_t Port2Clock : 1;
+			uint8_t Port1Translation : 1;
+			uint8_t Zero1 : 1;
+		};
+		uint8_t Raw;
+	} PS2_CONFIGURATION;
+
+	void PS2Wait(const bool Output)
+	{
+		int Timeout = 100000;
+		while (Timeout--)
+		{
+			PS2_STATUSES Status = {.Raw = inb(PS2_STATUS)};
+
+			if (Output)
+			{
+				if (Status.OutputBufferFull)
+					return;
+			}
+			else
+			{
+				if (!Status.InputBufferFull)
+					return;
+			}
+		}
+
+		PS2_STATUSES Status = {.Raw = inb(PS2_STATUS)};
+	}
+
+	void PS2WriteCommand(uint8_t Command)
+	{
+		PS2Wait(false);
+		outb(PS2_CMD, Command);
+	}
+
+	void PS2WriteData(uint8_t Data)
+	{
+		PS2Wait(false);
+		outb(PS2_DATA, Data);
+	}
+
+	uint8_t PS2ReadData()
+	{
+		PS2Wait(true);
+		return inb(PS2_DATA);
+	}
+
+	uint8_t PS2ReadStatus()
+	{
+		return inb(PS2_STATUS);
 	}
 
 	bool __CheckHypervisorBit()
@@ -853,20 +941,20 @@ namespace Driver::VMwareToolBox
 			dst_pid = v0::GetCurrentProcess(DriverID);
 		}
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_ENABLE_PORT_2);
-		v0::PS2WriteCommand(DriverID, PS2_CMD_READ_CONFIG);
-		PS2_CONFIGURATION config = {.Raw = v0::PS2ReadData(DriverID)};
+		PS2WriteCommand(PS2_CMD_ENABLE_PORT_2);
+		PS2WriteCommand(PS2_CMD_READ_CONFIG);
+		PS2_CONFIGURATION config = {.Raw = PS2ReadData()};
 		config.Port2Interrupt = 1;
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_CONFIG);
-		v0::PS2WriteData(DriverID, config.Raw);
+		PS2WriteCommand(PS2_CMD_WRITE_CONFIG);
+		PS2WriteData(config.Raw);
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_SET_DEFAULTS);
-		v0::PS2ReadData(DriverID);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_SET_DEFAULTS);
+		PS2ReadData();
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_ENABLE_DATA_REPORTING);
-		v0::PS2ReadData(DriverID);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_ENABLE_DATA_REPORTING);
+		PS2ReadData();
 		Absolute();
 
 		/**
@@ -881,8 +969,8 @@ namespace Driver::VMwareToolBox
 
 	int Final()
 	{
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_DISABLE_DATA_REPORTING);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_DISABLE_DATA_REPORTING);
 
 		Relative();
 
@@ -901,8 +989,8 @@ namespace Driver::VMwareToolBox
 	int Panic()
 	{
 		Relative();
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_DISABLE_DATA_REPORTING);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_DISABLE_DATA_REPORTING);
 		return 0;
 	}
 

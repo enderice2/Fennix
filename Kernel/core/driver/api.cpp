@@ -20,7 +20,6 @@
 #include <interface/driver.h>
 #include <interface/fs.h>
 #include <type_traits>
-#include <interface/aip.h>
 #include <interface/input.h>
 #include <interface/pci.h>
 
@@ -276,177 +275,6 @@ namespace v0
 	{
 		dbg_api("%d, %d", DriverID, Milliseconds);
 		thisClock->Sleep(std::chrono::milliseconds(Milliseconds));
-	}
-
-	/* --------- */
-
-	void PIC_EOI(dev_t DriverID, uint8_t IRQ)
-	{
-		dbg_api("%d, %d", DriverID, IRQ);
-
-#if defined(__amd64__) || defined(__i386__)
-		if (IRQ >= 8)
-			outb(PIC2_CMD, _PIC_EOI);
-		outb(PIC1_CMD, _PIC_EOI);
-#endif
-	}
-
-	void IRQ_MASK(dev_t DriverID, uint8_t IRQ)
-	{
-		dbg_api("%d, %d", DriverID, IRQ);
-
-#if defined(__amd64__) || defined(__i386__)
-		uint16_t port;
-		uint8_t value;
-
-		if (IRQ < 8)
-			port = PIC1_DATA;
-		else
-		{
-			port = PIC2_DATA;
-			IRQ -= 8;
-		}
-
-		value = inb(port) | (1 << IRQ);
-		outb(port, value);
-#endif
-	}
-
-	void IRQ_UNMASK(dev_t DriverID, uint8_t IRQ)
-	{
-		dbg_api("%d, %d", DriverID, IRQ);
-
-#if defined(__amd64__) || defined(__i386__)
-		uint16_t port;
-		uint8_t value;
-
-		if (IRQ < 8)
-			port = PIC1_DATA;
-		else
-		{
-			port = PIC2_DATA;
-			IRQ -= 8;
-		}
-
-		value = inb(port) & ~(1 << IRQ);
-		outb(port, value);
-#endif
-	}
-
-	void PS2Wait(dev_t DriverID, const bool Output)
-	{
-		// dbg_api("%d, %d", DriverID, Output);
-
-#if defined(__amd64__) || defined(__i386__)
-		int Timeout = 100000;
-		PS2_STATUSES Status = {.Raw = inb(PS2_STATUS)};
-		while (Timeout--)
-		{
-			if (!Output) /* FIXME: Reverse? */
-			{
-				if (Status.OutputBufferFull == 0)
-					return;
-			}
-			else
-			{
-				if (Status.InputBufferFull == 0)
-					return;
-			}
-			Status.Raw = inb(PS2_STATUS);
-		}
-
-		warn("PS/2 controller timeout! (Status: %#x, %d)", Status, Output);
-#endif
-	}
-
-	void PS2WriteCommand(dev_t DriverID, uint8_t Command)
-	{
-		dbg_api("%d, %d", DriverID, Command);
-
-#if defined(__amd64__) || defined(__i386__)
-		WaitInput;
-		outb(PS2_CMD, Command);
-#endif
-	}
-
-	void PS2WriteData(dev_t DriverID, uint8_t Data)
-	{
-		dbg_api("%d, %d", DriverID, Data);
-
-#if defined(__amd64__) || defined(__i386__)
-		WaitInput;
-		outb(PS2_DATA, Data);
-#endif
-	}
-
-	uint8_t PS2ReadData(dev_t DriverID)
-	{
-		// dbg_api("%d", DriverID);
-
-#if defined(__amd64__) || defined(__i386__)
-		WaitOutput;
-		return inb(PS2_DATA);
-#elif defined(__aarch64__)
-		return 0;
-#endif
-	}
-
-	uint8_t PS2ReadStatus(dev_t DriverID)
-	{
-		dbg_api("%d", DriverID);
-
-#if defined(__amd64__) || defined(__i386__)
-		WaitOutput;
-		return inb(PS2_STATUS);
-#elif defined(__aarch64__)
-		return 0;
-#endif
-	}
-
-	uint8_t PS2ReadAfterACK(dev_t DriverID)
-	{
-		dbg_api("%d", DriverID);
-
-		uint8_t ret = PS2ReadData(DriverID);
-#if defined(__amd64__) || defined(__i386__)
-		while (ret == PS2_ACK)
-		{
-			WaitOutput;
-			ret = inb(PS2_DATA);
-		}
-#endif
-		return ret;
-	}
-
-	void PS2ClearOutputBuffer(dev_t DriverID)
-	{
-		dbg_api("%d", DriverID);
-
-#if defined(__amd64__) || defined(__i386__)
-		PS2_STATUSES Status;
-		int timeout = 0x500;
-		while (timeout--)
-		{
-			Status.Raw = inb(PS2_STATUS);
-			if (Status.OutputBufferFull == 0)
-				return;
-			inb(PS2_DATA);
-		}
-#endif
-	}
-
-	int PS2ACKTimeout(dev_t DriverID)
-	{
-		dbg_api("%d", DriverID);
-
-		int timeout = 0x500;
-		while (timeout > 0)
-		{
-			if (PS2ReadData(DriverID) == PS2_ACK)
-				return 0;
-			timeout--;
-		}
-		return -ETIMEDOUT;
 	}
 
 	/* --------- */
@@ -789,18 +617,6 @@ static struct APISymbols APISymbols_v0[] = {
 	{"__KillThread", (void *)v0::KillThread},
 	{"__Yield", (void *)v0::Yield},
 	{"__Sleep", (void *)v0::Sleep},
-
-	{"__PIC_EOI", (void *)v0::PIC_EOI},
-	{"__IRQ_MASK", (void *)v0::IRQ_MASK},
-	{"__IRQ_UNMASK", (void *)v0::IRQ_UNMASK},
-	{"__PS2Wait", (void *)v0::PS2Wait},
-	{"__PS2WriteCommand", (void *)v0::PS2WriteCommand},
-	{"__PS2WriteData", (void *)v0::PS2WriteData},
-	{"__PS2ReadData", (void *)v0::PS2ReadData},
-	{"__PS2ReadStatus", (void *)v0::PS2ReadStatus},
-	{"__PS2ReadAfterACK", (void *)v0::PS2ReadAfterACK},
-	{"__PS2ClearOutputBuffer", (void *)v0::PS2ClearOutputBuffer},
-	{"__PS2ACKTimeout", (void *)v0::PS2ACKTimeout},
 
 	{"__AllocateMemory", (void *)v0::AllocateMemory},
 	{"__FreeMemory", (void *)v0::FreeMemory},

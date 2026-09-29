@@ -235,19 +235,6 @@ namespace v0
 	void Yield(dev_t DriverID);
 	void Sleep(dev_t DriverID, uint64_t Milliseconds);
 
-	void PIC_EOI(dev_t DriverID, uint8_t IRQ);
-	void IRQ_MASK(dev_t DriverID, uint8_t IRQ);
-	void IRQ_UNMASK(dev_t DriverID, uint8_t IRQ);
-
-	void PS2Wait(dev_t DriverID, const bool Output);
-	void PS2WriteCommand(dev_t DriverID, uint8_t Command);
-	void PS2WriteData(dev_t DriverID, uint8_t Data);
-	uint8_t PS2ReadData(dev_t DriverID);
-	uint8_t PS2ReadStatus(dev_t DriverID);
-	uint8_t PS2ReadAfterACK(dev_t DriverID);
-	void PS2ClearOutputBuffer(dev_t DriverID);
-	int PS2ACKTimeout(dev_t DriverID);
-
 	void *AllocateMemory(dev_t DriverID, size_t Pages);
 	void FreeMemory(dev_t DriverID, void *Pointer, size_t Pages);
 	void *MemoryCopy(dev_t DriverID, void *Destination, const void *Source, size_t Length);

@@ -20,7 +20,6 @@
 #include "aip.hpp"
 
 #include <driver.hpp>
-#include <interface/aip.h>
 #include <interface/input.h>
 
 namespace Driver::AdvancedIntegratedPeripheral
@@ -36,7 +35,7 @@ namespace Driver::AdvancedIntegratedPeripheral
 	InputReport mir = {};
 	void PS2MouseInterruptHandler(CPU::TrapFrame *)
 	{
-		uint8_t data = v0::PS2ReadData(DriverID);
+		uint8_t data = PS2ReadData();
 		if (data == PS2_MOUSE_RESP_ACK ||
 			data == PS2_MOUSE_RESP_RESEND)
 			return;
@@ -136,13 +135,13 @@ namespace Driver::AdvancedIntegratedPeripheral
 
 	void MouseSampleRate(uint8_t SampleRate)
 	{
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_SET_SAMPLE_RATE);
-		v0::PS2ReadData(DriverID);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_SET_SAMPLE_RATE);
+		PS2ReadData();
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, SampleRate);
-		v0::PS2ReadData(DriverID);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(SampleRate);
+		PS2ReadData();
 	}
 
 	int __fs_ms_Ioctl(struct Inode *, unsigned long, void *)
@@ -172,9 +171,9 @@ namespace Driver::AdvancedIntegratedPeripheral
 
 	int InitializeMouse()
 	{
-		v0::PS2WriteData(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_RESET);
-		uint8_t test = v0::PS2ReadData(DriverID);
+		PS2WriteData(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_RESET);
+		uint8_t test = PS2ReadData();
 		if (test != PS2_MOUSE_RESP_TEST_PASSED &&
 			test != PS2_MOUSE_RESP_ACK)
 		{
@@ -186,29 +185,29 @@ namespace Driver::AdvancedIntegratedPeripheral
 
 		MouseDevID = v0::RegisterDevice(DriverID, INPUT_TYPE_MOUSE, &MouseOps);
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_SET_DEFAULTS);
-		v0::PS2ReadData(DriverID);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_SET_DEFAULTS);
+		PS2ReadData();
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_ENABLE_DATA_REPORTING);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_ENABLE_DATA_REPORTING);
 
 		MouseSampleRate(200);
 		MouseSampleRate(100);
 		MouseSampleRate(80);
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_READ_ID);
-		uint8_t Device2ID = v0::PS2ReadData(DriverID);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_READ_ID);
+		uint8_t Device2ID = PS2ReadData();
 		trace("PS/2 Mouse ID: %#x", Device2ID);
 
 		MouseSampleRate(200);
 		MouseSampleRate(200);
 		MouseSampleRate(80);
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_READ_ID);
-		Device2ID = v0::PS2ReadData(DriverID);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_READ_ID);
+		Device2ID = PS2ReadData();
 		trace("PS/2 Mouse ID: %#x", Device2ID);
 
 		if (Device2ID >= 3 && Device2ID <= 4)
@@ -221,8 +220,8 @@ namespace Driver::AdvancedIntegratedPeripheral
 
 	int FinalizeMouse()
 	{
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_DISABLE_DATA_REPORTING);
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_DISABLE_DATA_REPORTING);
 
 		v0::UnregisterDevice(DriverID, MouseDevID);
 		return 0;
@@ -230,21 +229,21 @@ namespace Driver::AdvancedIntegratedPeripheral
 
 	int DetectPS2Mouse()
 	{
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_DISABLE_DATA_REPORTING);
-		if (v0::PS2ACKTimeout(DriverID) != 0)
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_DISABLE_DATA_REPORTING);
+		if (PS2ACKTimeout() != 0)
 			trace("PS/2 mouse failed to disable data reporting!");
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
-		v0::PS2WriteData(DriverID, PS2_MOUSE_CMD_READ_ID);
-		if (v0::PS2ACKTimeout(DriverID) != 0)
+		PS2WriteCommand(PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT);
+		PS2WriteData(PS2_MOUSE_CMD_READ_ID);
+		if (PS2ACKTimeout() != 0)
 			trace("PS/2 mouse failed to read ID!");
 
 		uint8_t recByte;
 		int timeout = 1000000;
 		while (timeout--)
 		{
-			recByte = v0::PS2ReadData(DriverID);
+			recByte = PS2ReadData();
 			if (recByte != PS2_ACK)
 				break;
 		}
@@ -253,7 +252,7 @@ namespace Driver::AdvancedIntegratedPeripheral
 		timeout = 1000000;
 		while (timeout--)
 		{
-			recByte = v0::PS2ReadData(DriverID);
+			recByte = PS2ReadData();
 			if (recByte != PS2_ACK)
 				break;
 		}

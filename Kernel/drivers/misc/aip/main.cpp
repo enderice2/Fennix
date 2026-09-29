@@ -18,7 +18,6 @@
 #if defined(__amd64__) || defined(__i386__)
 
 #include <driver.hpp>
-#include <interface/aip.h>
 #include <cpu.hpp>
 #include <pci.hpp>
 #include <log.hpp>
@@ -30,6 +29,129 @@ extern PCI::Manager *PCIManager;
 namespace Driver::AdvancedIntegratedPeripheral
 {
 	dev_t DriverID;
+
+	void PIC_EOI(uint8_t IRQ)
+	{
+		if (IRQ >= 8)
+			outb(PIC2_CMD, _PIC_EOI);
+		outb(PIC1_CMD, _PIC_EOI);
+	}
+
+	void IRQ_MASK(uint8_t IRQ)
+	{
+		uint16_t port;
+		uint8_t value;
+
+		if (IRQ < 8)
+			port = PIC1_DATA;
+		else
+		{
+			port = PIC2_DATA;
+			IRQ -= 8;
+		}
+
+		value = inb(port) | (1 << IRQ);
+		outb(port, value);
+	}
+
+	void IRQ_UNMASK(uint8_t IRQ)
+	{
+		uint16_t port;
+		uint8_t value;
+
+		if (IRQ < 8)
+			port = PIC1_DATA;
+		else
+		{
+			port = PIC2_DATA;
+			IRQ -= 8;
+		}
+
+		value = inb(port) & ~(1 << IRQ);
+		outb(port, value);
+	}
+
+	void PS2Wait(const bool Output)
+	{
+		int Timeout = 100000;
+		while (Timeout--)
+		{
+			PS2_STATUSES Status = {.Raw = inb(PS2_STATUS)};
+
+			if (Output)
+			{
+				if (Status.OutputBufferFull)
+					return;
+			}
+			else
+			{
+				if (!Status.InputBufferFull)
+					return;
+			}
+		}
+
+		PS2_STATUSES Status = {.Raw = inb(PS2_STATUS)};
+		warn("PS/2 controller timeout! (Status: %#x, %d)", Status.Raw, Timeout);
+	}
+
+	void PS2WriteCommand(uint8_t Command)
+	{
+		WaitInput;
+		outb(PS2_CMD, Command);
+	}
+
+	void PS2WriteData(uint8_t Data)
+	{
+		WaitInput;
+		outb(PS2_DATA, Data);
+	}
+
+	uint8_t PS2ReadData()
+	{
+		WaitOutput;
+		return inb(PS2_DATA);
+	}
+
+	uint8_t PS2ReadStatus()
+	{
+		return inb(PS2_STATUS);
+	}
+
+	uint8_t PS2ReadAfterACK()
+	{
+		uint8_t ret = PS2ReadData();
+		while (ret == PS2_ACK)
+		{
+			WaitOutput;
+			ret = inb(PS2_DATA);
+		}
+		return ret;
+	}
+
+	void PS2ClearOutputBuffer()
+	{
+		PS2_STATUSES Status;
+		int timeout = 0x500;
+		while (timeout--)
+		{
+			Status.Raw = inb(PS2_STATUS);
+			if (Status.OutputBufferFull == 0)
+				return;
+			inb(PS2_DATA);
+		}
+	}
+
+	int PS2ACKTimeout()
+	{
+		int timeout = 0x500;
+		while (timeout > 0)
+		{
+			if (PS2ReadData() == PS2_ACK)
+				return 0;
+			timeout--;
+		}
+		return -ETIMEDOUT;
+	}
 
 	bool IsATAPresent()
 	{
@@ -119,12 +241,12 @@ namespace Driver::AdvancedIntegratedPeripheral
 
 	int Entry()
 	{
-		v0::PS2WriteCommand(DriverID, PS2_CMD_DISABLE_PORT_1);
-		v0::PS2WriteCommand(DriverID, PS2_CMD_DISABLE_PORT_2);
-		v0::PS2ClearOutputBuffer(DriverID);
+		PS2WriteCommand(PS2_CMD_DISABLE_PORT_1);
+		PS2WriteCommand(PS2_CMD_DISABLE_PORT_2);
+		PS2ClearOutputBuffer();
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_READ_CONFIG);
-		PS2_CONFIGURATION cfg = {.Raw = v0::PS2ReadData(DriverID)};
+		PS2WriteCommand(PS2_CMD_READ_CONFIG);
+		PS2_CONFIGURATION cfg = {.Raw = PS2ReadData()};
 
 		DualChannel = cfg.Port2Clock;
 		if (DualChannel)
@@ -133,32 +255,32 @@ namespace Driver::AdvancedIntegratedPeripheral
 		cfg.Port2Interrupt = 1;
 		cfg.Port1Translation = 1;
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_CONFIG);
-		v0::PS2WriteData(DriverID, cfg.Raw);
+		PS2WriteCommand(PS2_CMD_WRITE_CONFIG);
+		PS2WriteData(cfg.Raw);
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_TEST_CONTROLLER);
-		uint8_t test = v0::PS2ReadData(DriverID);
+		PS2WriteCommand(PS2_CMD_TEST_CONTROLLER);
+		uint8_t test = PS2ReadData();
 		if (test != PS2_TEST_PASSED)
 		{
 			trace("PS/2 controller self test failed (%#x)", test);
 			return -EFAULT;
 		}
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_WRITE_CONFIG);
-		v0::PS2WriteData(DriverID, cfg.Raw);
+		PS2WriteCommand(PS2_CMD_WRITE_CONFIG);
+		PS2WriteData(cfg.Raw);
 
 		// bool port2avail = false;
 		// if (DualChannel)
 		// {
-		// 	v0::PS2WriteCommand(DriverID, PS2_CMD_ENABLE_PORT_1);
-		// 	v0::PS2WriteCommand(DriverID, PS2_CMD_READ_CONFIG);
-		// 	cfg.Raw = v0::PS2ReadData(DriverID);
+		// 	PS2WriteCommand(PS2_CMD_ENABLE_PORT_1);
+		// 	PS2WriteCommand(PS2_CMD_READ_CONFIG);
+		// 	cfg.Raw = PS2ReadData();
 		// 	port2avail = cfg.Port2Clock;
-		// 	v0::PS2WriteCommand(DriverID, PS2_CMD_DISABLE_PORT_1);
+		// 	PS2WriteCommand(PS2_CMD_DISABLE_PORT_1);
 		// }
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_TEST_PORT_1);
-		test = v0::PS2ReadData(DriverID);
+		PS2WriteCommand(PS2_CMD_TEST_PORT_1);
+		test = PS2ReadData();
 		if (test != 0x00)
 		{
 			trace("PS/2 Port 1 self test failed (%#x)", test);
@@ -167,8 +289,8 @@ namespace Driver::AdvancedIntegratedPeripheral
 
 		if (DualChannel)
 		{
-			v0::PS2WriteCommand(DriverID, PS2_CMD_TEST_PORT_2);
-			test = v0::PS2ReadData(DriverID);
+			PS2WriteCommand(PS2_CMD_TEST_PORT_2);
+			test = PS2ReadData();
 			if (test != 0x00)
 			{
 				trace("PS/2 Port 2 self test failed (%#x)", test);
@@ -176,9 +298,9 @@ namespace Driver::AdvancedIntegratedPeripheral
 			}
 		}
 
-		v0::PS2WriteCommand(DriverID, PS2_CMD_ENABLE_PORT_1);
+		PS2WriteCommand(PS2_CMD_ENABLE_PORT_1);
 		if (DualChannel)
-			v0::PS2WriteCommand(DriverID, PS2_CMD_ENABLE_PORT_2);
+			PS2WriteCommand(PS2_CMD_ENABLE_PORT_2);
 
 		int errK = InitializeKeyboard();
 
@@ -197,15 +319,15 @@ namespace Driver::AdvancedIntegratedPeripheral
 	{
 		FinalizeKeyboard();
 		FinalizeMouse();
-		v0::PS2WriteCommand(DriverID, PS2_CMD_DISABLE_PORT_1);
-		v0::PS2WriteCommand(DriverID, PS2_CMD_DISABLE_PORT_2);
+		PS2WriteCommand(PS2_CMD_DISABLE_PORT_1);
+		PS2WriteCommand(PS2_CMD_DISABLE_PORT_2);
 		return 0;
 	}
 
 	int Panic()
 	{
-		v0::PS2WriteCommand(DriverID, PS2_CMD_DISABLE_PORT_1);
-		v0::PS2WriteCommand(DriverID, PS2_CMD_DISABLE_PORT_2);
+		PS2WriteCommand(PS2_CMD_DISABLE_PORT_1);
+		PS2WriteCommand(PS2_CMD_DISABLE_PORT_2);
 		return 0;
 	}
 

@@ -21,7 +21,6 @@
 
 #include <driver.hpp>
 #include <interface/input.h>
-#include <interface/aip.h>
 #include <cpu.hpp>
 #include <io.h>
 
@@ -135,8 +134,8 @@ namespace Driver::AdvancedIntegratedPeripheral
 
 	int InitializeKeyboard()
 	{
-		// v0::PS2WriteData(DriverID, PS2_KBD_CMD_RESET);
-		// uint8_t test = v0::PS2ReadData(DriverID);
+		// PS2WriteData(PS2_KBD_CMD_RESET);
+		// uint8_t test = PS2ReadData();
 		// if (test != PS2_KBD_RESP_TEST_PASSED &&
 		// 	test != PS2_KBD_RESP_ACK)
 		// {
@@ -144,32 +143,32 @@ namespace Driver::AdvancedIntegratedPeripheral
 		// 	return -EFAULT;
 		// }
 
-		v0::PS2WriteData(DriverID, PS2_KBD_CMD_DEFAULTS);
-		if (v0::PS2ACKTimeout(DriverID) != 0)
+		PS2WriteData(PS2_KBD_CMD_DEFAULTS);
+		if (PS2ACKTimeout() != 0)
 			trace("PS/2 keyboard failed to set defaults");
 
-		v0::PS2WriteData(DriverID, PS2_KBD_CMD_SCAN_CODE_SET);
-		if (v0::PS2ACKTimeout(DriverID) != 0)
+		PS2WriteData(PS2_KBD_CMD_SCAN_CODE_SET);
+		if (PS2ACKTimeout() != 0)
 			trace("PS/2 keyboard failed to set scan code set");
 
 		/* We want Scan Code Set 1 */
-		v0::PS2WriteData(DriverID, PS2_KBD_SCAN_CODE_SET_2); /* It will set to 1 but with translation? */
-		if (v0::PS2ACKTimeout(DriverID) != 0)
+		PS2WriteData(PS2_KBD_SCAN_CODE_SET_2); /* It will set to 1 but with translation? */
+		if (PS2ACKTimeout() != 0)
 			trace("PS/2 keyboard failed to set scan code set 2");
 
-		v0::PS2WriteData(DriverID, PS2_KBD_CMD_SCAN_CODE_SET);
-		if (v0::PS2ACKTimeout(DriverID) != 0)
+		PS2WriteData(PS2_KBD_CMD_SCAN_CODE_SET);
+		if (PS2ACKTimeout() != 0)
 			trace("PS/2 keyboard failed to set scan code set");
 
-		v0::PS2WriteData(DriverID, PS2_KBD_SCAN_CODE_GET_CURRENT);
-		if (v0::PS2ACKTimeout(DriverID) != 0)
+		PS2WriteData(PS2_KBD_SCAN_CODE_GET_CURRENT);
+		if (PS2ACKTimeout() != 0)
 			trace("PS/2 keyboard failed to get current scan code set");
 
-		KeyboardScanCodeSet = v0::PS2ReadAfterACK(DriverID);
+		KeyboardScanCodeSet = PS2ReadAfterACK();
 		trace("PS/2 Keyboard Scan Code Set: 0x%X", KeyboardScanCodeSet);
-		v0::PS2ClearOutputBuffer(DriverID);
+		PS2ClearOutputBuffer();
 
-		v0::PS2WriteData(DriverID, PS2_KBD_CMD_ENABLE_SCANNING);
+		PS2WriteData(PS2_KBD_CMD_ENABLE_SCANNING);
 
 		v0::RegisterInterruptHandler(DriverID, 1, (void *)PS2KbdInterruptHandler);
 
@@ -179,8 +178,8 @@ namespace Driver::AdvancedIntegratedPeripheral
 
 	int FinalizeKeyboard()
 	{
-		v0::PS2WriteData(DriverID, PS2_KBD_CMD_DISABLE_SCANNING);
-		if (v0::PS2ACKTimeout(DriverID) != 0)
+		PS2WriteData(PS2_KBD_CMD_DISABLE_SCANNING);
+		if (PS2ACKTimeout() != 0)
 			trace("PS/2 keyboard failed to disable scanning");
 
 		v0::UnregisterDevice(DriverID, KeyboardDevID);
@@ -189,19 +188,19 @@ namespace Driver::AdvancedIntegratedPeripheral
 
 	int DetectPS2Keyboard()
 	{
-		v0::PS2WriteData(DriverID, PS2_KBD_CMD_DISABLE_SCANNING);
-		if (v0::PS2ACKTimeout(DriverID) != 0)
+		PS2WriteData(PS2_KBD_CMD_DISABLE_SCANNING);
+		if (PS2ACKTimeout() != 0)
 			trace("PS/2 keyboard failed to disable scanning");
 
-		v0::PS2WriteData(DriverID, PS2_KBD_CMD_IDENTIFY);
-		if (v0::PS2ACKTimeout(DriverID) != 0)
+		PS2WriteData(PS2_KBD_CMD_IDENTIFY);
+		if (PS2ACKTimeout() != 0)
 			trace("PS/2 keyboard failed to identify");
 
 		uint8_t recByte;
 		int timeout = 1000000;
 		while (timeout--)
 		{
-			recByte = v0::PS2ReadData(DriverID);
+			recByte = PS2ReadData();
 			if (recByte != PS2_ACK)
 				break;
 		}
@@ -210,7 +209,7 @@ namespace Driver::AdvancedIntegratedPeripheral
 		timeout = 1000000;
 		while (timeout--)
 		{
-			recByte = v0::PS2ReadData(DriverID);
+			recByte = PS2ReadData();
 			if (recByte != PS2_ACK)
 				break;
 		}
