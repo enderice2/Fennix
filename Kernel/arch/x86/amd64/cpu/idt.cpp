@@ -23,7 +23,7 @@
 #include <io.h>
 
 #include "gdt.hpp"
-#include "../../../kernel.h"
+#include "../../../../kernel.h"
 
 extern "C" Ofast hot void interrupt_dispatch(CPU::TrapFrame *Frame) { irq.Dispatch(Frame); }
 extern "C" Ofast hot void scheduler_dispatch(CPU::SchedulerFrame *Frame) { irq.Dispatch(Frame); }

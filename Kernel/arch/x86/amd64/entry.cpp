@@ -104,6 +104,7 @@ extern "C" __no_stack_protector nif cold void KernelEntry(BootInfo *Info)
 #endif // DEBUG
 
 	main();
+	__unreachable;
 }
 
 cold void KernelExit()

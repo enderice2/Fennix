@@ -21,7 +21,7 @@
 #include <memory.hpp>
 #include <cpu.hpp>
 
-#include "../../../kernel.h"
+#include "../../../../kernel.h"
 
 volatile bool CPUEnabled = false;
 

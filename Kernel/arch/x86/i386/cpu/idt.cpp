@@ -23,7 +23,7 @@
 #include <io.h>
 
 #include "gdt.hpp"
-#include "../../../kernel.h"
+#include "../../../../kernel.h"
 
 /* conversion from 'uint64_t' {aka 'long unsigned int'} to 'unsigned char:2' may change value */
 #pragma GCC diagnostic ignored "-Wconversion"

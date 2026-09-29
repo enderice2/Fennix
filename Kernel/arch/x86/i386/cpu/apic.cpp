@@ -25,7 +25,7 @@
 #include <smp.hpp>
 #include <io.h>
 
-#include "../../../kernel.h"
+#include "../../../../kernel.h"
 
 NewLock(APICLock);
 

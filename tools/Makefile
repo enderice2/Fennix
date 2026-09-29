@@ -1,5 +1,6 @@
 WORKING_DIR = $(CURDIR)
-CROSS_DIR=$(WORKING_DIR)/cross
+# CROSS_DIR=$(WORKING_DIR)/cross
+CROSS_DIR=/usr/local
 export PATH := $(CROSS_DIR):$(PATH)
 
 BINUTILS_TAG = binutils-2_43_1
@@ -148,7 +149,7 @@ __do_binutils:
 	--disable-pie \
 	&& \
 	$(MAKE) --quiet all -j$(shell nproc) && \
-	$(MAKE) --quiet install
+	sudo $(MAKE) --quiet install
 
 __do_gcc:
 	mkdir -p $(GCC_CLONE_PATH)/__build
@@ -174,9 +175,9 @@ __do_gcc:
 	$(MAKE) --quiet all-gcc -j$(shell nproc) && \
 	$(MAKE) --quiet all-target-libgcc -j$(shell nproc) && \
 	$(MAKE) --quiet all-target-libstdc++-v3 -j$(shell nproc) && \
-	$(MAKE) --quiet install-gcc -j$(shell nproc) && \
-	$(MAKE) --quiet install-target-libgcc -j$(shell nproc) && \
-	$(MAKE) --quiet install-target-libstdc++-v3 -j$(shell nproc)
+	sudo $(MAKE) --quiet install-gcc -j$(shell nproc) && \
+	sudo $(MAKE) --quiet install-target-libgcc -j$(shell nproc) && \
+	sudo $(MAKE) --quiet install-target-libstdc++-v3 -j$(shell nproc)
 
 do_binutils:
 	$(MAKE) __do_binutils BUILD_TARGET="x86_64-fennix"
@@ -204,4 +205,4 @@ do_qemu:
 	--disable-opengl \
 	&& \
 	$(MAKE) --quiet -j$(shell nproc) && \
-	$(MAKE) --quiet install
+	sudo $(MAKE) --quiet install

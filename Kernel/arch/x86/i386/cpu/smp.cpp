@@ -24,7 +24,7 @@
 #include <cpu.hpp>
 #include <atomic>
 
-#include "../../../kernel.h"
+#include "../../../../kernel.h"
 #include "apic.hpp"
 
 enum SMPTrampolineAddress

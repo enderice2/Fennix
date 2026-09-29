@@ -28,7 +28,7 @@
 #include "../kernel.h"
 
 #if defined(__amd64__)
-#include "../arch/amd64/cpu/gdt.hpp"
+#include "../arch/x86/amd64/cpu/gdt.hpp"
 #elif defined(__i386__)
 #include "../arch/i386/cpu/apic.hpp"
 #elif defined(__aarch64__)

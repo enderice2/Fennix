@@ -18,7 +18,7 @@
 #include <usb.hpp>
 #include <auto_page>
 
-#include "../../../kernel.h"
+#include "../../../../kernel.h"
 
 namespace UniversalSerialBus
 {

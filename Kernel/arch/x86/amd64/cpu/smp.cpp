@@ -25,7 +25,7 @@
 #include <cpu.hpp>
 #include <atomic>
 
-#include "../../../kernel.h"
+#include "../../../../kernel.h"
 
 extern "C" uint64_t _trampoline_start, _trampoline_end;
 

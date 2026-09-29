@@ -15,6 +15,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && apt-get update
 
 # Required packages for building gcc & binutils
 RUN apt-get -y install --no-install-recommends \
+	sudo \
 	build-essential \
 	bison \
 	flex \

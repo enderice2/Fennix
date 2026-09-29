@@ -335,7 +335,7 @@ endif
 	chmod -R 750 tmp_rootfs/home/root/
 	chmod -R 777 tmp_rootfs/tmp/
 	tar czf rootfs.tar.gz -C tmp_rootfs/ --owner=root:0 --group=root:0 ./ --format=ustar
-	cp Kernel/fennix.elf rootfs.tar.gz iso_tmp_data/
+	cp Kernel/build/fennix.elf rootfs.tar.gz iso_tmp_data/
 ifeq ($(BOOTLOADER), limine)
 	cp  tools/limine.conf \
 		tools/limine/limine-bios.sys \
@@ -363,7 +363,7 @@ ifeq ($(BOOTLOADER), grub)
 	grub-mkrescue -d /usr/lib/grub/x86_64-efi -o $(OSNAME).iso iso_tmp_data
 endif
 ifneq ($(filter aarch64 arm,$(OSARCH)),)
-	$(__CONF_OBJCOPY) Kernel/fennix.elf -O binary $(OSNAME).img
+	$(__CONF_OBJCOPY) Kernel/build/fennix.elf -O binary $(OSNAME).img
 #	cp Bootloader/boot.bin $(OSNAME).img
 endif
 
