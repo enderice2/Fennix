@@ -98,7 +98,7 @@ namespace APIC
 
 			debug("[ISO %d] Mapping to source IRQ%#d GSI:%#lx on CPU %d", i, i->IRQSource, i->GSI, CPU);
 
-			this->RawRedirectIRQ(i->IRQSource + 16,
+			this->RawRedirectIRQ(i->IRQSource + CPU::x86::IRQ0,
 								 i->GSI,
 								 i->Flags,
 								 CPU, Status);
@@ -106,7 +106,7 @@ namespace APIC
 		}
 
 		debug("Mapping IRQ%d on CPU %d", IRQ, CPU);
-		this->RawRedirectIRQ(IRQ + 16, IRQ, 0, CPU, Status);
+		this->RawRedirectIRQ(IRQ + CPU::x86::IRQ0, IRQ, 0, CPU, Status);
 	}
 
 	void IO::RedirectIRQs(uint8_t CPU)
@@ -118,13 +118,13 @@ namespace APIC
 	void IO::Mask(uint32_t gsi)
 	{
 		/* FIXME: untested code! */
-		this->RawRedirectIRQ(gsi + 16, gsi, 0, 0, 0);
+		this->RawRedirectIRQ(gsi + CPU::x86::IRQ0, gsi, 0, 0, 0);
 	}
 
 	void IO::Unmask(uint32_t gsi)
 	{
 		/* FIXME: untested code! */
-		this->RawRedirectIRQ(gsi + 16, gsi, 0, 0, 1);
+		this->RawRedirectIRQ(gsi + CPU::x86::IRQ0, gsi, 0, 0, 1);
 	}
 
 	IO::IO() { assert(MADTManager != nullptr); }
