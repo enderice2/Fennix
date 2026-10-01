@@ -11,13 +11,13 @@ jobs:
     name: Build Cross-Compiler & Toolchain
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
       with:
         submodules: recursive
 
     - name: Cache cross Folder
       id: cache-cross
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         path: tools/cross
         key: ${{ runner.os }}-cross-${{ hashFiles('tools/Makefile') }}
@@ -65,7 +65,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
 
     - name: Check for cache
       id: check-cache
@@ -100,7 +100,7 @@ jobs:
 
     - name: Cache cross
       id: cache-cross
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         path: tools/cross
         key: ${{ runner.os }}-cross-${{ hashFiles('tools/Makefile') }}
@@ -129,14 +129,14 @@ jobs:
 
     steps:
     - name: Checkout 🛎️
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         submodules: recursive
         fetch-depth: 0
 
     - name: Cache cross Folder 💾
       id: cache-cross
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         path: tools/cross
         key: ${{ runner.os }}-cross-${{ hashFiles('tools/Makefile') }}
@@ -168,7 +168,7 @@ jobs:
 
     - name: Upload Artifact 📁
       if: always()
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: build-${{ matrix.arch }}-${{ matrix.type }}
         path: artifacts/
@@ -180,13 +180,13 @@ jobs:
     needs: [compile]
     steps:
     - name: Checkout 🛎️
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         submodules: recursive
         fetch-depth: 0
 
     - name: Download All Builds 💾
-      uses: actions/download-artifact@v7
+      uses: actions/download-artifact@v8
       with:
         path: artifacts
         merge-multiple: true
