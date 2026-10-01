@@ -5,6 +5,7 @@ on:
     branches: [ master ]
     paths:
       - tools/**
+      - .github/workflows/devcontainer.yml
   workflow_dispatch:
 
 permissions:
