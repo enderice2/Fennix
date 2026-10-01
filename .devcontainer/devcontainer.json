@@ -2,9 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
 	"name": "Fennix",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"image": "ghcr.io/enderice2/fennix-devcontainer:latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [

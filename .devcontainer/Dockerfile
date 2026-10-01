@@ -134,3 +134,8 @@ tar -xzf /tmp/automake.tar.gz -C /tmp
 cd /tmp/automake-1.15.1
 ./configure && make && sudo make install
 EOF
+
+COPY tools/Makefile tools/ReadEthernetPackets.c tools/ErrorParser.cpp tools/binutils-gdb.patch tools/gcc.patch /tmp/fennix-tools/
+RUN make -C /tmp/fennix-tools all && \
+	make -C /tmp/fennix-tools clean && \
+	rm -rf /tmp/fennix-tools

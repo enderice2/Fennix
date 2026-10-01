@@ -1,0 +1,11 @@
+.git
+build/
+tools/cross/
+tools/limine/
+rootfs/
+tmp_rootfs/
+iso_tmp_data/
+artifacts/
+*.qcow2
+*.img
+*.dmp
