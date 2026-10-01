@@ -3,9 +3,8 @@ name: Build Devcontainer Image
 on:
   push:
     branches: [ master ]
-    tags: [ 'v*' ]
-  pull_request:
-    branches: [ master ]
+    paths:
+      - tools/**
   workflow_dispatch:
 
 permissions:
