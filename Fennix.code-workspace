@@ -13,7 +13,8 @@
 			"rootfs",
 			"tools",
 			"devcontainer",
-			"workspace"
+			"workspace",
+			"makefile"
 		]
 	}
 }

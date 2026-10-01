@@ -66,6 +66,13 @@ QEMUFLAGS += -device vmware-svga -M q35 \
 			 -device ide-hd,drive=bootdsk,bus=ahci.0 \
 			 -drive id=disk,file=qemu-disk.qcow2,if=none \
 			 -device ide-hd,drive=disk,bus=ahci.1 \
+			 \
+			 -device isa-fdc \
+			 -blockdev driver=file,node-name=f0,filename=floppy0.img \
+			 -device floppy,drive=f0,unit=0 \
+			 -blockdev driver=file,node-name=f1,filename=floppy1.img \
+			 -device floppy,drive=f1,unit=1 \
+			 \
 			 -audiodev pa,id=pa1,server=/run/user/1000/pulse/native \
 			 -machine pcspk-audiodev=pa1 \
 			 -device AC97,audiodev=pa1 \
@@ -94,6 +101,7 @@ QEMUFLAGS += -M q35 \
 			 -parallel file:LPT1.dmp \
 			 -parallel file:LPT2.dmp \
 			 -parallel file:LPT3.dmp \
+			 -fda floppy0.img -fdb floppy1.img \
 			 -hda $(OSNAME).iso \
 			 -audiodev pa,id=pa1,server=/run/user/1000/pulse/native \
 			 -machine pcspk-audiodev=pa1 \
@@ -132,6 +140,16 @@ ifneq (,$(wildcard ./qemu-disk.qcow2))
 	$(info qemu-disk.qcow2 Already exists)
 else
 	qemu-img create -f qcow2 qemu-disk.qcow2 1G
+endif
+ifneq (,$(wildcard ./floppy0.img))
+	$(info floppy0.img Already exists)
+else
+	qemu-img create -f raw floppy0.img 1440k
+endif
+ifneq (,$(wildcard ./floppy1.img))
+	$(info floppy1.img Already exists)
+else
+	qemu-img create -f raw floppy1.img 1440k
 endif
 
 # Install necessary packages, build cross-compiler etc...
