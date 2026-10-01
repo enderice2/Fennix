@@ -48,7 +48,7 @@ var input_8h =
       [ "Device", "de/ded/input_8h.html#ae0e73e3ad012fad295b7bf2d1cc93da9", null ],
       [ "Type", "de/ded/input_8h.html#af15f4807037d91adf5b3223b64e9ad50", null ]
     ] ],
-    [ "InputReport.__unnamed13__", "de/ded/input_8h.html#de/d5c/unionInputReport_8____unnamed13____", [
+    [ "InputReport.__unnamed1__", "de/ded/input_8h.html#dd/d98/unionInputReport_8____unnamed1____", [
       [ "Accelerometer", "de/ded/input_8h.html#ab043bc6d611582087d8bf1790d863d69", null ],
       [ "Gamepad", "de/ded/input_8h.html#a221f6781b4faa2d321ca0d928f518d6e", null ],
       [ "Gyroscope", "de/ded/input_8h.html#abed99e5db57749f375e738c1c0258047", null ],

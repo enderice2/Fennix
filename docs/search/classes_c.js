@@ -1,4 +1,29 @@
 var searchData=
 [
-  ['touchscreenreport_0',['TouchScreenReport',['../de/ded/input_8h.html#d1/df2/structTouchScreenReport',1,'']]]
+  ['usbconfigurationdescriptor_0',['USBConfigurationDescriptor',['../dc/de4/usb_8h.html#da/dc6/structUSBConfigurationDescriptor',1,'']]],
+  ['usbcontroller_1',['USBController',['../d2/d22/structUSBController.html',1,'']]],
+  ['usbdevice_2',['USBDevice',['../dc/de4/usb_8h.html#d1/d20/structUSBDevice',1,'']]],
+  ['usbdevicedescriptor_3',['USBDeviceDescriptor',['../dc/de4/usb_8h.html#db/dc5/structUSBDeviceDescriptor',1,'']]],
+  ['usbdevicerequest_4',['USBDeviceRequest',['../dc/de4/usb_8h.html#d1/d41/structUSBDeviceRequest',1,'']]],
+  ['usbdevicerequest_2ebmrequesttype_5',['USBDeviceRequest.bmRequestType',['../dc/de4/usb_8h.html#df/d0b/unionUSBDeviceRequest_8bmRequestType',1,'']]],
+  ['usbdevicerequest_2ebmrequesttype_2e_5f_5funnamed5_5f_5f_6',['USBDeviceRequest.bmRequestType.__unnamed5__',['../dc/de4/usb_8h.html#d6/dcd/structUSBDeviceRequest_8bmRequestType_8____unnamed5____',1,'']]],
+  ['usbendpoint_7',['USBEndpoint',['../dc/de4/usb_8h.html#d9/d57/structUSBEndpoint',1,'']]],
+  ['usbendpointdescriptor_8',['USBEndpointDescriptor',['../dc/de4/usb_8h.html#d0/d30/structUSBEndpointDescriptor',1,'']]],
+  ['usbhiddescriptor_9',['USBHIDDescriptor',['../dc/de4/usb_8h.html#da/d26/structUSBHIDDescriptor',1,'']]],
+  ['usbhiddescriptor_2edescriptor_10',['USBHIDDescriptor.Descriptor',['../dc/de4/usb_8h.html#da/d75/structUSBHIDDescriptor_8Descriptor',1,'']]],
+  ['usbhubdescriptor_11',['USBHubDescriptor',['../dc/de4/usb_8h.html#d9/d50/structUSBHubDescriptor',1,'']]],
+  ['usbhubdescriptor_2eu_12',['USBHubDescriptor.u',['../dc/de4/usb_8h.html#d5/dee/unionUSBHubDescriptor_8u',1,'']]],
+  ['usbhubstatus_13',['USBHubStatus',['../dc/de4/usb_8h.html#d9/dd4/structUSBHubStatus',1,'']]],
+  ['usbhubstatus_2ewhubchange_14',['USBHubStatus.wHubChange',['../dc/de4/usb_8h.html#d0/de8/unionUSBHubStatus_8wHubChange',1,'']]],
+  ['usbhubstatus_2ewhubchange_2e_5f_5funnamed22_5f_5f_15',['USBHubStatus.wHubChange.__unnamed22__',['../dc/de4/usb_8h.html#d6/da5/structUSBHubStatus_8wHubChange_8____unnamed22____',1,'']]],
+  ['usbhubstatus_2ewhubstatus_16',['USBHubStatus.wHubStatus',['../dc/de4/usb_8h.html#d2/dc4/unionUSBHubStatus_8wHubStatus',1,'']]],
+  ['usbhubstatus_2ewhubstatus_2e_5f_5funnamed20_5f_5f_17',['USBHubStatus.wHubStatus.__unnamed20__',['../dc/de4/usb_8h.html#d0/ddb/structUSBHubStatus_8wHubStatus_8____unnamed20____',1,'']]],
+  ['usbinterfacedescriptor_18',['USBInterfaceDescriptor',['../dc/de4/usb_8h.html#d7/dc0/structUSBInterfaceDescriptor',1,'']]],
+  ['usbportstatus_19',['USBPortStatus',['../dc/de4/usb_8h.html#d7/db0/structUSBPortStatus',1,'']]],
+  ['usbportstatus_2ewportchange_20',['USBPortStatus.wPortChange',['../dc/de4/usb_8h.html#d2/d9f/unionUSBPortStatus_8wPortChange',1,'']]],
+  ['usbportstatus_2ewportchange_2e_5f_5funnamed34_5f_5f_21',['USBPortStatus.wPortChange.__unnamed34__',['../dc/de4/usb_8h.html#d7/d2e/structUSBPortStatus_8wPortChange_8____unnamed34____',1,'']]],
+  ['usbportstatus_2ewportstatus_22',['USBPortStatus.wPortStatus',['../dc/de4/usb_8h.html#dc/ddb/unionUSBPortStatus_8wPortStatus',1,'']]],
+  ['usbportstatus_2ewportstatus_2e_5f_5funnamed32_5f_5f_23',['USBPortStatus.wPortStatus.__unnamed32__',['../dc/de4/usb_8h.html#d8/d42/structUSBPortStatus_8wPortStatus_8____unnamed32____',1,'']]],
+  ['usbrequestblock_24',['USBRequestBlock',['../d8/dd1/structUSBRequestBlock.html',1,'']]],
+  ['usbstringdescriptor_25',['USBStringDescriptor',['../dc/de4/usb_8h.html#d2/d64/structUSBStringDescriptor',1,'']]]
 ];

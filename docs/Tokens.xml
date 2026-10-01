@@ -2,10 +2,10 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>.__unnamed20__</Name>
+      <Name>.__unnamed26__</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
-      <Scope>.__unnamed20__</Scope>
+      <Scope>.__unnamed26__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
   </Token>
@@ -91,16 +91,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>PS2_CONFIGURATION</Name>
-      <APILanguage>c</APILanguage>
-      <Type>cl</Type>
-      <Scope>PS2_CONFIGURATION</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>SuperBlockOperations</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -169,7 +159,7 @@
       <Name>__reserved</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBHubStatus.wHubStatus.__unnamed32__</Scope>
+      <Scope>USBHubStatus.wHubStatus.__unnamed20__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>ad07ee03cbfb2ff9b6622e6ea4d91f9f3</Anchor>
@@ -179,7 +169,7 @@
       <Name>__reserved</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBHubStatus.wHubChange.__unnamed34__</Scope>
+      <Scope>USBHubStatus.wHubChange.__unnamed22__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>ad07ee03cbfb2ff9b6622e6ea4d91f9f3</Anchor>
@@ -187,61 +177,61 @@
   <Token>
     <TokenIdentifier>
       <Name>__reserved</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>.__unnamed26__</Scope>
+    </TokenIdentifier>
+    <Path>dc/de4/usb_8h.html</Path>
+    <Anchor>ad07ee03cbfb2ff9b6622e6ea4d91f9f3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__reserved</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>.__unnamed28__</Scope>
+    </TokenIdentifier>
+    <Path>dc/de4/usb_8h.html</Path>
+    <Anchor>ad07ee03cbfb2ff9b6622e6ea4d91f9f3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__reserved0</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
+    </TokenIdentifier>
+    <Path>dc/de4/usb_8h.html</Path>
+    <Anchor>a2850bea91b0c551f37f3f5e32a238a21</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__reserved0</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>USBPortStatus.wPortChange.__unnamed34__</Scope>
+    </TokenIdentifier>
+    <Path>dc/de4/usb_8h.html</Path>
+    <Anchor>a2850bea91b0c551f37f3f5e32a238a21</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__reserved0</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
       <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>ad07ee03cbfb2ff9b6622e6ea4d91f9f3</Anchor>
+    <Anchor>a2850bea91b0c551f37f3f5e32a238a21</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>__reserved</Name>
+      <Name>__reserved0</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
       <Scope>.__unnamed40__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>ad07ee03cbfb2ff9b6622e6ea4d91f9f3</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__reserved0</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
-    </TokenIdentifier>
-    <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a2850bea91b0c551f37f3f5e32a238a21</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__reserved0</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>USBPortStatus.wPortChange.__unnamed46__</Scope>
-    </TokenIdentifier>
-    <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a2850bea91b0c551f37f3f5e32a238a21</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__reserved0</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
-    </TokenIdentifier>
-    <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a2850bea91b0c551f37f3f5e32a238a21</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__reserved0</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>.__unnamed52__</Scope>
-    </TokenIdentifier>
-    <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a2850bea91b0c551f37f3f5e32a238a21</Anchor>
   </Token>
   <Token>
@@ -249,7 +239,7 @@
       <Name>__reserved1</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>acd8949ff69e5a2a014100db38cb62a6d</Anchor>
@@ -259,20 +249,10 @@
       <Name>__reserved1</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>acd8949ff69e5a2a014100db38cb62a6d</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>A20Gate</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_OUTPUT_PORT.__unnamed5__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ab24700857c7c1e39353a7d8d12212ee9</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -289,7 +269,7 @@
       <Name>Accelerometer</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>InputReport.__unnamed13__</Scope>
+      <Scope>InputReport.__unnamed1__</Scope>
     </TokenIdentifier>
     <Path>de/ded/input_8h.html</Path>
     <Anchor>ab043bc6d611582087d8bf1790d863d69</Anchor>
@@ -433,16 +413,6 @@
     </TokenIdentifier>
     <Path>d9/d97/pci_8h.html</Path>
     <Anchor>a8d4ae102d9459f2c3ea913412e9a3f75</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Base</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_MOUSE_PACKET</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ae07d9573c7ae9aa7d734e43ab74d88b3</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -862,7 +832,7 @@
       <Scope>USBDeviceRequest</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a12c370e2ab1046c1a0fffdde5feb5517</Anchor>
+    <Anchor>a39344ebf5d88c8fb08162949cbe1d999</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1039,7 +1009,7 @@
       <Name>C_PORT_CONNECTION</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortChange.__unnamed46__</Scope>
+      <Scope>USBPortStatus.wPortChange.__unnamed34__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>ae0c50ce312153bfc94f5c30091d02e1c</Anchor>
@@ -1049,7 +1019,7 @@
       <Name>C_PORT_CONNECTION</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed52__</Scope>
+      <Scope>.__unnamed40__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>ae0c50ce312153bfc94f5c30091d02e1c</Anchor>
@@ -1059,7 +1029,7 @@
       <Name>C_PORT_ENABLE</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortChange.__unnamed46__</Scope>
+      <Scope>USBPortStatus.wPortChange.__unnamed34__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>ad878656e48dab047c2c29fa61c2d148b</Anchor>
@@ -1069,7 +1039,7 @@
       <Name>C_PORT_ENABLE</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed52__</Scope>
+      <Scope>.__unnamed40__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>ad878656e48dab047c2c29fa61c2d148b</Anchor>
@@ -1079,7 +1049,7 @@
       <Name>C_PORT_OVER_CURRENT</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortChange.__unnamed46__</Scope>
+      <Scope>USBPortStatus.wPortChange.__unnamed34__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a2f7cc620f2b1310b1c78c31618bf8259</Anchor>
@@ -1089,7 +1059,7 @@
       <Name>C_PORT_OVER_CURRENT</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed52__</Scope>
+      <Scope>.__unnamed40__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a2f7cc620f2b1310b1c78c31618bf8259</Anchor>
@@ -1099,7 +1069,7 @@
       <Name>C_PORT_RESET</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortChange.__unnamed46__</Scope>
+      <Scope>USBPortStatus.wPortChange.__unnamed34__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a441236095df05d77e2dd236c6c7e4a8f</Anchor>
@@ -1109,7 +1079,7 @@
       <Name>C_PORT_RESET</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed52__</Scope>
+      <Scope>.__unnamed40__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a441236095df05d77e2dd236c6c7e4a8f</Anchor>
@@ -1119,7 +1089,7 @@
       <Name>C_PORT_SUSPEND</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortChange.__unnamed46__</Scope>
+      <Scope>USBPortStatus.wPortChange.__unnamed34__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a0dccdb7cd734d0a15bb06a9da270cf37</Anchor>
@@ -1129,7 +1099,7 @@
       <Name>C_PORT_SUSPEND</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed52__</Scope>
+      <Scope>.__unnamed40__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a0dccdb7cd734d0a15bb06a9da270cf37</Anchor>
@@ -1256,16 +1226,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>CommandData</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_STATUSES.__unnamed1__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ad3c1a945d3b7f0aa9f0bbcb1bdc77d37</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Complete</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -1366,16 +1326,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>Delay</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_KBD_TYPEMATIC.__unnamed7__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a8f497c1a3d15af9e0c215019f26b887d</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>DeleteInode</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -1402,7 +1352,7 @@
       <Scope>USBHIDDescriptor</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a03da6f0d0b37df56696d448f5645caed</Anchor>
+    <Anchor>a4c892f3e4cf5f65fcdf4d06c85edca20</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1499,7 +1449,7 @@
       <Name>Direction</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBDeviceRequest.bmRequestType.__unnamed17__</Scope>
+      <Scope>USBDeviceRequest.bmRequestType.__unnamed5__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a02674a4ef33e11c879283629996c8ff8</Anchor>
@@ -1509,7 +1459,7 @@
       <Name>Direction</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed20__</Scope>
+      <Scope>.__unnamed8__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a02674a4ef33e11c879283629996c8ff8</Anchor>
@@ -1589,7 +1539,7 @@
       <Name>Gamepad</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>InputReport.__unnamed13__</Scope>
+      <Scope>InputReport.__unnamed1__</Scope>
     </TokenIdentifier>
     <Path>de/ded/input_8h.html</Path>
     <Anchor>a221f6781b4faa2d321ca0d928f518d6e</Anchor>
@@ -1609,7 +1559,7 @@
       <Name>Gyroscope</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>InputReport.__unnamed13__</Scope>
+      <Scope>InputReport.__unnamed1__</Scope>
     </TokenIdentifier>
     <Path>de/ded/input_8h.html</Path>
     <Anchor>abed99e5db57749f375e738c1c0258047</Anchor>
@@ -1742,17 +1692,7 @@
       <Scope>FileSystemDevice</Scope>
     </TokenIdentifier>
     <Path>df/d26/fs_8h.html</Path>
-    <Anchor>a8bec4f04ae605c9a4695cd78904ddbe3</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>InputBufferFull</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_STATUSES.__unnamed1__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a999955f00254a1ec83b388b8142ac5e6</Anchor>
+    <Anchor>a67de6bb1c2136502fe7fed212b794bbb</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1899,7 +1839,7 @@
       <Name>Joystick</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>InputReport.__unnamed13__</Scope>
+      <Scope>InputReport.__unnamed1__</Scope>
     </TokenIdentifier>
     <Path>de/ded/input_8h.html</Path>
     <Anchor>a1162b85b7b993e2edf7da29dd8abf7e2</Anchor>
@@ -1939,7 +1879,7 @@
       <Name>Keyboard</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>InputReport.__unnamed13__</Scope>
+      <Scope>InputReport.__unnamed1__</Scope>
     </TokenIdentifier>
     <Path>de/ded/input_8h.html</Path>
     <Anchor>a6ce4d85a628a88bbdb3ac24a8e5a9c2e</Anchor>
@@ -2089,7 +2029,7 @@
       <Name>LPS</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBHubStatus.wHubStatus.__unnamed32__</Scope>
+      <Scope>USBHubStatus.wHubStatus.__unnamed20__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>af0bd8ffe783f0ce4bf0fb76c508284f7</Anchor>
@@ -2099,7 +2039,7 @@
       <Name>LPS</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed38__</Scope>
+      <Scope>.__unnamed26__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>af0bd8ffe783f0ce4bf0fb76c508284f7</Anchor>
@@ -2109,7 +2049,7 @@
       <Name>LPSC</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBHubStatus.wHubChange.__unnamed34__</Scope>
+      <Scope>USBHubStatus.wHubChange.__unnamed22__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a1d68e7883970b1ca56623cd245b7d368</Anchor>
@@ -2119,7 +2059,7 @@
       <Name>LPSC</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed40__</Scope>
+      <Scope>.__unnamed28__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a1d68e7883970b1ca56623cd245b7d368</Anchor>
@@ -2139,7 +2079,7 @@
       <Name>Magnetometer</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>InputReport.__unnamed13__</Scope>
+      <Scope>InputReport.__unnamed1__</Scope>
     </TokenIdentifier>
     <Path>de/ded/input_8h.html</Path>
     <Anchor>a9e9fa52e0aa4a2b519f8287760d7c3ac</Anchor>
@@ -2319,7 +2259,7 @@
       <Name>Mouse</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>InputReport.__unnamed13__</Scope>
+      <Scope>InputReport.__unnamed1__</Scope>
     </TokenIdentifier>
     <Path>de/ded/input_8h.html</Path>
     <Anchor>af2a47c6809d88e175dade0ef7b16aa13</Anchor>
@@ -2409,7 +2349,7 @@
       <Name>OC</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBHubStatus.wHubStatus.__unnamed32__</Scope>
+      <Scope>USBHubStatus.wHubStatus.__unnamed20__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a628ac2641a11205611acfdd540e18809</Anchor>
@@ -2419,7 +2359,7 @@
       <Name>OC</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed38__</Scope>
+      <Scope>.__unnamed26__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a628ac2641a11205611acfdd540e18809</Anchor>
@@ -2429,7 +2369,7 @@
       <Name>OCC</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBHubStatus.wHubChange.__unnamed34__</Scope>
+      <Scope>USBHubStatus.wHubChange.__unnamed22__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>adcb1c29255ec9645f8be15096fae7b93</Anchor>
@@ -2439,7 +2379,7 @@
       <Name>OCC</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed40__</Scope>
+      <Scope>.__unnamed28__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>adcb1c29255ec9645f8be15096fae7b93</Anchor>
@@ -2496,16 +2436,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>OutputBufferFull</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_STATUSES.__unnamed1__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aa9b7be021da7a0ec83d707bd42740f3d</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Parent</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -2513,16 +2443,6 @@
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a6f58b875f50fd359a1222404806084f6</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ParityError</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_STATUSES.__unnamed1__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a63440a36bf6fd0748b3c188f3e9fda78</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2586,120 +2506,10 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>Port1Clock</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_CONFIGURATION.__unnamed3__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a44c6b11fcf9b6a9a6e7fe2a969b58b0f</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Port1InputBufferFull</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_OUTPUT_PORT.__unnamed5__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aba33c9a5143b225eab7df62ac376741f</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Port1Interrupt</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_CONFIGURATION.__unnamed3__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a78e48bc7d4778ddc8e647ec195da3e1a</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Port1OutputBufferFull</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_OUTPUT_PORT.__unnamed5__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>acd4e8faa0cb2df34eef242730f9abbcf</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Port1Translation</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_CONFIGURATION.__unnamed3__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>af4c84ba01a644fbe45e4b9e09f827168</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Port2Clock</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_CONFIGURATION.__unnamed3__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aeeefe959ba7eabe712b1a3039d4d7ec7</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Port2Clock</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_OUTPUT_PORT.__unnamed5__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aeeefe959ba7eabe712b1a3039d4d7ec7</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Port2Data</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_OUTPUT_PORT.__unnamed5__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a88d3c2504556b9c06accac2642e8a48b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Port2InputBufferFull</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_OUTPUT_PORT.__unnamed5__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ac2d9dfb2e7ccc41b0869944f6de082e9</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Port2Interrupt</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_CONFIGURATION.__unnamed3__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ab139fbe5dc1f6fb378c6de7168ad4254</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Port2OutputBufferFull</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_OUTPUT_PORT.__unnamed5__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a04a22d5db50e8333c482419e9bbd2d78</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>PORT_CONNECTION</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a2a356a25b9433f52530a968d07467fd0</Anchor>
@@ -2709,7 +2519,7 @@
       <Name>PORT_CONNECTION</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a2a356a25b9433f52530a968d07467fd0</Anchor>
@@ -2719,7 +2529,7 @@
       <Name>PORT_ENABLE</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a20173b822ef39347be06ffbd67e59076</Anchor>
@@ -2729,7 +2539,7 @@
       <Name>PORT_ENABLE</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a20173b822ef39347be06ffbd67e59076</Anchor>
@@ -2739,7 +2549,7 @@
       <Name>PORT_HIGH_SPEED</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>aaa11a60607b1ea093393768ae01f6fbc</Anchor>
@@ -2749,7 +2559,7 @@
       <Name>PORT_HIGH_SPEED</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>aaa11a60607b1ea093393768ae01f6fbc</Anchor>
@@ -2759,7 +2569,7 @@
       <Name>PORT_INDICATOR</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a171c913c4769f9796fc641e5c2f5f94a</Anchor>
@@ -2769,7 +2579,7 @@
       <Name>PORT_INDICATOR</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a171c913c4769f9796fc641e5c2f5f94a</Anchor>
@@ -2779,7 +2589,7 @@
       <Name>PORT_LOW_SPEED</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>ac544781da2685a3fd1177d9f667451fc</Anchor>
@@ -2789,7 +2599,7 @@
       <Name>PORT_LOW_SPEED</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>ac544781da2685a3fd1177d9f667451fc</Anchor>
@@ -2799,7 +2609,7 @@
       <Name>PORT_OVER_CURRENT</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a8a68facbf3db3d4fc0570b6ffd9f1bbc</Anchor>
@@ -2809,7 +2619,7 @@
       <Name>PORT_OVER_CURRENT</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a8a68facbf3db3d4fc0570b6ffd9f1bbc</Anchor>
@@ -2819,7 +2629,7 @@
       <Name>PORT_POWER</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a9b975312189761d455c5e668551ea70f</Anchor>
@@ -2829,7 +2639,7 @@
       <Name>PORT_POWER</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a9b975312189761d455c5e668551ea70f</Anchor>
@@ -2839,7 +2649,7 @@
       <Name>PORT_RESET</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>ad84e08e2c56048336f54fcc7df90c78a</Anchor>
@@ -2849,7 +2659,7 @@
       <Name>PORT_RESET</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>ad84e08e2c56048336f54fcc7df90c78a</Anchor>
@@ -2859,7 +2669,7 @@
       <Name>PORT_SUSPEND</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a29367fe786d12ede740dcd1d99cf2615</Anchor>
@@ -2869,7 +2679,7 @@
       <Name>PORT_SUSPEND</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a29367fe786d12ede740dcd1d99cf2615</Anchor>
@@ -2879,7 +2689,7 @@
       <Name>PORT_TEST</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBPortStatus.wPortStatus.__unnamed44__</Scope>
+      <Scope>USBPortStatus.wPortStatus.__unnamed32__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>adbb7face025abf9e9e4158160a5b7a45</Anchor>
@@ -2889,7 +2699,7 @@
       <Name>PORT_TEST</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed50__</Scope>
+      <Scope>.__unnamed38__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>adbb7face025abf9e9e4158160a5b7a45</Anchor>
@@ -3086,66 +2896,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>Raw</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_STATUSES</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a0aeb1f673a677a69047678d8dc1550d1</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Raw</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_CONFIGURATION</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aabcce9d04cf80862c31c591b284ee358</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Raw</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_OUTPUT_PORT</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a6f55d35c117c53b1aa5b104e550674dd</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Raw</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_KBD_TYPEMATIC</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a1c786a0ac638f742e31267026602ac54</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Raw</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_MOUSE_PACKET.Base</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a65e65c8ab0d8609ce12fc68a03cb8e00</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Raw</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_MOUSE_PACKET.ZMovement</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a65e65c8ab0d8609ce12fc68a03cb8e00</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>RawDevice</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -3199,7 +2949,7 @@
       <Name>Recipient</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBDeviceRequest.bmRequestType.__unnamed17__</Scope>
+      <Scope>USBDeviceRequest.bmRequestType.__unnamed5__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a5d6103b662f41b07e10687f03aca8fdc</Anchor>
@@ -3209,7 +2959,7 @@
       <Name>Recipient</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed20__</Scope>
+      <Scope>.__unnamed8__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a5d6103b662f41b07e10687f03aca8fdc</Anchor>
@@ -3243,16 +2993,6 @@
     </TokenIdentifier>
     <Path>db/de6/structInodeOperations.html</Path>
     <Anchor>a54bbd07bcb9a6143867be3aa05577413</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>RepeatRate</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_KBD_TYPEMATIC.__unnamed7__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ab0a4e5ca864ccf625afe5cbd853b490c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3606,46 +3346,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>SystemFlag</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_STATUSES.__unnamed1__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>acc8252d0e5a2a96ee791ee05c333bb56</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>SystemFlag</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_CONFIGURATION.__unnamed3__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>acc8252d0e5a2a96ee791ee05c333bb56</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>SystemReset</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_OUTPUT_PORT.__unnamed5__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a993f0a6346847628c86bbcf1cf306236</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>TimeoutError</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_STATUSES.__unnamed1__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a2ce01afd7e833fc13c63448689ea762a</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Toggle</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -3659,7 +3359,7 @@
       <Name>TouchScreen</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>InputReport.__unnamed13__</Scope>
+      <Scope>InputReport.__unnamed1__</Scope>
     </TokenIdentifier>
     <Path>de/ded/input_8h.html</Path>
     <Anchor>a64a952e5a8456c1030ce54bfa07ebb52</Anchor>
@@ -3719,7 +3419,7 @@
       <Name>Type</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>USBDeviceRequest.bmRequestType.__unnamed17__</Scope>
+      <Scope>USBDeviceRequest.bmRequestType.__unnamed5__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>aa1fa27779242b4902f7ae3bdd5c6d508</Anchor>
@@ -3729,7 +3429,7 @@
       <Name>Type</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>.__unnamed20__</Scope>
+      <Scope>.__unnamed8__</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>aa1fa27779242b4902f7ae3bdd5c6d508</Anchor>
@@ -3742,27 +3442,7 @@
       <Scope>USBHubDescriptor</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a900ca1bff68c04899e97ffff989b049a</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Unknown1</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_STATUSES.__unnamed1__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a28c5637b237d55031f1b3772d731c041</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Unknown2</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_STATUSES.__unnamed1__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>afe489f6ef777e98956c00038b863eb0f</Anchor>
+    <Anchor>af42b6552e058e2388fb824cf34ddb070</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3796,16 +3476,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>version</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>kutsname</Scope>
-    </TokenIdentifier>
-    <Path>d2/d6e/syscalls_8h.html</Path>
-    <Anchor>ab0d51c806d74e4ec305829e807f58033</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Version</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -3813,6 +3483,16 @@
     </TokenIdentifier>
     <Path>db/de4/driver_8h.html</Path>
     <Anchor>a7f2ee0705a9eaf49c4f920d827198530</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>version</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>kutsname</Scope>
+    </TokenIdentifier>
+    <Path>d2/d6e/syscalls_8h.html</Path>
+    <Anchor>ab0d51c806d74e4ec305829e807f58033</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3832,7 +3512,7 @@
       <Scope>USBHubStatus</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a6060ab0a49b0292d94efe9eaff1a5951</Anchor>
+    <Anchor>a37a6423c1621fcdd9f1063bc66402b4a</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3852,7 +3532,7 @@
       <Scope>USBHubStatus</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a271a94558ca87274b450baed0e8d7bf1</Anchor>
+    <Anchor>ada28b450e81b729803227d47546d51d0</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3902,7 +3582,7 @@
       <Scope>USBPortStatus</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>af4e9bec224640cf2f9fb3eb10b315457</Anchor>
+    <Anchor>ab41fbdb22fbf6b7d598cdc212868217e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3912,7 +3592,7 @@
       <Scope>USBPortStatus</Scope>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a31ae13255cdb67e07cda92945803ae17</Anchor>
+    <Anchor>a07dff398b3006b166b99c0fa1369ae03</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3996,16 +3676,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>XMovement</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_MOUSE_PACKET</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a03984accdad77fa5280f8724510170d4</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Y</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -4046,16 +3716,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>YMovement</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_MOUSE_PACKET</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ae7ed739b075fbfcabddfb598f2ebb912</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Z</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -4093,46 +3753,6 @@
     </TokenIdentifier>
     <Path>de/ded/input_8h.html</Path>
     <Anchor>a072fe487c2498b2c7788e6e18769aecb</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Zero</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_KBD_TYPEMATIC.__unnamed7__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ad7ed4ee1df437474d005188535f74875</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Zero0</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_CONFIGURATION.__unnamed3__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ad31cba1790c6843a18adfc7ddfcee23e</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Zero1</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_CONFIGURATION.__unnamed3__</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ac1bea7eee679d45845dc20ba9cc0cc20</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ZMovement</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>PS2_MOUSE_PACKET</Scope>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>acc274a47b2ec66d6731ec91b274e1423</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5406,16 +5026,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>_PIC_EOI</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a8305f30b16326e7c511e03ddce6c6961</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>AddController</Name>
       <APILanguage>c</APILanguage>
       <Type>func</Type>
@@ -5433,36 +5043,6 @@
     <Path>df/d26/fs_8h.html</Path>
     <Anchor>aab39d62bf90b7b74ddff3b22086f40f6</Anchor>
     <DeclaredIn>fs.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Always0</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ad636c779d8a2494cbf0e5bef39c32207</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Always0_2</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a64f89a7ebae40aae6fd6a15dd67dba12</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Always1</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a7e36db4ddfffac0319695ee9988dc7f6</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5971,7 +5551,7 @@
       <Type>data</Type>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a1fb45c38180bf67f6be87ba69f51767d</Anchor>
+    <Anchor>a906b7aea45695d8b40be8c382692fdb6</Anchor>
     <DeclaredIn>usb.h</DeclaredIn>
   </Token>
   <Token>
@@ -6043,26 +5623,6 @@
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a1e7be110861bd4ff75c86d5214f31543</Anchor>
     <DeclaredIn>usb.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Button4</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a985d3c1b1bb78dcb532adda850db8e71</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Button5</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a51b10f759e11e22a2df18e78164340d2</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6651,7 +6211,7 @@
       <Type>data</Type>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a88f7cce7b89dc378890059b1377ac1e8</Anchor>
+    <Anchor>a7c21f27f7f855ab2be0e91f519b1b446</Anchor>
     <DeclaredIn>usb.h</DeclaredIn>
   </Token>
   <Token>
@@ -8743,26 +8303,6 @@
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a77c33850b90ff7617243c40ce61d9168</Anchor>
     <DeclaredIn>usb.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>IRQ_MASK</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a47eacd96b732a39b728fed2402f9210b</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>IRQ_UNMASK</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>abb94e8ea4110b1505f8722d697697eea</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -11276,16 +10816,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>LeftButton</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>afed3db2529852271d278ff08791fa996</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Lookup</Name>
       <APILanguage>c</APILanguage>
       <Type>data</Type>
@@ -11343,16 +10873,6 @@
     <Path>db/de4/driver_8h.html</Path>
     <Anchor>ac0416d24abd7b108d48d16eb4e913e8aa46b21613d1139b1262129a7791500e40</Anchor>
     <DeclaredIn>driver.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>MiddleButton</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a7f194284481c61912ad0d0fb8f525439</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -11976,56 +11496,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>PIC1_CMD</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a4c4c538b4d0809530a26a7a6d4469259</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PIC1_DATA</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>af27e966ec947ca1172f30ae301c5f24b</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PIC2_CMD</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ae21e6e278037d30c9548e2fbb4308306</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PIC2_DATA</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ab6d3b9f6f427357310896adf176145f1</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PIC_EOI</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a08e984e6a1417b7b6e89c6232ce00905</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>PortPwrCtrlMask</Name>
       <APILanguage>c</APILanguage>
       <Type>data</Type>
@@ -12113,1096 +11583,6 @@
     <Path>df/d26/fs_8h.html</Path>
     <Anchor>ae79cbe5c8217124106e493f0aeba0705</Anchor>
     <DeclaredIn>fs.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_ACK</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aae27b4e03e27b850f66cf5f46ed30530</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a349f6d70cf357fe295324ef26b1de859</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_COPY_INPUT_0_3_TO_4_7_STATUS</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>af934e2ef5888d9ffd9fc9d1d18368af9</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_COPY_INPUT_4_7_TO_4_7_STATUS</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a7203baf59eb90b5b0ad253e2373b9907</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_DIAGNOSTIC_DUMP</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a73785a9d50b49c041a68c2b5086b19a9</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_DISABLE_PORT_1</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>abceabf403342d3c3834bc41b96d4e05d</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_DISABLE_PORT_2</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a8e760f710e8ad14e0b22dcbe2f6804fd</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_ENABLE_PORT_1</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aa8b34d40c6d58af702ff8f6f656e9625</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_ENABLE_PORT_2</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a760516c47eeaf05775fc1fd81e339c73</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_PULSE_OUTPUT_LINE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a6c152c6f1649c23093a994c73b5ec3f3</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_READ_CONFIG</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a85b51743c17aecdd28ae941693da6c11</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_READ_CONFIG_N</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a3f626852e86177253c8cf1e1bcbbe1c1</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_READ_INPUT_PORT</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a17e275485045a87d7e66250bf0a3f7e7</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_READ_OUTPUT_PORT</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>adacccff83b034d25299dc29eca2788f0</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_TEST_CONTROLLER</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aa33fc8f1e6eba7de0bf02c716fd5543c</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_TEST_PORT_1</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a7e5f986206d7889c8d0c7aa85365e0e0</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_TEST_PORT_2</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aa7ab36cbcc7910e971c736401c9c36ee</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_WRITE_CONFIG</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a0aee664379c66e07a7bb3fdf96ac98e6</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_WRITE_CONFIG_N</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ae99951c9a825580da3cd19fad3032fcd</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_WRITE_NEXT_BYTE_TO_OUTPUT_PORT</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a2a9b984a4f47f73a34dbc145546f39ed</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_1_OUTPUT</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ad4f3cdf719d28a63ae05302ae4c64298</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a477e63cb3f091426422de8d39d085343</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_OUTPUT</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a6ba1c2da3b2b02c2a2bcd324ead30aaf</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_DATA</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>afdbeabd6455ad1caf38d713be4945425</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_ALL_MAKE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>affc73ef21f75670e1632788ef763e347</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_ALL_MAKE_RELEASE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a0c0da13ca5919b091c19234acccb7472</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_ALL_TYPEMATIC</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aeab72e1b339968e91de7ef6e177d4d46</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_ALL_TYPEMATIC_MAKE_RELEASE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>afb13f744c73bbff0b45c8b15aa95d1c2</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_DEFAULTS</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>acea9e4bf70511389b33df326074434ff</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_DISABLE_SCANNING</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a1e408ee85e43b8060fb268d265889f49</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_ECHO</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a8cfa2bad14d701597ac3214fd9b62d7f</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_ENABLE_SCANNING</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ad63145b6dc06948bae574cd024b2606f</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_IDENTIFY</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>af4ab5ae2b7058064dc5f1d0ce04473c6</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_RESEND</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a78e89eac04afa736620202a250b1652e</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_RESET</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a7def054c2c4044f0d79a4242c1fab0f3</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_SCAN_CODE_SET</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a2e6a0f04e2a8f77ac8fc5ad284a64e9a</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_SET_LEDS</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a59c9a2227ea292bc16c9c65d6d092cbd</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_SPECIFIC_MAKE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a87304f876af426e63c40878fac95069b</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_SPECIFIC_MAKE_RELEASE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>adf07e1dd4c9e9623332e055a0670a61e</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_SPECIFIC_TYPEMATIC</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>af9e177b9aefa0121328d0738105253a8</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_CMD_TYPEMATIC</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a40756f0aac46d870eb681a58dc372bfa</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_LED_CAPS_LOCK</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbca80fa56c37e35327ab30585f1093695ad</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_LED_NUM_LOCK</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbcabd6d7f2afaa27f8056a7b34a1d48400b</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_LED_SCROLL_LOCK</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbca371d0631f3e4cc5e96abe555e47fef7d</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_LEDS</Name>
-      <APILanguage>c</APILanguage>
-      <Type>enum</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbc</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_LED_SCROLL_LOCK</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbca371d0631f3e4cc5e96abe555e47fef7d</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_LED_NUM_LOCK</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbcabd6d7f2afaa27f8056a7b34a1d48400b</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_LED_CAPS_LOCK</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbca80fa56c37e35327ab30585f1093695ad</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_RESP_ACK</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>acd7c0c3c66f59b7c30bc4c427a1facb4</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_RESP_ECHO</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a522d2d21681a109cc7e49dff69d58e35</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_RESP_RESEND</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aa34179ba1def0d1be4f8e7eff0eeded4</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_RESP_TEST_FAILED</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a934a0f9b95a6cd75d9a9886a690560c6</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_RESP_TEST_FAILED_2</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a2412d04c5199900f1fe5c6b03a1b833f</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_RESP_TEST_PASSED</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a2a20b18102384522a2f63bb3cd0baa4a</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SC_SET_1</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a7e0e395183152f3e37e9475a96f11b2e</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SC_SET_2</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a9ef0041dce55959183fa4fa24f618968</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SC_SET_3</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a1abdcf6b613c2fcbff74268db121e34a</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SCAN_CODE_GET_CURRENT</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a2251b650209d2abf9c98f3e45e3cf5c6</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SCAN_CODE_SET</Name>
-      <APILanguage>c</APILanguage>
-      <Type>enum</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SCAN_CODE_GET_CURRENT</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a2251b650209d2abf9c98f3e45e3cf5c6</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SCAN_CODE_SET_1</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4ab6a12143a58e1487e9d6e3b533cd6c9b</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SCAN_CODE_SET_2</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a611a5a1d2655245ba7ed1ec6f6e6055c</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SCAN_CODE_SET_3</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a2a3158fc36b4fdf627d248303a6ede20</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SC_SET_1</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a7e0e395183152f3e37e9475a96f11b2e</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SC_SET_2</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a9ef0041dce55959183fa4fa24f618968</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SC_SET_3</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a1abdcf6b613c2fcbff74268db121e34a</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SCAN_CODE_SET_1</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4ab6a12143a58e1487e9d6e3b533cd6c9b</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SCAN_CODE_SET_2</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a611a5a1d2655245ba7ed1ec6f6e6055c</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_KBD_SCAN_CODE_SET_3</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a298a99937859237aa2f19ee87436c3e4a2a3158fc36b4fdf627d248303a6ede20</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_DISABLE_DATA_REPORTING</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ad5515a4dbe6bf00f285039e3ba7e1b74</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_ENABLE_DATA_REPORTING</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a59645119c76af5f8c5150065e372b841</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_GET_STATUS</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a8374733dd184ca602b8a2fc7af22cd17</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_READ_DATA</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aea2e4c34ba825590bf3a1c23add124ea</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_READ_ID</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a92d821d3f64c1fda822aea140495d70e</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_RESEND</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a9765ecf9e2e3d0bd6acd5a3c7c2618dc</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_RESET</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a81b027602f9a3813f9e6268ecde9b9bf</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_RESET_WRAP_MODE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a4dc8cdb101ee23fde5d4685ebcfc7d20</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_SET_DEFAULTS</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a01fa96b1f69bb77a3efae0ed30452f17</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_SET_REMOTE_MODE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a1e37d0fcb186f3089b6cc7302357b11f</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_SET_RESOLUTION</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a1670fa9e8c258966dc991035f7d700e5</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_SET_SAMPLE_RATE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a3446e4e7e8f773d4261ce35f13ba2981</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_SET_SCALING_1_1</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a8cf2e24dd34a0b528db4d9c415c3b957</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_SET_SCALING_2_1</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a5f7afa4d6bb52799b5b43f81723af25d</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_SET_STREAM_MODE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a514ca9060abcc8c0170399d1be4cc1aa</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_CMD_SET_WRAP_MODE</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ac1d8f18884044daee1482cc7b167a761</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RES_1</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aed07baf84b6821e47550c706b103fad7a856a1c6cc3a816158e945299c040c7a7</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RES_2</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aed07baf84b6821e47550c706b103fad7a32e6b1eb4bbb5014ef437e81fa1aaf15</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RES_4</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aed07baf84b6821e47550c706b103fad7ad06de8d5228edc910b2a45ef3f64d11c</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RES_8</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aed07baf84b6821e47550c706b103fad7aaadc22beea4ed7609400ddb1bd1e81c2</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RESOLUTION</Name>
-      <APILanguage>c</APILanguage>
-      <Type>enum</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aed07baf84b6821e47550c706b103fad7</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RES_1</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aed07baf84b6821e47550c706b103fad7a856a1c6cc3a816158e945299c040c7a7</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RES_2</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aed07baf84b6821e47550c706b103fad7a32e6b1eb4bbb5014ef437e81fa1aaf15</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RES_4</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aed07baf84b6821e47550c706b103fad7ad06de8d5228edc910b2a45ef3f64d11c</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RES_8</Name>
-      <APILanguage>c</APILanguage>
-      <Type>econst</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aed07baf84b6821e47550c706b103fad7aaadc22beea4ed7609400ddb1bd1e81c2</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RESP_ACK</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ac5bc0457a1c10ae362feb776532f5da9</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RESP_RESEND</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aac7fdb6df880b369a9a6ae86d8c5f12f</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RESP_TEST_FAILED</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a598e51d51617a1d80aaf56e19ef872fc</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_MOUSE_RESP_TEST_PASSED</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a2c9c30e6c4f5213dabac40b2a501a93d</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_STATUS</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a5011033b67ebce0ddc40f985c04832e1</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_TEST_FAILED</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ab807b48ac4960880a9107832b7b0f195</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2_TEST_PASSED</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a76797708c65d0cbfc053424ebcbf82d7</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2ACKTimeout</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a38ac8086f1219290834fa333d5f61d61</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2ClearOutputBuffer</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ab89ed60f3ef02b78ef5080b0941ed134</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2ReadAfterACK</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a1c1df3cb3ab237cb29864c8d185537f0</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2ReadData</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ac52f28bcc38cdcb9e2548528de67dc44</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2ReadStatus</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ab4e5cc3a96dc9f7d922e65241ff53f48</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2Wait</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>af2ae44f829abc7018863d9bf8fb9b859</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2WriteCommand</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a12501e11544172f81587ea9a2cedd7be</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PS2WriteData</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ac722c6485f425b33b023549fa448c112</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -13313,16 +11693,6 @@
     <Path>de/ded/input_8h.html</Path>
     <Anchor>aba095481bbee5eb8903061ed75aa435d</Anchor>
     <DeclaredIn>input.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>RightButton</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>ae720ea34653c53edca8e6006ac14eedb</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -16251,7 +14621,7 @@
       <Type>data</Type>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>aa24b93ab6e4356aa508f3c530aa20312</Anchor>
+    <Anchor>a013dca3fceb944ea074e3e8ed9b4bbaf</Anchor>
     <DeclaredIn>usb.h</DeclaredIn>
   </Token>
   <Token>
@@ -18236,32 +16606,12 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>WaitInput</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>aa964d7c1114a861480b1fea356404cf4</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>WaitOutput</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a553775c2f7c013ee400dffb01d596328</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>wHubChange</Name>
       <APILanguage>c</APILanguage>
       <Type>data</Type>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a7a3e287b3bcaa3c1e81cc0696576c797</Anchor>
+    <Anchor>a334295ab6f8f66b5570b545f376a1ae3</Anchor>
     <DeclaredIn>usb.h</DeclaredIn>
   </Token>
   <Token>
@@ -18291,7 +16641,7 @@
       <Type>data</Type>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a30b4856315882c80163667eef569bd78</Anchor>
+    <Anchor>a7786c397aa33ea94ae4e27ad2815c11b</Anchor>
     <DeclaredIn>usb.h</DeclaredIn>
   </Token>
   <Token>
@@ -18331,7 +16681,7 @@
       <Type>data</Type>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>a95f8abdfeb160bee442f4e1a655c6a55</Anchor>
+    <Anchor>a6f415dc409410c9d3d9d07fedce776db</Anchor>
     <DeclaredIn>usb.h</DeclaredIn>
   </Token>
   <Token>
@@ -18341,7 +16691,7 @@
       <Type>data</Type>
     </TokenIdentifier>
     <Path>dc/de4/usb_8h.html</Path>
-    <Anchor>aa68583e7d8288c9f2ecdeb450806a276</Anchor>
+    <Anchor>aad554aa1ead41cd798714c1c2bb0d357</Anchor>
     <DeclaredIn>usb.h</DeclaredIn>
   </Token>
   <Token>
@@ -18383,55 +16733,5 @@
     <Path>dc/de4/usb_8h.html</Path>
     <Anchor>a7383d0165ad8eab48aa239c005199121</Anchor>
     <DeclaredIn>usb.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>XOverflow</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a999196b528952ded86d2ecdd66fd2659</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>XSign</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a8ba513483738e003cc2d949bbc8c87b7</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>YOverflow</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a010d40129fea5610bc6510df54e8822c</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>YSign</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a50b11bac2f0fa249f5cebe404c00d74e</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Z</Name>
-      <APILanguage>c</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>d1/de1/aip_8h.html</Path>
-    <Anchor>a4d6dfe063ce4b9f790c99c37c1ef782d</Anchor>
-    <DeclaredIn>aip.h</DeclaredIn>
   </Token>
 </Tokens>

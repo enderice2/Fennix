@@ -36,7 +36,7 @@ var fs_8h =
     [ "InodeOperations", "db/de6/structInodeOperations.html", "db/de6/structInodeOperations" ],
     [ "FileSystemDevice", "df/d26/fs_8h.html#d4/d24/structFileSystemDevice", [
       [ "Block", "df/d26/fs_8h.html#ae311d9d0d76dbba597183a4a934720b4", null ],
-      [ "inode", "df/d26/fs_8h.html#a8bec4f04ae605c9a4695cd78904ddbe3", null ]
+      [ "inode", "df/d26/fs_8h.html#a67de6bb1c2136502fe7fed212b794bbb", null ]
     ] ],
     [ "SuperBlockOperations", "d2/d55/structSuperBlockOperations.html", "d2/d55/structSuperBlockOperations" ],
     [ "FileSystemInfo", "df/d26/fs_8h.html#de/d99/structFileSystemInfo", [

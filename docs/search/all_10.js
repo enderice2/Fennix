@@ -20,10 +20,9 @@ var searchData=
   ['o_5ftrunc_17',['O_TRUNC',['../d7/d9f/fcntl_8h.html#ad1d67e453fb3031f40f8cd3403773813',1,'fcntl.h']]],
   ['o_5ftty_5finit_18',['O_TTY_INIT',['../d7/d9f/fcntl_8h.html#a0ee7b090d0fd09015039f6325118400f',1,'fcntl.h']]],
   ['o_5fwronly_19',['O_WRONLY',['../d7/d9f/fcntl_8h.html#a11b644a8526139c4cc1850dac1271ced',1,'fcntl.h']]],
-  ['oc_20',['oc',['../dc/de4/usb_8h.html#a628ac2641a11205611acfdd540e18809',1,'.__unnamed38__::OC'],['../dc/de4/usb_8h.html#a628ac2641a11205611acfdd540e18809',1,'USBHubStatus.wHubStatus.__unnamed32__::OC']]],
-  ['occ_21',['occ',['../dc/de4/usb_8h.html#adcb1c29255ec9645f8be15096fae7b93',1,'.__unnamed40__::OCC'],['../dc/de4/usb_8h.html#adcb1c29255ec9645f8be15096fae7b93',1,'USBHubStatus.wHubChange.__unnamed34__::OCC']]],
+  ['oc_20',['oc',['../dc/de4/usb_8h.html#a628ac2641a11205611acfdd540e18809',1,'.__unnamed26__::OC'],['../dc/de4/usb_8h.html#a628ac2641a11205611acfdd540e18809',1,'USBHubStatus.wHubStatus.__unnamed20__::OC']]],
+  ['occ_21',['occ',['../dc/de4/usb_8h.html#adcb1c29255ec9645f8be15096fae7b93',1,'.__unnamed28__::OCC'],['../dc/de4/usb_8h.html#adcb1c29255ec9645f8be15096fae7b93',1,'USBHubStatus.wHubChange.__unnamed22__::OCC']]],
   ['offset_22',['Offset',['../df/d26/fs_8h.html#ac7fd076e6f0290af80aee31a0af35b4a',1,'Inode']]],
   ['open_23',['open',['../db/de6/structInodeOperations.html#a869200a6c684532a9a75a05bca1e9270',1,'InodeOperations::Open'],['../df/d26/fs_8h.html#a38e8576cf8a6210b386212d7b80f42a0',1,'Open:&#160;fs.h']]],
-  ['ops_24',['ops',['../df/d26/fs_8h.html#a2e69ea86f5e1537c9173b961a03bdc0c',1,'FileSystemInfo::Ops'],['../de/d40/block_8h.html#a00ca2ebbf46a93847c9c56f1d9c79772',1,'BlockDevice::Ops'],['../df/d26/fs_8h.html#ae847897826ceb8346eb5141f8c23436a',1,'FileSystemDevice.inode::ops'],['../df/d26/fs_8h.html#aa4f24d5e592caaf588d436302324694a',1,'Ops:&#160;fs.h']]],
-  ['outputbufferfull_25',['OutputBufferFull',['../d1/de1/aip_8h.html#aa9b7be021da7a0ec83d707bd42740f3d',1,'PS2_STATUSES.__unnamed1__']]]
+  ['ops_24',['ops',['../df/d26/fs_8h.html#a2e69ea86f5e1537c9173b961a03bdc0c',1,'FileSystemInfo::Ops'],['../de/d40/block_8h.html#a00ca2ebbf46a93847c9c56f1d9c79772',1,'BlockDevice::Ops'],['../df/d26/fs_8h.html#ae847897826ceb8346eb5141f8c23436a',1,'FileSystemDevice.inode::ops'],['../df/d26/fs_8h.html#aa4f24d5e592caaf588d436302324694a',1,'Ops:&#160;fs.h']]]
 ];

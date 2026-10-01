@@ -113,7 +113,7 @@ var searchData=
   ['key_5fx_110',['KEY_X',['../de/ded/input_8h.html#a505d8572bf9cf882f643df6a7f695d35a480a807305121d41673b8c208898f497',1,'input.h']]],
   ['key_5fy_111',['KEY_Y',['../de/ded/input_8h.html#a505d8572bf9cf882f643df6a7f695d35a5d44524b2a6090fa97aa9353d69f67a3',1,'input.h']]],
   ['key_5fz_112',['KEY_Z',['../de/ded/input_8h.html#a505d8572bf9cf882f643df6a7f695d35aadc60d2de1d019604547c0df88f84cda',1,'input.h']]],
-  ['keyboard_113',['Keyboard',['../de/ded/input_8h.html#a6ce4d85a628a88bbdb3ac24a8e5a9c2e',1,'InputReport.__unnamed13__']]],
+  ['keyboard_113',['Keyboard',['../de/ded/input_8h.html#a6ce4d85a628a88bbdb3ac24a8e5a9c2e',1,'InputReport.__unnamed1__']]],
   ['keyboardreport_114',['KeyboardReport',['../de/ded/input_8h.html#d1/da7/structKeyboardReport',1,'']]],
   ['keypad_5f0_115',['KEYPAD_0',['../de/ded/input_8h.html#a505d8572bf9cf882f643df6a7f695d35a3d4651d86fe7a5cd80bc028a9543ac44',1,'input.h']]],
   ['keypad_5f1_116',['KEYPAD_1',['../de/ded/input_8h.html#a505d8572bf9cf882f643df6a7f695d35a9159048ef7c917ba00c50e39b14cb812',1,'input.h']]],

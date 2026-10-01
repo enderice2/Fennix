@@ -5,9 +5,9 @@ var searchData=
   ['_5f_5fdriverinfo_2',['__DriverInfo',['../db/de4/driver_8h.html#d8/d02/struct____DriverInfo',1,'']]],
   ['_5f_5fdriverversion_3',['__DriverVersion',['../db/de4/driver_8h.html#d7/d01/struct____DriverInfo_1_1____DriverVersion',1,'__DriverInfo']]],
   ['_5f_5fpciarray_4',['__PCIArray',['../db/de4/driver_8h.html#df/d8a/struct____PCIArray',1,'']]],
-  ['_5f_5freserved_5',['__reserved',['../dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3',1,'.__unnamed40__::__reserved'],['../dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3',1,'USBHubStatus.wHubStatus.__unnamed32__::__reserved'],['../dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3',1,'USBHubStatus.wHubChange.__unnamed34__::__reserved'],['../dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3',1,'.__unnamed38__::__reserved']]],
-  ['_5f_5freserved0_6',['__reserved0',['../dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21',1,'USBPortStatus.wPortStatus.__unnamed44__::__reserved0'],['../dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21',1,'.__unnamed52__::__reserved0'],['../dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21',1,'.__unnamed50__::__reserved0'],['../dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21',1,'USBPortStatus.wPortChange.__unnamed46__::__reserved0']]],
-  ['_5f_5freserved1_7',['__reserved1',['../dc/de4/usb_8h.html#acd8949ff69e5a2a014100db38cb62a6d',1,'USBPortStatus.wPortStatus.__unnamed44__::__reserved1'],['../dc/de4/usb_8h.html#acd8949ff69e5a2a014100db38cb62a6d',1,'.__unnamed50__::__reserved1']]],
+  ['_5f_5freserved_5',['__reserved',['../dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3',1,'.__unnamed28__::__reserved'],['../dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3',1,'USBHubStatus.wHubStatus.__unnamed20__::__reserved'],['../dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3',1,'USBHubStatus.wHubChange.__unnamed22__::__reserved'],['../dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3',1,'.__unnamed26__::__reserved']]],
+  ['_5f_5freserved0_6',['__reserved0',['../dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21',1,'USBPortStatus.wPortStatus.__unnamed32__::__reserved0'],['../dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21',1,'.__unnamed40__::__reserved0'],['../dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21',1,'.__unnamed38__::__reserved0'],['../dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21',1,'USBPortStatus.wPortChange.__unnamed34__::__reserved0']]],
+  ['_5f_5freserved1_7',['__reserved1',['../dc/de4/usb_8h.html#acd8949ff69e5a2a014100db38cb62a6d',1,'USBPortStatus.wPortStatus.__unnamed32__::__reserved1'],['../dc/de4/usb_8h.html#acd8949ff69e5a2a014100db38cb62a6d',1,'.__unnamed38__::__reserved1']]],
   ['_5f_5fsys_5fclock_5fmonotonic_8',['__SYS_CLOCK_MONOTONIC',['../d2/d6e/syscalls_8h.html#a7a5f7859d5649f718ae575a0d2b16dbeab8e30bbd12154a98cd0d3b56243db66e',1,'syscalls.h']]],
   ['_5f_5fsys_5fclock_5fprocess_5fcputime_5fid_9',['__SYS_CLOCK_PROCESS_CPUTIME_ID',['../d2/d6e/syscalls_8h.html#a7a5f7859d5649f718ae575a0d2b16dbea0e23e1e735537e2a5e9f3c1c8bab2c43',1,'syscalls.h']]],
   ['_5f_5fsys_5fclock_5frealtime_10',['__SYS_CLOCK_REALTIME',['../d2/d6e/syscalls_8h.html#a7a5f7859d5649f718ae575a0d2b16dbea87b50a62aca80dc707da058b4eaa0fe0',1,'syscalls.h']]],
@@ -129,6 +129,5 @@ var searchData=
   ['_5f_5fsys_5fsigxfsz_126',['__SYS_SIGXFSZ',['../d2/d6e/syscalls_8h.html#a00cccf768d6a30a87942a42566f93116a8523049a833dc7a5e73c335f5dd66cb4',1,'syscalls.h']]],
   ['_5f_5fsys_5fsocklen_5ft_127',['__SYS_socklen_t',['../d2/d6e/syscalls_8h.html#a26c7083c9eaca35069347ed4e00813fd',1,'syscalls.h']]],
   ['_5f_5fsys_5fw_5fok_128',['__SYS_W_OK',['../d2/d6e/syscalls_8h.html#a1b1a32a2c40ebd73520ed18f3dc1f2adacae52f76d1c14f4e183fa55e93acf039',1,'syscalls.h']]],
-  ['_5f_5fsys_5fx_5fok_129',['__SYS_X_OK',['../d2/d6e/syscalls_8h.html#a1b1a32a2c40ebd73520ed18f3dc1f2ada00e46ad06c15293e550daf1837e20c82',1,'syscalls.h']]],
-  ['_5fpic_5feoi_130',['_PIC_EOI',['../d1/de1/aip_8h.html#a8305f30b16326e7c511e03ddce6c6961',1,'aip.h']]]
+  ['_5f_5fsys_5fx_5fok_129',['__SYS_X_OK',['../d2/d6e/syscalls_8h.html#a1b1a32a2c40ebd73520ed18f3dc1f2ada00e46ad06c15293e550daf1837e20c82',1,'syscalls.h']]]
 ];

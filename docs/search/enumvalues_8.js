@@ -10,19 +10,5 @@ var searchData=
   ['pci_5fcommand_5fserr_7',['PCI_COMMAND_SERR',['../d9/d97/pci_8h.html#ab7d0ea17dce7f541574a7f07737fd7a9a5a0c359da65c71e95b8c0b94f1ee9964',1,'pci.h']]],
   ['pci_5fcommand_5fspecial_8',['PCI_COMMAND_SPECIAL',['../d9/d97/pci_8h.html#ab7d0ea17dce7f541574a7f07737fd7a9a863ac4dcb61090a1e094d7eee753f94c',1,'pci.h']]],
   ['pci_5fcommand_5fvga_5fpalette_9',['PCI_COMMAND_VGA_PALETTE',['../d9/d97/pci_8h.html#ab7d0ea17dce7f541574a7f07737fd7a9aaacae44e40ad2fbbb1d610d456a11a25',1,'pci.h']]],
-  ['pci_5fcommand_5fwait_10',['PCI_COMMAND_WAIT',['../d9/d97/pci_8h.html#ab7d0ea17dce7f541574a7f07737fd7a9a60e658286d9486fbcbf5b35b41e7b237',1,'pci.h']]],
-  ['ps2_5fkbd_5fled_5fcaps_5flock_11',['PS2_KBD_LED_CAPS_LOCK',['../d1/de1/aip_8h.html#a9a7a0249339e911c4a1c3ec0c7c94cbca80fa56c37e35327ab30585f1093695ad',1,'aip.h']]],
-  ['ps2_5fkbd_5fled_5fnum_5flock_12',['PS2_KBD_LED_NUM_LOCK',['../d1/de1/aip_8h.html#a9a7a0249339e911c4a1c3ec0c7c94cbcabd6d7f2afaa27f8056a7b34a1d48400b',1,'aip.h']]],
-  ['ps2_5fkbd_5fled_5fscroll_5flock_13',['PS2_KBD_LED_SCROLL_LOCK',['../d1/de1/aip_8h.html#a9a7a0249339e911c4a1c3ec0c7c94cbca371d0631f3e4cc5e96abe555e47fef7d',1,'aip.h']]],
-  ['ps2_5fkbd_5fsc_5fset_5f1_14',['PS2_KBD_SC_SET_1',['../d1/de1/aip_8h.html#a298a99937859237aa2f19ee87436c3e4a7e0e395183152f3e37e9475a96f11b2e',1,'aip.h']]],
-  ['ps2_5fkbd_5fsc_5fset_5f2_15',['PS2_KBD_SC_SET_2',['../d1/de1/aip_8h.html#a298a99937859237aa2f19ee87436c3e4a9ef0041dce55959183fa4fa24f618968',1,'aip.h']]],
-  ['ps2_5fkbd_5fsc_5fset_5f3_16',['PS2_KBD_SC_SET_3',['../d1/de1/aip_8h.html#a298a99937859237aa2f19ee87436c3e4a1abdcf6b613c2fcbff74268db121e34a',1,'aip.h']]],
-  ['ps2_5fkbd_5fscan_5fcode_5fget_5fcurrent_17',['PS2_KBD_SCAN_CODE_GET_CURRENT',['../d1/de1/aip_8h.html#a298a99937859237aa2f19ee87436c3e4a2251b650209d2abf9c98f3e45e3cf5c6',1,'aip.h']]],
-  ['ps2_5fkbd_5fscan_5fcode_5fset_5f1_18',['PS2_KBD_SCAN_CODE_SET_1',['../d1/de1/aip_8h.html#a298a99937859237aa2f19ee87436c3e4ab6a12143a58e1487e9d6e3b533cd6c9b',1,'aip.h']]],
-  ['ps2_5fkbd_5fscan_5fcode_5fset_5f2_19',['PS2_KBD_SCAN_CODE_SET_2',['../d1/de1/aip_8h.html#a298a99937859237aa2f19ee87436c3e4a611a5a1d2655245ba7ed1ec6f6e6055c',1,'aip.h']]],
-  ['ps2_5fkbd_5fscan_5fcode_5fset_5f3_20',['PS2_KBD_SCAN_CODE_SET_3',['../d1/de1/aip_8h.html#a298a99937859237aa2f19ee87436c3e4a2a3158fc36b4fdf627d248303a6ede20',1,'aip.h']]],
-  ['ps2_5fmouse_5fres_5f1_21',['PS2_MOUSE_RES_1',['../d1/de1/aip_8h.html#aed07baf84b6821e47550c706b103fad7a856a1c6cc3a816158e945299c040c7a7',1,'aip.h']]],
-  ['ps2_5fmouse_5fres_5f2_22',['PS2_MOUSE_RES_2',['../d1/de1/aip_8h.html#aed07baf84b6821e47550c706b103fad7a32e6b1eb4bbb5014ef437e81fa1aaf15',1,'aip.h']]],
-  ['ps2_5fmouse_5fres_5f4_23',['PS2_MOUSE_RES_4',['../d1/de1/aip_8h.html#aed07baf84b6821e47550c706b103fad7ad06de8d5228edc910b2a45ef3f64d11c',1,'aip.h']]],
-  ['ps2_5fmouse_5fres_5f8_24',['PS2_MOUSE_RES_8',['../d1/de1/aip_8h.html#aed07baf84b6821e47550c706b103fad7aaadc22beea4ed7609400ddb1bd1e81c2',1,'aip.h']]]
+  ['pci_5fcommand_5fwait_10',['PCI_COMMAND_WAIT',['../d9/d97/pci_8h.html#ab7d0ea17dce7f541574a7f07737fd7a9a60e658286d9486fbcbf5b35b41e7b237',1,'pci.h']]]
 ];

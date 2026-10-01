@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['superblockoperations_0',['SuperBlockOperations',['../d2/d55/structSuperBlockOperations.html',1,'']]]
+  ['touchscreenreport_0',['TouchScreenReport',['../de/ded/input_8h.html#d1/df2/structTouchScreenReport',1,'']]]
 ];

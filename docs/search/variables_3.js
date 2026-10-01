@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['c_5fport_5fconnection_0',['c_port_connection',['../dc/de4/usb_8h.html#ae0c50ce312153bfc94f5c30091d02e1c',1,'.__unnamed52__::C_PORT_CONNECTION'],['../dc/de4/usb_8h.html#ae0c50ce312153bfc94f5c30091d02e1c',1,'USBPortStatus.wPortChange.__unnamed46__::C_PORT_CONNECTION']]],
-  ['c_5fport_5fenable_1',['c_port_enable',['../dc/de4/usb_8h.html#ad878656e48dab047c2c29fa61c2d148b',1,'USBPortStatus.wPortChange.__unnamed46__::C_PORT_ENABLE'],['../dc/de4/usb_8h.html#ad878656e48dab047c2c29fa61c2d148b',1,'.__unnamed52__::C_PORT_ENABLE']]],
-  ['c_5fport_5fover_5fcurrent_2',['c_port_over_current',['../dc/de4/usb_8h.html#a2f7cc620f2b1310b1c78c31618bf8259',1,'USBPortStatus.wPortChange.__unnamed46__::C_PORT_OVER_CURRENT'],['../dc/de4/usb_8h.html#a2f7cc620f2b1310b1c78c31618bf8259',1,'.__unnamed52__::C_PORT_OVER_CURRENT']]],
-  ['c_5fport_5freset_3',['c_port_reset',['../dc/de4/usb_8h.html#a441236095df05d77e2dd236c6c7e4a8f',1,'USBPortStatus.wPortChange.__unnamed46__::C_PORT_RESET'],['../dc/de4/usb_8h.html#a441236095df05d77e2dd236c6c7e4a8f',1,'.__unnamed52__::C_PORT_RESET']]],
-  ['c_5fport_5fsuspend_4',['c_port_suspend',['../dc/de4/usb_8h.html#a0dccdb7cd734d0a15bb06a9da270cf37',1,'USBPortStatus.wPortChange.__unnamed46__::C_PORT_SUSPEND'],['../dc/de4/usb_8h.html#a0dccdb7cd734d0a15bb06a9da270cf37',1,'.__unnamed52__::C_PORT_SUSPEND']]],
+  ['c_5fport_5fconnection_0',['c_port_connection',['../dc/de4/usb_8h.html#ae0c50ce312153bfc94f5c30091d02e1c',1,'.__unnamed40__::C_PORT_CONNECTION'],['../dc/de4/usb_8h.html#ae0c50ce312153bfc94f5c30091d02e1c',1,'USBPortStatus.wPortChange.__unnamed34__::C_PORT_CONNECTION']]],
+  ['c_5fport_5fenable_1',['c_port_enable',['../dc/de4/usb_8h.html#ad878656e48dab047c2c29fa61c2d148b',1,'USBPortStatus.wPortChange.__unnamed34__::C_PORT_ENABLE'],['../dc/de4/usb_8h.html#ad878656e48dab047c2c29fa61c2d148b',1,'.__unnamed40__::C_PORT_ENABLE']]],
+  ['c_5fport_5fover_5fcurrent_2',['c_port_over_current',['../dc/de4/usb_8h.html#a2f7cc620f2b1310b1c78c31618bf8259',1,'USBPortStatus.wPortChange.__unnamed34__::C_PORT_OVER_CURRENT'],['../dc/de4/usb_8h.html#a2f7cc620f2b1310b1c78c31618bf8259',1,'.__unnamed40__::C_PORT_OVER_CURRENT']]],
+  ['c_5fport_5freset_3',['c_port_reset',['../dc/de4/usb_8h.html#a441236095df05d77e2dd236c6c7e4a8f',1,'USBPortStatus.wPortChange.__unnamed34__::C_PORT_RESET'],['../dc/de4/usb_8h.html#a441236095df05d77e2dd236c6c7e4a8f',1,'.__unnamed40__::C_PORT_RESET']]],
+  ['c_5fport_5fsuspend_4',['c_port_suspend',['../dc/de4/usb_8h.html#a0dccdb7cd734d0a15bb06a9da270cf37',1,'USBPortStatus.wPortChange.__unnamed34__::C_PORT_SUSPEND'],['../dc/de4/usb_8h.html#a0dccdb7cd734d0a15bb06a9da270cf37',1,'.__unnamed40__::C_PORT_SUSPEND']]],
   ['cachelinesize_5',['CacheLineSize',['../d9/d97/pci_8h.html#a5203ccd0486a21671341f4bb00c89b4b',1,'__attribute__']]],
   ['cancelurb_6',['CancelURB',['../d2/d22/structUSBController.html#abd483a952b52c8db907c57e0a39415c9',1,'USBController']]],
   ['capabilities_7',['capabilities',['../df/d26/fs_8h.html#a2574a851a68bf7e94b081586ac0fadd4',1,'FileSystemInfo::Capabilities'],['../df/d26/fs_8h.html#a1e190b7f0133183d91cc71fc8d47ed0c',1,'Capabilities:&#160;fs.h']]],
@@ -17,10 +17,9 @@ var searchData=
   ['class_14',['Class',['../d9/d97/pci_8h.html#a10dff2b27b0c182ac0428796e1ab083d',1,'__attribute__']]],
   ['close_15',['close',['../db/de6/structInodeOperations.html#ab9c62336bdce356caa7d165b86371e7f',1,'InodeOperations::Close'],['../df/d26/fs_8h.html#a00f03806ee4724ff3e44372909ab378b',1,'Close:&#160;fs.h']]],
   ['command_16',['Command',['../d9/d97/pci_8h.html#af7007d29612482dce21e79e4db0fd2b8',1,'__attribute__']]],
-  ['commanddata_17',['CommandData',['../d1/de1/aip_8h.html#ad3c1a945d3b7f0aa9f0bbcb1bdc77d37',1,'PS2_STATUSES.__unnamed1__']]],
-  ['complete_18',['Complete',['../d8/dd1/structUSBRequestBlock.html#a85f8a3801424af3f0273571b5d8821ef',1,'USBRequestBlock']]],
-  ['completioncontext_19',['CompletionContext',['../d8/dd1/structUSBRequestBlock.html#a6a827feabc610265a8877d7acec88387',1,'USBRequestBlock']]],
-  ['config_20',['Config',['../d9/d97/pci_8h.html#aae7dbeb87dc97e9e2b3befb18fe075af',1,'__attribute__']]],
-  ['controller_21',['Controller',['../dc/de4/usb_8h.html#ab479ed0c9cc301ca9527ff548dc752d1',1,'USBDevice']]],
-  ['create_22',['create',['../db/de6/structInodeOperations.html#abed9ba869733a00a02a41a3ea9765bda',1,'InodeOperations::Create'],['../df/d26/fs_8h.html#a2e6d2e5dc031b51fc6f466515b4d3b3e',1,'Create:&#160;fs.h']]]
+  ['complete_17',['Complete',['../d8/dd1/structUSBRequestBlock.html#a85f8a3801424af3f0273571b5d8821ef',1,'USBRequestBlock']]],
+  ['completioncontext_18',['CompletionContext',['../d8/dd1/structUSBRequestBlock.html#a6a827feabc610265a8877d7acec88387',1,'USBRequestBlock']]],
+  ['config_19',['Config',['../d9/d97/pci_8h.html#aae7dbeb87dc97e9e2b3befb18fe075af',1,'__attribute__']]],
+  ['controller_20',['Controller',['../dc/de4/usb_8h.html#ab479ed0c9cc301ca9527ff548dc752d1',1,'USBDevice']]],
+  ['create_21',['create',['../db/de6/structInodeOperations.html#abed9ba869733a00a02a41a3ea9765bda',1,'InodeOperations::Create'],['../df/d26/fs_8h.html#a2e6d2e5dc031b51fc6f466515b4d3b3e',1,'Create:&#160;fs.h']]]
 ];

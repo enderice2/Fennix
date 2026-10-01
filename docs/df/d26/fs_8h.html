@@ -578,7 +578,7 @@ Block</td>
 Block Device. <p>If the device is a block device, this will be non-NULL. </p>
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a8bec4f04ae605c9a4695cd78904ddbe3" name="a8bec4f04ae605c9a4695cd78904ddbe3"></a>struct <a class="el" href="../../df/d26/fs_8h.html#d0/d03/structFileSystemDevice_8inode">FileSystemDevice.inode</a></td>
+<a id="a67de6bb1c2136502fe7fed212b794bbb" name="a67de6bb1c2136502fe7fed212b794bbb"></a>struct <a class="el" href="../../df/d26/fs_8h.html#d0/d03/structFileSystemDevice_8inode">FileSystemDevice.inode</a></td>
 <td class="fieldname">
 inode</td>
 <td class="fielddoc">
@@ -904,7 +904,7 @@ ops</td>
 <div class="line"><span class="lineno">  329</span>    {</div>
 <div class="line"><span class="lineno">  335</span>        <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d26/fs_8h.html#d6/d59/structInode">Inode</a> *node;</div>
 <div class="line"><span class="lineno">  336</span>        <span class="keyword">struct </span><a class="code hl_struct" href="../../db/de6/structInodeOperations.html">InodeOperations</a> *ops;</div>
-<div class="line"><span class="lineno">  337</span>    } <a class="code hl_variable" href="../../df/d26/fs_8h.html#a8bec4f04ae605c9a4695cd78904ddbe3">inode</a>;</div>
+<div class="line"><span class="lineno">  337</span>    } <a class="code hl_variable" href="../../df/d26/fs_8h.html#a67de6bb1c2136502fe7fed212b794bbb">inode</a>;</div>
 <div class="line"><span class="lineno">  338</span> </div>
 <div class="line"><span class="lineno">  344</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../de/d40/block_8h.html#da/df6/structBlockDevice">BlockDevice</a> *<a class="code hl_variable" href="../../df/d26/fs_8h.html#ae311d9d0d76dbba597183a4a934720b4">Block</a>;</div>
 <div class="line"><span class="lineno">  345</span>};</div>
@@ -967,9 +967,9 @@ ops</td>
 <div class="ttc" id="afs_8h_html_a5f5c45d347b3cbe34597e57c04967e8b"><div class="ttname"><a href="../../df/d26/fs_8h.html#a5f5c45d347b3cbe34597e57c04967e8b">Write</a></div><div class="ttdeci">ssize_t(* Write)(struct Inode *Node, const void *Buffer, size_t Size, off_t Offset)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d26/fs_8h_source.html#l00005">fs.h:5</a></div></div>
 <div class="ttc" id="afs_8h_html_a667a06765053832b0e364d352d331481"><div class="ttname"><a href="../../df/d26/fs_8h.html#a667a06765053832b0e364d352d331481">Inode::Mode</a></div><div class="ttdeci">mode_t Mode</div><div class="ttdef"><b>Definition</b> <a href="../../df/d26/fs_8h_source.html#l00248">fs.h:248</a></div></div>
 <div class="ttc" id="afs_8h_html_a6755c486906051ec7d4fd52fa1895d51"><div class="ttname"><a href="../../df/d26/fs_8h.html#a6755c486906051ec7d4fd52fa1895d51">__attribute__</a></div><div class="ttdeci">struct FileSystemDevice __attribute__</div></div>
+<div class="ttc" id="afs_8h_html_a67de6bb1c2136502fe7fed212b794bbb"><div class="ttname"><a href="../../df/d26/fs_8h.html#a67de6bb1c2136502fe7fed212b794bbb">FileSystemDevice::inode</a></div><div class="ttdeci">struct FileSystemDevice::@2 inode</div></div>
 <div class="ttc" id="afs_8h_html_a75f4deeb21caf3c4150e515e19913349"><div class="ttname"><a href="../../df/d26/fs_8h.html#a75f4deeb21caf3c4150e515e19913349">RegisterFileSystem</a></div><div class="ttdeci">dev_t RegisterFileSystem(struct FileSystemInfo *Info, struct Inode *Root)</div></div>
 <div class="ttc" id="afs_8h_html_a760b4e07b204e4852e7fb55e25567623"><div class="ttname"><a href="../../df/d26/fs_8h.html#a760b4e07b204e4852e7fb55e25567623">Name</a></div><div class="ttdeci">const char * Name</div><div class="ttdef"><b>Definition</b> <a href="../../df/d26/fs_8h_source.html#l00000">fs.h:0</a></div></div>
-<div class="ttc" id="afs_8h_html_a8bec4f04ae605c9a4695cd78904ddbe3"><div class="ttname"><a href="../../df/d26/fs_8h.html#a8bec4f04ae605c9a4695cd78904ddbe3">FileSystemDevice::inode</a></div><div class="ttdeci">struct FileSystemDevice::@14 inode</div></div>
 <div class="ttc" id="afs_8h_html_a9441374ba1bef439109da976a8048bb9"><div class="ttname"><a href="../../df/d26/fs_8h.html#a9441374ba1bef439109da976a8048bb9">Rename</a></div><div class="ttdeci">int(* Rename)(struct Inode *Parent, const char *OldName, const char *NewName)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d26/fs_8h_source.html#l00003">fs.h:3</a></div></div>
 <div class="ttc" id="afs_8h_html_a98adbbae239ee188f2a5cb61d1564ad1"><div class="ttname"><a href="../../df/d26/fs_8h.html#a98adbbae239ee188f2a5cb61d1564ad1">Stat</a></div><div class="ttdeci">int(* Stat)(struct Inode *Node, struct kstat *Stat)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d26/fs_8h_source.html#l00016">fs.h:16</a></div></div>
 <div class="ttc" id="afs_8h_html_a9ca9828444d899586f97c6c9a4d5d5f0"><div class="ttname"><a href="../../df/d26/fs_8h.html#a9ca9828444d899586f97c6c9a4d5d5f0">SymLink</a></div><div class="ttdeci">int(* SymLink)(struct Inode *Parent, const char *Name, const char *Target, struct Inode **Result)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d26/fs_8h_source.html#l00013">fs.h:13</a></div></div>
@@ -2765,7 +2765,7 @@ ops</td>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_52bed8acfaac088d5968cb2c84d7645d.html">Kernel</a></li><li class="navelem"><a class="el" href="../../dir_2c335c1ccbf6ef7c89cc08c9ed88be2e.html">include</a></li><li class="navelem"><a class="el" href="../../dir_811a06ffcfc34bd0f88967f0406a39f5.html">interface</a></li><li class="navelem"><a class="el" href="../../df/d26/fs_8h.html">fs.h</a></li>
-    <li class="footer">Generated on Mon Feb 16 2026 15:59:51 for Fennix by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Oct 1 2026 02:08:40 for Fennix by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

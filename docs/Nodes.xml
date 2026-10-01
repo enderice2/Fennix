@@ -38,31 +38,9 @@
           <Path>annotated.html</Path>
         <Subnodes>
            <Node>
-            <Name>.__unnamed20__</Name>
+            <Name>.__unnamed26__</Name>
             <Path>dc/de4/usb_8h.html</Path>
-            <Anchor>d9/d38/struct_8____unnamed20____</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>Direction</Name>
-              <Path>dc/de4/usb_8h.html</Path>
-              <Anchor>a02674a4ef33e11c879283629996c8ff8</Anchor>
-             </Node>
-             <Node>
-              <Name>Recipient</Name>
-              <Path>dc/de4/usb_8h.html</Path>
-              <Anchor>a5d6103b662f41b07e10687f03aca8fdc</Anchor>
-             </Node>
-             <Node>
-              <Name>Type</Name>
-              <Path>dc/de4/usb_8h.html</Path>
-              <Anchor>aa1fa27779242b4902f7ae3bdd5c6d508</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>.__unnamed38__</Name>
-            <Path>dc/de4/usb_8h.html</Path>
-            <Anchor>d8/d78/struct_8____unnamed38____</Anchor>
+            <Anchor>df/de8/struct_8____unnamed26____</Anchor>
           <Subnodes>
              <Node>
               <Name>__reserved</Name>
@@ -82,9 +60,9 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>.__unnamed40__</Name>
+            <Name>.__unnamed28__</Name>
             <Path>dc/de4/usb_8h.html</Path>
-            <Anchor>d7/d4b/struct_8____unnamed40____</Anchor>
+            <Anchor>d4/d60/struct_8____unnamed28____</Anchor>
           <Subnodes>
              <Node>
               <Name>__reserved</Name>
@@ -104,9 +82,9 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>.__unnamed50__</Name>
+            <Name>.__unnamed38__</Name>
             <Path>dc/de4/usb_8h.html</Path>
-            <Anchor>d8/dc4/struct_8____unnamed50____</Anchor>
+            <Anchor>d8/d78/struct_8____unnamed38____</Anchor>
           <Subnodes>
              <Node>
               <Name>__reserved0</Name>
@@ -171,9 +149,9 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>.__unnamed52__</Name>
+            <Name>.__unnamed40__</Name>
             <Path>dc/de4/usb_8h.html</Path>
-            <Anchor>d4/da7/struct_8____unnamed52____</Anchor>
+            <Anchor>d7/d4b/struct_8____unnamed40____</Anchor>
           <Subnodes>
              <Node>
               <Name>__reserved0</Name>
@@ -204,6 +182,28 @@
               <Name>C_PORT_SUSPEND</Name>
               <Path>dc/de4/usb_8h.html</Path>
               <Anchor>a0dccdb7cd734d0a15bb06a9da270cf37</Anchor>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
+            <Name>.__unnamed8__</Name>
+            <Path>dc/de4/usb_8h.html</Path>
+            <Anchor>de/d13/struct_8____unnamed8____</Anchor>
+          <Subnodes>
+             <Node>
+              <Name>Direction</Name>
+              <Path>dc/de4/usb_8h.html</Path>
+              <Anchor>a02674a4ef33e11c879283629996c8ff8</Anchor>
+             </Node>
+             <Node>
+              <Name>Recipient</Name>
+              <Path>dc/de4/usb_8h.html</Path>
+              <Anchor>a5d6103b662f41b07e10687f03aca8fdc</Anchor>
+             </Node>
+             <Node>
+              <Name>Type</Name>
+              <Path>dc/de4/usb_8h.html</Path>
+              <Anchor>aa1fa27779242b4902f7ae3bdd5c6d508</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -739,7 +739,7 @@
              <Node>
               <Name>inode</Name>
               <Path>df/d26/fs_8h.html</Path>
-              <Anchor>a8bec4f04ae605c9a4695cd78904ddbe3</Anchor>
+              <Anchor>a67de6bb1c2136502fe7fed212b794bbb</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -1081,9 +1081,9 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>InputReport.__unnamed13__</Name>
+            <Name>InputReport.__unnamed1__</Name>
             <Path>de/ded/input_8h.html</Path>
-            <Anchor>de/d5c/unionInputReport_8____unnamed13____</Anchor>
+            <Anchor>dd/d98/unionInputReport_8____unnamed1____</Anchor>
           <Subnodes>
              <Node>
               <Name>Accelerometer</Name>
@@ -1375,268 +1375,6 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>PS2_CONFIGURATION</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>d5/d42/unionPS2__CONFIGURATION</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>Raw</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>aabcce9d04cf80862c31c591b284ee358</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>PS2_CONFIGURATION.__unnamed3__</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>d4/dae/structPS2__CONFIGURATION_8____unnamed3____</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>Port1Clock</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a44c6b11fcf9b6a9a6e7fe2a969b58b0f</Anchor>
-             </Node>
-             <Node>
-              <Name>Port1Interrupt</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a78e48bc7d4778ddc8e647ec195da3e1a</Anchor>
-             </Node>
-             <Node>
-              <Name>Port1Translation</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>af4c84ba01a644fbe45e4b9e09f827168</Anchor>
-             </Node>
-             <Node>
-              <Name>Port2Clock</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>aeeefe959ba7eabe712b1a3039d4d7ec7</Anchor>
-             </Node>
-             <Node>
-              <Name>Port2Interrupt</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>ab139fbe5dc1f6fb378c6de7168ad4254</Anchor>
-             </Node>
-             <Node>
-              <Name>SystemFlag</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>acc8252d0e5a2a96ee791ee05c333bb56</Anchor>
-             </Node>
-             <Node>
-              <Name>Zero0</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>ad31cba1790c6843a18adfc7ddfcee23e</Anchor>
-             </Node>
-             <Node>
-              <Name>Zero1</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>ac1bea7eee679d45845dc20ba9cc0cc20</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>PS2_KBD_TYPEMATIC</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>d5/d94/unionPS2__KBD__TYPEMATIC</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>Raw</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a1c786a0ac638f742e31267026602ac54</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>PS2_KBD_TYPEMATIC.__unnamed7__</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>db/dee/structPS2__KBD__TYPEMATIC_8____unnamed7____</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>Delay</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a8f497c1a3d15af9e0c215019f26b887d</Anchor>
-             </Node>
-             <Node>
-              <Name>RepeatRate</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>ab0a4e5ca864ccf625afe5cbd853b490c</Anchor>
-             </Node>
-             <Node>
-              <Name>Zero</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>ad7ed4ee1df437474d005188535f74875</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>PS2_MOUSE_PACKET</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>d3/d18/structPS2__MOUSE__PACKET</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>Base</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>ae07d9573c7ae9aa7d734e43ab74d88b3</Anchor>
-             </Node>
-             <Node>
-              <Name>XMovement</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a03984accdad77fa5280f8724510170d4</Anchor>
-             </Node>
-             <Node>
-              <Name>YMovement</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>ae7ed739b075fbfcabddfb598f2ebb912</Anchor>
-             </Node>
-             <Node>
-              <Name>ZMovement</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>acc274a47b2ec66d6731ec91b274e1423</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>PS2_MOUSE_PACKET.Base</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>d0/df2/unionPS2__MOUSE__PACKET_8Base</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>Raw</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a65e65c8ab0d8609ce12fc68a03cb8e00</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>PS2_MOUSE_PACKET.ZMovement</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>d3/d3e/unionPS2__MOUSE__PACKET_8ZMovement</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>Raw</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a65e65c8ab0d8609ce12fc68a03cb8e00</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>PS2_OUTPUT_PORT</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>da/dc6/unionPS2__OUTPUT__PORT</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>Raw</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a6f55d35c117c53b1aa5b104e550674dd</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>PS2_OUTPUT_PORT.__unnamed5__</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>de/d3a/structPS2__OUTPUT__PORT_8____unnamed5____</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>A20Gate</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>ab24700857c7c1e39353a7d8d12212ee9</Anchor>
-             </Node>
-             <Node>
-              <Name>Port1InputBufferFull</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>aba33c9a5143b225eab7df62ac376741f</Anchor>
-             </Node>
-             <Node>
-              <Name>Port1OutputBufferFull</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>acd4e8faa0cb2df34eef242730f9abbcf</Anchor>
-             </Node>
-             <Node>
-              <Name>Port2Clock</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>aeeefe959ba7eabe712b1a3039d4d7ec7</Anchor>
-             </Node>
-             <Node>
-              <Name>Port2Data</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a88d3c2504556b9c06accac2642e8a48b</Anchor>
-             </Node>
-             <Node>
-              <Name>Port2InputBufferFull</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>ac2d9dfb2e7ccc41b0869944f6de082e9</Anchor>
-             </Node>
-             <Node>
-              <Name>Port2OutputBufferFull</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a04a22d5db50e8333c482419e9bbd2d78</Anchor>
-             </Node>
-             <Node>
-              <Name>SystemReset</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a993f0a6346847628c86bbcf1cf306236</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>PS2_STATUSES</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>d7/d48/unionPS2__STATUSES</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>Raw</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a0aeb1f673a677a69047678d8dc1550d1</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>PS2_STATUSES.__unnamed1__</Name>
-            <Path>d1/de1/aip_8h.html</Path>
-            <Anchor>dd/d0d/structPS2__STATUSES_8____unnamed1____</Anchor>
-          <Subnodes>
-             <Node>
-              <Name>CommandData</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>ad3c1a945d3b7f0aa9f0bbcb1bdc77d37</Anchor>
-             </Node>
-             <Node>
-              <Name>InputBufferFull</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a999955f00254a1ec83b388b8142ac5e6</Anchor>
-             </Node>
-             <Node>
-              <Name>OutputBufferFull</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>aa9b7be021da7a0ec83d707bd42740f3d</Anchor>
-             </Node>
-             <Node>
-              <Name>ParityError</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a63440a36bf6fd0748b3c188f3e9fda78</Anchor>
-             </Node>
-             <Node>
-              <Name>SystemFlag</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>acc8252d0e5a2a96ee791ee05c333bb56</Anchor>
-             </Node>
-             <Node>
-              <Name>TimeoutError</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a2ce01afd7e833fc13c63448689ea762a</Anchor>
-             </Node>
-             <Node>
-              <Name>Unknown1</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>a28c5637b237d55031f1b3772d731c041</Anchor>
-             </Node>
-             <Node>
-              <Name>Unknown2</Name>
-              <Path>d1/de1/aip_8h.html</Path>
-              <Anchor>afe489f6ef777e98956c00038b863eb0f</Anchor>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
             <Name>SuperBlockOperations</Name>
             <Path>d2/d55/structSuperBlockOperations.html</Path>
           <Subnodes>
@@ -1907,7 +1645,7 @@
              <Node>
               <Name>bmRequestType</Name>
               <Path>dc/de4/usb_8h.html</Path>
-              <Anchor>a12c370e2ab1046c1a0fffdde5feb5517</Anchor>
+              <Anchor>a39344ebf5d88c8fb08162949cbe1d999</Anchor>
              </Node>
              <Node>
               <Name>bRequest</Name>
@@ -1944,9 +1682,9 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>USBDeviceRequest.bmRequestType.__unnamed17__</Name>
+            <Name>USBDeviceRequest.bmRequestType.__unnamed5__</Name>
             <Path>dc/de4/usb_8h.html</Path>
-            <Anchor>df/dc4/structUSBDeviceRequest_8bmRequestType_8____unnamed17____</Anchor>
+            <Anchor>d6/dcd/structUSBDeviceRequest_8bmRequestType_8____unnamed5____</Anchor>
           <Subnodes>
              <Node>
               <Name>Direction</Name>
@@ -2062,7 +1800,7 @@
              <Node>
               <Name>Descriptor</Name>
               <Path>dc/de4/usb_8h.html</Path>
-              <Anchor>a03da6f0d0b37df56696d448f5645caed</Anchor>
+              <Anchor>a4c892f3e4cf5f65fcdf4d06c85edca20</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -2116,7 +1854,7 @@
              <Node>
               <Name>u</Name>
               <Path>dc/de4/usb_8h.html</Path>
-              <Anchor>a900ca1bff68c04899e97ffff989b049a</Anchor>
+              <Anchor>af42b6552e058e2388fb824cf34ddb070</Anchor>
              </Node>
              <Node>
               <Name>wHubCharacteristics</Name>
@@ -2138,12 +1876,12 @@
              <Node>
               <Name>wHubChange</Name>
               <Path>dc/de4/usb_8h.html</Path>
-              <Anchor>a6060ab0a49b0292d94efe9eaff1a5951</Anchor>
+              <Anchor>a37a6423c1621fcdd9f1063bc66402b4a</Anchor>
              </Node>
              <Node>
               <Name>wHubStatus</Name>
               <Path>dc/de4/usb_8h.html</Path>
-              <Anchor>a271a94558ca87274b450baed0e8d7bf1</Anchor>
+              <Anchor>ada28b450e81b729803227d47546d51d0</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -2160,9 +1898,9 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>USBHubStatus.wHubChange.__unnamed34__</Name>
+            <Name>USBHubStatus.wHubChange.__unnamed22__</Name>
             <Path>dc/de4/usb_8h.html</Path>
-            <Anchor>d7/ddd/structUSBHubStatus_8wHubChange_8____unnamed34____</Anchor>
+            <Anchor>d6/da5/structUSBHubStatus_8wHubChange_8____unnamed22____</Anchor>
           <Subnodes>
              <Node>
               <Name>__reserved</Name>
@@ -2194,9 +1932,9 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>USBHubStatus.wHubStatus.__unnamed32__</Name>
+            <Name>USBHubStatus.wHubStatus.__unnamed20__</Name>
             <Path>dc/de4/usb_8h.html</Path>
-            <Anchor>d5/dec/structUSBHubStatus_8wHubStatus_8____unnamed32____</Anchor>
+            <Anchor>d0/ddb/structUSBHubStatus_8wHubStatus_8____unnamed20____</Anchor>
           <Subnodes>
              <Node>
               <Name>__reserved</Name>
@@ -2275,12 +2013,12 @@
              <Node>
               <Name>wPortChange</Name>
               <Path>dc/de4/usb_8h.html</Path>
-              <Anchor>af4e9bec224640cf2f9fb3eb10b315457</Anchor>
+              <Anchor>ab41fbdb22fbf6b7d598cdc212868217e</Anchor>
              </Node>
              <Node>
               <Name>wPortStatus</Name>
               <Path>dc/de4/usb_8h.html</Path>
-              <Anchor>a31ae13255cdb67e07cda92945803ae17</Anchor>
+              <Anchor>a07dff398b3006b166b99c0fa1369ae03</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -2297,9 +2035,9 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>USBPortStatus.wPortChange.__unnamed46__</Name>
+            <Name>USBPortStatus.wPortChange.__unnamed34__</Name>
             <Path>dc/de4/usb_8h.html</Path>
-            <Anchor>d1/d79/structUSBPortStatus_8wPortChange_8____unnamed46____</Anchor>
+            <Anchor>d7/d2e/structUSBPortStatus_8wPortChange_8____unnamed34____</Anchor>
           <Subnodes>
              <Node>
               <Name>__reserved0</Name>
@@ -2346,9 +2084,9 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>USBPortStatus.wPortStatus.__unnamed44__</Name>
+            <Name>USBPortStatus.wPortStatus.__unnamed32__</Name>
             <Path>dc/de4/usb_8h.html</Path>
-            <Anchor>db/d98/structUSBPortStatus_8wPortStatus_8____unnamed44____</Anchor>
+            <Anchor>d8/d42/structUSBPortStatus_8wPortStatus_8____unnamed32____</Anchor>
           <Subnodes>
              <Node>
               <Name>__reserved0</Name>
@@ -2755,870 +2493,6 @@
                 <Name>interface</Name>
                 <Path>dir_811a06ffcfc34bd0f88967f0406a39f5.html</Path>
               <Subnodes>
-                 <Node>
-                  <Name>aip.h</Name>
-                  <Path>d1/de1/aip_8h.html</Path>
-                <Subnodes>
-                   <Node>
-                    <Name>PS2_STATUSES</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>d7/d48/unionPS2__STATUSES</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>Raw</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a0aeb1f673a677a69047678d8dc1550d1</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CONFIGURATION</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>d5/d42/unionPS2__CONFIGURATION</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>Raw</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>aabcce9d04cf80862c31c591b284ee358</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_OUTPUT_PORT</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>da/dc6/unionPS2__OUTPUT__PORT</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>Raw</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a6f55d35c117c53b1aa5b104e550674dd</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_TYPEMATIC</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>d5/d94/unionPS2__KBD__TYPEMATIC</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>Raw</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a1c786a0ac638f742e31267026602ac54</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_PACKET</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>d3/d18/structPS2__MOUSE__PACKET</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>Base</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>ae07d9573c7ae9aa7d734e43ab74d88b3</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>XMovement</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a03984accdad77fa5280f8724510170d4</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>YMovement</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>ae7ed739b075fbfcabddfb598f2ebb912</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>ZMovement</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>acc274a47b2ec66d6731ec91b274e1423</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_STATUSES.__unnamed1__</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>dd/d0d/structPS2__STATUSES_8____unnamed1____</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>CommandData</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>ad3c1a945d3b7f0aa9f0bbcb1bdc77d37</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>InputBufferFull</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a999955f00254a1ec83b388b8142ac5e6</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>OutputBufferFull</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>aa9b7be021da7a0ec83d707bd42740f3d</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>ParityError</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a63440a36bf6fd0748b3c188f3e9fda78</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>SystemFlag</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>acc8252d0e5a2a96ee791ee05c333bb56</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>TimeoutError</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a2ce01afd7e833fc13c63448689ea762a</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Unknown1</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a28c5637b237d55031f1b3772d731c041</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Unknown2</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>afe489f6ef777e98956c00038b863eb0f</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CONFIGURATION.__unnamed3__</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>d4/dae/structPS2__CONFIGURATION_8____unnamed3____</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>Port1Clock</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a44c6b11fcf9b6a9a6e7fe2a969b58b0f</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Port1Interrupt</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a78e48bc7d4778ddc8e647ec195da3e1a</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Port1Translation</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>af4c84ba01a644fbe45e4b9e09f827168</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Port2Clock</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>aeeefe959ba7eabe712b1a3039d4d7ec7</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Port2Interrupt</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>ab139fbe5dc1f6fb378c6de7168ad4254</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>SystemFlag</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>acc8252d0e5a2a96ee791ee05c333bb56</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Zero0</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>ad31cba1790c6843a18adfc7ddfcee23e</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Zero1</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>ac1bea7eee679d45845dc20ba9cc0cc20</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_OUTPUT_PORT.__unnamed5__</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>de/d3a/structPS2__OUTPUT__PORT_8____unnamed5____</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>A20Gate</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>ab24700857c7c1e39353a7d8d12212ee9</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Port1InputBufferFull</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>aba33c9a5143b225eab7df62ac376741f</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Port1OutputBufferFull</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>acd4e8faa0cb2df34eef242730f9abbcf</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Port2Clock</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>aeeefe959ba7eabe712b1a3039d4d7ec7</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Port2Data</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a88d3c2504556b9c06accac2642e8a48b</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Port2InputBufferFull</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>ac2d9dfb2e7ccc41b0869944f6de082e9</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Port2OutputBufferFull</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a04a22d5db50e8333c482419e9bbd2d78</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>SystemReset</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a993f0a6346847628c86bbcf1cf306236</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_TYPEMATIC.__unnamed7__</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>db/dee/structPS2__KBD__TYPEMATIC_8____unnamed7____</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>Delay</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a8f497c1a3d15af9e0c215019f26b887d</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>RepeatRate</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>ab0a4e5ca864ccf625afe5cbd853b490c</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Zero</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>ad7ed4ee1df437474d005188535f74875</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_PACKET.Base</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>d0/df2/unionPS2__MOUSE__PACKET_8Base</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>Raw</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a65e65c8ab0d8609ce12fc68a03cb8e00</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_PACKET.ZMovement</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>d3/d3e/unionPS2__MOUSE__PACKET_8ZMovement</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>Raw</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a65e65c8ab0d8609ce12fc68a03cb8e00</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>_PIC_EOI</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a8305f30b16326e7c511e03ddce6c6961</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PIC1_CMD</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a4c4c538b4d0809530a26a7a6d4469259</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PIC1_DATA</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>af27e966ec947ca1172f30ae301c5f24b</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PIC2_CMD</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ae21e6e278037d30c9548e2fbb4308306</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PIC2_DATA</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ab6d3b9f6f427357310896adf176145f1</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_ACK</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>aae27b4e03e27b850f66cf5f46ed30530</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a349f6d70cf357fe295324ef26b1de859</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_COPY_INPUT_0_3_TO_4_7_STATUS</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>af934e2ef5888d9ffd9fc9d1d18368af9</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_COPY_INPUT_4_7_TO_4_7_STATUS</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a7203baf59eb90b5b0ad253e2373b9907</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_DIAGNOSTIC_DUMP</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a73785a9d50b49c041a68c2b5086b19a9</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_DISABLE_PORT_1</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>abceabf403342d3c3834bc41b96d4e05d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_DISABLE_PORT_2</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a8e760f710e8ad14e0b22dcbe2f6804fd</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_ENABLE_PORT_1</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>aa8b34d40c6d58af702ff8f6f656e9625</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_ENABLE_PORT_2</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a760516c47eeaf05775fc1fd81e339c73</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_PULSE_OUTPUT_LINE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a6c152c6f1649c23093a994c73b5ec3f3</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_READ_CONFIG</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a85b51743c17aecdd28ae941693da6c11</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_READ_CONFIG_N</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a3f626852e86177253c8cf1e1bcbbe1c1</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_READ_INPUT_PORT</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a17e275485045a87d7e66250bf0a3f7e7</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_READ_OUTPUT_PORT</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>adacccff83b034d25299dc29eca2788f0</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_TEST_CONTROLLER</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>aa33fc8f1e6eba7de0bf02c716fd5543c</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_TEST_PORT_1</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a7e5f986206d7889c8d0c7aa85365e0e0</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_TEST_PORT_2</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>aa7ab36cbcc7910e971c736401c9c36ee</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_WRITE_CONFIG</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a0aee664379c66e07a7bb3fdf96ac98e6</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_WRITE_CONFIG_N</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ae99951c9a825580da3cd19fad3032fcd</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_WRITE_NEXT_BYTE_TO_OUTPUT_PORT</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a2a9b984a4f47f73a34dbc145546f39ed</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_1_OUTPUT</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ad4f3cdf719d28a63ae05302ae4c64298</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_INPUT</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a477e63cb3f091426422de8d39d085343</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_CMD_WRITE_NEXT_BYTE_TO_PS2_PORT_2_OUTPUT</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a6ba1c2da3b2b02c2a2bcd324ead30aaf</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_DATA</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>afdbeabd6455ad1caf38d713be4945425</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_ALL_MAKE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>affc73ef21f75670e1632788ef763e347</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_ALL_MAKE_RELEASE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a0c0da13ca5919b091c19234acccb7472</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_ALL_TYPEMATIC</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>aeab72e1b339968e91de7ef6e177d4d46</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_ALL_TYPEMATIC_MAKE_RELEASE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>afb13f744c73bbff0b45c8b15aa95d1c2</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_DEFAULTS</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>acea9e4bf70511389b33df326074434ff</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_DISABLE_SCANNING</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a1e408ee85e43b8060fb268d265889f49</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_ECHO</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a8cfa2bad14d701597ac3214fd9b62d7f</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_ENABLE_SCANNING</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ad63145b6dc06948bae574cd024b2606f</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_IDENTIFY</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>af4ab5ae2b7058064dc5f1d0ce04473c6</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_RESEND</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a78e89eac04afa736620202a250b1652e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_RESET</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a7def054c2c4044f0d79a4242c1fab0f3</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_SCAN_CODE_SET</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a2e6a0f04e2a8f77ac8fc5ad284a64e9a</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_SET_LEDS</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a59c9a2227ea292bc16c9c65d6d092cbd</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_SPECIFIC_MAKE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a87304f876af426e63c40878fac95069b</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_SPECIFIC_MAKE_RELEASE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>adf07e1dd4c9e9623332e055a0670a61e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_SPECIFIC_TYPEMATIC</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>af9e177b9aefa0121328d0738105253a8</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_CMD_TYPEMATIC</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a40756f0aac46d870eb681a58dc372bfa</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_RESP_ACK</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>acd7c0c3c66f59b7c30bc4c427a1facb4</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_RESP_ECHO</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a522d2d21681a109cc7e49dff69d58e35</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_RESP_RESEND</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>aa34179ba1def0d1be4f8e7eff0eeded4</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_RESP_TEST_FAILED</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a934a0f9b95a6cd75d9a9886a690560c6</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_RESP_TEST_FAILED_2</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a2412d04c5199900f1fe5c6b03a1b833f</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_RESP_TEST_PASSED</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a2a20b18102384522a2f63bb3cd0baa4a</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_DISABLE_DATA_REPORTING</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ad5515a4dbe6bf00f285039e3ba7e1b74</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_ENABLE_DATA_REPORTING</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a59645119c76af5f8c5150065e372b841</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_GET_STATUS</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a8374733dd184ca602b8a2fc7af22cd17</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_READ_DATA</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>aea2e4c34ba825590bf3a1c23add124ea</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_READ_ID</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a92d821d3f64c1fda822aea140495d70e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_RESEND</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a9765ecf9e2e3d0bd6acd5a3c7c2618dc</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_RESET</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a81b027602f9a3813f9e6268ecde9b9bf</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_RESET_WRAP_MODE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a4dc8cdb101ee23fde5d4685ebcfc7d20</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_SET_DEFAULTS</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a01fa96b1f69bb77a3efae0ed30452f17</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_SET_REMOTE_MODE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a1e37d0fcb186f3089b6cc7302357b11f</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_SET_RESOLUTION</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a1670fa9e8c258966dc991035f7d700e5</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_SET_SAMPLE_RATE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a3446e4e7e8f773d4261ce35f13ba2981</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_SET_SCALING_1_1</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a8cf2e24dd34a0b528db4d9c415c3b957</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_SET_SCALING_2_1</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a5f7afa4d6bb52799b5b43f81723af25d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_SET_STREAM_MODE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a514ca9060abcc8c0170399d1be4cc1aa</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_CMD_SET_WRAP_MODE</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ac1d8f18884044daee1482cc7b167a761</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_RESP_ACK</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ac5bc0457a1c10ae362feb776532f5da9</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_RESP_RESEND</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>aac7fdb6df880b369a9a6ae86d8c5f12f</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_RESP_TEST_FAILED</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a598e51d51617a1d80aaf56e19ef872fc</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_RESP_TEST_PASSED</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a2c9c30e6c4f5213dabac40b2a501a93d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_STATUS</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a5011033b67ebce0ddc40f985c04832e1</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_TEST_FAILED</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ab807b48ac4960880a9107832b7b0f195</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_TEST_PASSED</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a76797708c65d0cbfc053424ebcbf82d7</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>WaitInput</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>aa964d7c1114a861480b1fea356404cf4</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>WaitOutput</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a553775c2f7c013ee400dffb01d596328</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_LEDS</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbc</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>PS2_KBD_LED_SCROLL_LOCK</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbca371d0631f3e4cc5e96abe555e47fef7d</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_KBD_LED_NUM_LOCK</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbcabd6d7f2afaa27f8056a7b34a1d48400b</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_KBD_LED_CAPS_LOCK</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a9a7a0249339e911c4a1c3ec0c7c94cbca80fa56c37e35327ab30585f1093695ad</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_KBD_SCAN_CODE_SET</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a298a99937859237aa2f19ee87436c3e4</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>PS2_KBD_SCAN_CODE_GET_CURRENT</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a298a99937859237aa2f19ee87436c3e4a2251b650209d2abf9c98f3e45e3cf5c6</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_KBD_SCAN_CODE_SET_1</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a298a99937859237aa2f19ee87436c3e4ab6a12143a58e1487e9d6e3b533cd6c9b</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_KBD_SCAN_CODE_SET_2</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a298a99937859237aa2f19ee87436c3e4a611a5a1d2655245ba7ed1ec6f6e6055c</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_KBD_SCAN_CODE_SET_3</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a298a99937859237aa2f19ee87436c3e4a2a3158fc36b4fdf627d248303a6ede20</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_KBD_SC_SET_1</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a298a99937859237aa2f19ee87436c3e4a7e0e395183152f3e37e9475a96f11b2e</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_KBD_SC_SET_2</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a298a99937859237aa2f19ee87436c3e4a9ef0041dce55959183fa4fa24f618968</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_KBD_SC_SET_3</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>a298a99937859237aa2f19ee87436c3e4a1abdcf6b613c2fcbff74268db121e34a</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>PS2_MOUSE_RESOLUTION</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>aed07baf84b6821e47550c706b103fad7</Anchor>
-                  <Subnodes>
-                     <Node>
-                      <Name>PS2_MOUSE_RES_1</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>aed07baf84b6821e47550c706b103fad7a856a1c6cc3a816158e945299c040c7a7</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_MOUSE_RES_2</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>aed07baf84b6821e47550c706b103fad7a32e6b1eb4bbb5014ef437e81fa1aaf15</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_MOUSE_RES_4</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>aed07baf84b6821e47550c706b103fad7ad06de8d5228edc910b2a45ef3f64d11c</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>PS2_MOUSE_RES_8</Name>
-                      <Path>d1/de1/aip_8h.html</Path>
-                      <Anchor>aed07baf84b6821e47550c706b103fad7aaadc22beea4ed7609400ddb1bd1e81c2</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>IRQ_MASK</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a47eacd96b732a39b728fed2402f9210b</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>IRQ_UNMASK</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>abb94e8ea4110b1505f8722d697697eea</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PIC_EOI</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a08e984e6a1417b7b6e89c6232ce00905</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2ACKTimeout</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a38ac8086f1219290834fa333d5f61d61</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2ClearOutputBuffer</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ab89ed60f3ef02b78ef5080b0941ed134</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2ReadAfterACK</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a1c1df3cb3ab237cb29864c8d185537f0</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2ReadData</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ac52f28bcc38cdcb9e2548528de67dc44</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2ReadStatus</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ab4e5cc3a96dc9f7d922e65241ff53f48</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2Wait</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>af2ae44f829abc7018863d9bf8fb9b859</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2WriteCommand</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a12501e11544172f81587ea9a2cedd7be</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>PS2WriteData</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ac722c6485f425b33b023549fa448c112</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>Always0</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ad636c779d8a2494cbf0e5bef39c32207</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>Always0_2</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a64f89a7ebae40aae6fd6a15dd67dba12</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>Always1</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a7e36db4ddfffac0319695ee9988dc7f6</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>Button4</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a985d3c1b1bb78dcb532adda850db8e71</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>Button5</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a51b10f759e11e22a2df18e78164340d2</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>LeftButton</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>afed3db2529852271d278ff08791fa996</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>MiddleButton</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a7f194284481c61912ad0d0fb8f525439</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>RightButton</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>ae720ea34653c53edca8e6006ac14eedb</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>XOverflow</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a999196b528952ded86d2ecdd66fd2659</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>XSign</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a8ba513483738e003cc2d949bbc8c87b7</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>YOverflow</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a010d40129fea5610bc6510df54e8822c</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>YSign</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a50b11bac2f0fa249f5cebe404c00d74e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>Z</Name>
-                    <Path>d1/de1/aip_8h.html</Path>
-                    <Anchor>a4d6dfe063ce4b9f790c99c37c1ef782d</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
                  <Node>
                   <Name>audio.h</Name>
                   <Path>da/d09/audio_8h.html</Path>
@@ -5099,7 +3973,7 @@
                      <Node>
                       <Name>inode</Name>
                       <Path>df/d26/fs_8h.html</Path>
-                      <Anchor>a8bec4f04ae605c9a4695cd78904ddbe3</Anchor>
+                      <Anchor>a67de6bb1c2136502fe7fed212b794bbb</Anchor>
                      </Node>
                     </Subnodes>
                    </Node>
@@ -5859,9 +4733,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>InputReport.__unnamed13__</Name>
+                    <Name>InputReport.__unnamed1__</Name>
                     <Path>de/ded/input_8h.html</Path>
-                    <Anchor>de/d5c/unionInputReport_8____unnamed13____</Anchor>
+                    <Anchor>dd/d98/unionInputReport_8____unnamed1____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>Accelerometer</Name>
@@ -8359,7 +7233,7 @@
                      <Node>
                       <Name>bmRequestType</Name>
                       <Path>dc/de4/usb_8h.html</Path>
-                      <Anchor>a12c370e2ab1046c1a0fffdde5feb5517</Anchor>
+                      <Anchor>a39344ebf5d88c8fb08162949cbe1d999</Anchor>
                      </Node>
                      <Node>
                       <Name>bRequest</Name>
@@ -8651,7 +7525,7 @@
                      <Node>
                       <Name>Descriptor</Name>
                       <Path>dc/de4/usb_8h.html</Path>
-                      <Anchor>a03da6f0d0b37df56696d448f5645caed</Anchor>
+                      <Anchor>a4c892f3e4cf5f65fcdf4d06c85edca20</Anchor>
                      </Node>
                     </Subnodes>
                    </Node>
@@ -8688,7 +7562,7 @@
                      <Node>
                       <Name>u</Name>
                       <Path>dc/de4/usb_8h.html</Path>
-                      <Anchor>a900ca1bff68c04899e97ffff989b049a</Anchor>
+                      <Anchor>af42b6552e058e2388fb824cf34ddb070</Anchor>
                      </Node>
                      <Node>
                       <Name>wHubCharacteristics</Name>
@@ -8705,12 +7579,12 @@
                      <Node>
                       <Name>wHubChange</Name>
                       <Path>dc/de4/usb_8h.html</Path>
-                      <Anchor>a6060ab0a49b0292d94efe9eaff1a5951</Anchor>
+                      <Anchor>a37a6423c1621fcdd9f1063bc66402b4a</Anchor>
                      </Node>
                      <Node>
                       <Name>wHubStatus</Name>
                       <Path>dc/de4/usb_8h.html</Path>
-                      <Anchor>a271a94558ca87274b450baed0e8d7bf1</Anchor>
+                      <Anchor>ada28b450e81b729803227d47546d51d0</Anchor>
                      </Node>
                     </Subnodes>
                    </Node>
@@ -8722,12 +7596,12 @@
                      <Node>
                       <Name>wPortChange</Name>
                       <Path>dc/de4/usb_8h.html</Path>
-                      <Anchor>af4e9bec224640cf2f9fb3eb10b315457</Anchor>
+                      <Anchor>ab41fbdb22fbf6b7d598cdc212868217e</Anchor>
                      </Node>
                      <Node>
                       <Name>wPortStatus</Name>
                       <Path>dc/de4/usb_8h.html</Path>
-                      <Anchor>a31ae13255cdb67e07cda92945803ae17</Anchor>
+                      <Anchor>a07dff398b3006b166b99c0fa1369ae03</Anchor>
                      </Node>
                     </Subnodes>
                    </Node>
@@ -8925,9 +7799,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>USBDeviceRequest.bmRequestType.__unnamed17__</Name>
+                    <Name>USBDeviceRequest.bmRequestType.__unnamed5__</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>df/dc4/structUSBDeviceRequest_8bmRequestType_8____unnamed17____</Anchor>
+                    <Anchor>d6/dcd/structUSBDeviceRequest_8bmRequestType_8____unnamed5____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>Direction</Name>
@@ -8947,9 +7821,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>.__unnamed20__</Name>
+                    <Name>.__unnamed8__</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>d9/d38/struct_8____unnamed20____</Anchor>
+                    <Anchor>de/d13/struct_8____unnamed8____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>Direction</Name>
@@ -9003,9 +7877,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>USBHubStatus.wHubStatus.__unnamed32__</Name>
+                    <Name>USBHubStatus.wHubStatus.__unnamed20__</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>d5/dec/structUSBHubStatus_8wHubStatus_8____unnamed32____</Anchor>
+                    <Anchor>d0/ddb/structUSBHubStatus_8wHubStatus_8____unnamed20____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>__reserved</Name>
@@ -9037,9 +7911,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>USBHubStatus.wHubChange.__unnamed34__</Name>
+                    <Name>USBHubStatus.wHubChange.__unnamed22__</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>d7/ddd/structUSBHubStatus_8wHubChange_8____unnamed34____</Anchor>
+                    <Anchor>d6/da5/structUSBHubStatus_8wHubChange_8____unnamed22____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>__reserved</Name>
@@ -9059,9 +7933,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>.__unnamed38__</Name>
+                    <Name>.__unnamed26__</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>d8/d78/struct_8____unnamed38____</Anchor>
+                    <Anchor>df/de8/struct_8____unnamed26____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>__reserved</Name>
@@ -9081,9 +7955,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>.__unnamed40__</Name>
+                    <Name>.__unnamed28__</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>d7/d4b/struct_8____unnamed40____</Anchor>
+                    <Anchor>d4/d60/struct_8____unnamed28____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>__reserved</Name>
@@ -9115,9 +7989,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>USBPortStatus.wPortStatus.__unnamed44__</Name>
+                    <Name>USBPortStatus.wPortStatus.__unnamed32__</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>db/d98/structUSBPortStatus_8wPortStatus_8____unnamed44____</Anchor>
+                    <Anchor>d8/d42/structUSBPortStatus_8wPortStatus_8____unnamed32____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>__reserved0</Name>
@@ -9194,9 +8068,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>USBPortStatus.wPortChange.__unnamed46__</Name>
+                    <Name>USBPortStatus.wPortChange.__unnamed34__</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>d1/d79/structUSBPortStatus_8wPortChange_8____unnamed46____</Anchor>
+                    <Anchor>d7/d2e/structUSBPortStatus_8wPortChange_8____unnamed34____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>__reserved0</Name>
@@ -9231,9 +8105,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>.__unnamed50__</Name>
+                    <Name>.__unnamed38__</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>d8/dc4/struct_8____unnamed50____</Anchor>
+                    <Anchor>d8/d78/struct_8____unnamed38____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>__reserved0</Name>
@@ -9298,9 +8172,9 @@
                     </Subnodes>
                    </Node>
                    <Node>
-                    <Name>.__unnamed52__</Name>
+                    <Name>.__unnamed40__</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>d4/da7/struct_8____unnamed52____</Anchor>
+                    <Anchor>d7/d4b/struct_8____unnamed40____</Anchor>
                   <Subnodes>
                      <Node>
                       <Name>__reserved0</Name>
@@ -10090,7 +8964,7 @@
                    <Node>
                     <Name>bmRequestType</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>a1fb45c38180bf67f6be87ba69f51767d</Anchor>
+                    <Anchor>a906b7aea45695d8b40be8c382692fdb6</Anchor>
                    </Node>
                    <Node>
                     <Name>bNbrPorts</Name>
@@ -10130,7 +9004,7 @@
                    <Node>
                     <Name>Descriptor</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>a88f7cce7b89dc378890059b1377ac1e8</Anchor>
+                    <Anchor>a7c21f27f7f855ab2be0e91f519b1b446</Anchor>
                    </Node>
                    <Node>
                     <Name>DeviceRemovable</Name>
@@ -10180,12 +9054,12 @@
                    <Node>
                     <Name>u</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>aa24b93ab6e4356aa508f3c530aa20312</Anchor>
+                    <Anchor>a013dca3fceb944ea074e3e8ed9b4bbaf</Anchor>
                    </Node>
                    <Node>
                     <Name>wHubChange</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>a7a3e287b3bcaa3c1e81cc0696576c797</Anchor>
+                    <Anchor>a334295ab6f8f66b5570b545f376a1ae3</Anchor>
                    </Node>
                    <Node>
                     <Name>wHubCharacteristics</Name>
@@ -10200,7 +9074,7 @@
                    <Node>
                     <Name>wHubStatus</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>a30b4856315882c80163667eef569bd78</Anchor>
+                    <Anchor>a7786c397aa33ea94ae4e27ad2815c11b</Anchor>
                    </Node>
                    <Node>
                     <Name>wIndex</Name>
@@ -10220,12 +9094,12 @@
                    <Node>
                     <Name>wPortChange</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>a95f8abdfeb160bee442f4e1a655c6a55</Anchor>
+                    <Anchor>a6f415dc409410c9d3d9d07fedce776db</Anchor>
                    </Node>
                    <Node>
                     <Name>wPortStatus</Name>
                     <Path>dc/de4/usb_8h.html</Path>
-                    <Anchor>aa68583e7d8288c9f2ecdeb450806a276</Anchor>
+                    <Anchor>aad554aa1ead41cd798714c1c2bb0d357</Anchor>
                    </Node>
                    <Node>
                     <Name>wString</Name>
@@ -10362,18 +9236,6 @@
               <Name>w</Name>
               <Path>globals_w.html</Path>
              </Node>
-             <Node>
-              <Name>x</Name>
-              <Path>globals_x.html</Path>
-             </Node>
-             <Node>
-              <Name>y</Name>
-              <Path>globals_y.html</Path>
-             </Node>
-             <Node>
-              <Name>z</Name>
-              <Path>globals_z.html</Path>
-             </Node>
             </Subnodes>
            </Node>
            <Node>
@@ -10493,10 +9355,6 @@
              <Node>
               <Name>u</Name>
               <Path>globals_defs_u.html</Path>
-             </Node>
-             <Node>
-              <Name>w</Name>
-              <Path>globals_defs_w.html</Path>
              </Node>
             </Subnodes>
            </Node>

@@ -132,7 +132,5 @@ var searchData=
   ['syscall_5fsignal_5ft_129',['syscall_signal_t',['../d2/d6e/syscalls_8h.html#a00cccf768d6a30a87942a42566f93116',1,'syscalls.h']]],
   ['syscalls_2eh_130',['syscalls.h',['../d2/d6e/syscalls_8h.html',1,'']]],
   ['syscalls_5ft_131',['syscalls_t',['../d2/d6e/syscalls_8h.html#a58e578ea55e3e184c5ed9206edc2a475',1,'syscalls.h']]],
-  ['sysname_132',['sysname',['../d2/d6e/syscalls_8h.html#a17c25c334ed5c0f04a629ff78a68750e',1,'kutsname']]],
-  ['systemflag_133',['systemflag',['../d1/de1/aip_8h.html#acc8252d0e5a2a96ee791ee05c333bb56',1,'PS2_CONFIGURATION.__unnamed3__::SystemFlag'],['../d1/de1/aip_8h.html#acc8252d0e5a2a96ee791ee05c333bb56',1,'PS2_STATUSES.__unnamed1__::SystemFlag']]],
-  ['systemreset_134',['SystemReset',['../d1/de1/aip_8h.html#a993f0a6346847628c86bbcf1cf306236',1,'PS2_OUTPUT_PORT.__unnamed5__']]]
+  ['sysname_132',['sysname',['../d2/d6e/syscalls_8h.html#a17c25c334ed5c0f04a629ff78a68750e',1,'kutsname']]]
 ];

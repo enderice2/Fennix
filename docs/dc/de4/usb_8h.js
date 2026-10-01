@@ -1,7 +1,7 @@
 var usb_8h =
 [
     [ "USBDeviceRequest", "dc/de4/usb_8h.html#d1/d41/structUSBDeviceRequest", [
-      [ "bmRequestType", "dc/de4/usb_8h.html#a12c370e2ab1046c1a0fffdde5feb5517", null ],
+      [ "bmRequestType", "dc/de4/usb_8h.html#a39344ebf5d88c8fb08162949cbe1d999", null ],
       [ "bRequest", "dc/de4/usb_8h.html#ac1c4884602b3026a747a33474691d941", null ],
       [ "wIndex", "dc/de4/usb_8h.html#a5db347b99175b0ff35f23d221b2f48c4", null ],
       [ "wLength", "dc/de4/usb_8h.html#a794a3c862bda55462dbb4d4ca88b6249", null ],
@@ -63,7 +63,7 @@ var usb_8h =
       [ "bDescriptorType", "dc/de4/usb_8h.html#a4fa6df3db874ad680fd165cbf3176ea1", null ],
       [ "bLength", "dc/de4/usb_8h.html#a56634d215f17e2c6f838992efbde7a43", null ],
       [ "bNumDescriptors", "dc/de4/usb_8h.html#a240724fe4911909e2a921830399ec8f4", null ],
-      [ "Descriptor", "dc/de4/usb_8h.html#a03da6f0d0b37df56696d448f5645caed", null ]
+      [ "Descriptor", "dc/de4/usb_8h.html#a4c892f3e4cf5f65fcdf4d06c85edca20", null ]
     ] ],
     [ "USBHubDescriptor", "dc/de4/usb_8h.html#d9/d50/structUSBHubDescriptor", [
       [ "bDescLength", "dc/de4/usb_8h.html#afdaaecdbed6ceeed8fa1c00ccda0f019", null ],
@@ -71,16 +71,16 @@ var usb_8h =
       [ "bHubContrCurrent", "dc/de4/usb_8h.html#a6233420b8f5aca92f930e21ba4064022", null ],
       [ "bNbrPorts", "dc/de4/usb_8h.html#a0c989a4e8093845d06e22e60f74490da", null ],
       [ "bPwrOn2PwrGood", "dc/de4/usb_8h.html#a69817fa077e4aea6b2c9fcd8da77cb71", null ],
-      [ "u", "dc/de4/usb_8h.html#a900ca1bff68c04899e97ffff989b049a", null ],
+      [ "u", "dc/de4/usb_8h.html#af42b6552e058e2388fb824cf34ddb070", null ],
       [ "wHubCharacteristics", "dc/de4/usb_8h.html#a5fe933a402b573a3fd19fef0eb0250c5", null ]
     ] ],
     [ "USBHubStatus", "dc/de4/usb_8h.html#d9/dd4/structUSBHubStatus", [
-      [ "wHubChange", "dc/de4/usb_8h.html#a6060ab0a49b0292d94efe9eaff1a5951", null ],
-      [ "wHubStatus", "dc/de4/usb_8h.html#a271a94558ca87274b450baed0e8d7bf1", null ]
+      [ "wHubChange", "dc/de4/usb_8h.html#a37a6423c1621fcdd9f1063bc66402b4a", null ],
+      [ "wHubStatus", "dc/de4/usb_8h.html#ada28b450e81b729803227d47546d51d0", null ]
     ] ],
     [ "USBPortStatus", "dc/de4/usb_8h.html#d7/db0/structUSBPortStatus", [
-      [ "wPortChange", "dc/de4/usb_8h.html#af4e9bec224640cf2f9fb3eb10b315457", null ],
-      [ "wPortStatus", "dc/de4/usb_8h.html#a31ae13255cdb67e07cda92945803ae17", null ]
+      [ "wPortChange", "dc/de4/usb_8h.html#ab41fbdb22fbf6b7d598cdc212868217e", null ],
+      [ "wPortStatus", "dc/de4/usb_8h.html#a07dff398b3006b166b99c0fa1369ae03", null ]
     ] ],
     [ "USBEndpoint", "dc/de4/usb_8h.html#d9/d57/structUSBEndpoint", [
       [ "Address", "dc/de4/usb_8h.html#ad70d27fc09bf76b2920231e58bffefe1", null ],
@@ -105,12 +105,12 @@ var usb_8h =
     [ "USBDeviceRequest.bmRequestType", "dc/de4/usb_8h.html#df/d0b/unionUSBDeviceRequest_8bmRequestType", [
       [ "raw", "dc/de4/usb_8h.html#abdd166af3a63f7be696dd17a218a6ffb", null ]
     ] ],
-    [ "USBDeviceRequest.bmRequestType.__unnamed17__", "dc/de4/usb_8h.html#df/dc4/structUSBDeviceRequest_8bmRequestType_8____unnamed17____", [
+    [ "USBDeviceRequest.bmRequestType.__unnamed5__", "dc/de4/usb_8h.html#d6/dcd/structUSBDeviceRequest_8bmRequestType_8____unnamed5____", [
       [ "Direction", "dc/de4/usb_8h.html#a02674a4ef33e11c879283629996c8ff8", null ],
       [ "Recipient", "dc/de4/usb_8h.html#a5d6103b662f41b07e10687f03aca8fdc", null ],
       [ "Type", "dc/de4/usb_8h.html#aa1fa27779242b4902f7ae3bdd5c6d508", null ]
     ] ],
-    [ ".__unnamed20__", "dc/de4/usb_8h.html#d9/d38/struct_8____unnamed20____", [
+    [ ".__unnamed8__", "dc/de4/usb_8h.html#de/d13/struct_8____unnamed8____", [
       [ "Direction", "dc/de4/usb_8h.html#a02674a4ef33e11c879283629996c8ff8", null ],
       [ "Recipient", "dc/de4/usb_8h.html#a5d6103b662f41b07e10687f03aca8fdc", null ],
       [ "Type", "dc/de4/usb_8h.html#aa1fa27779242b4902f7ae3bdd5c6d508", null ]
@@ -123,7 +123,7 @@ var usb_8h =
     [ "USBHubStatus.wHubStatus", "dc/de4/usb_8h.html#d2/dc4/unionUSBHubStatus_8wHubStatus", [
       [ "raw", "dc/de4/usb_8h.html#abdd166af3a63f7be696dd17a218a6ffb", null ]
     ] ],
-    [ "USBHubStatus.wHubStatus.__unnamed32__", "dc/de4/usb_8h.html#d5/dec/structUSBHubStatus_8wHubStatus_8____unnamed32____", [
+    [ "USBHubStatus.wHubStatus.__unnamed20__", "dc/de4/usb_8h.html#d0/ddb/structUSBHubStatus_8wHubStatus_8____unnamed20____", [
       [ "__reserved", "dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3", null ],
       [ "LPS", "dc/de4/usb_8h.html#af0bd8ffe783f0ce4bf0fb76c508284f7", null ],
       [ "OC", "dc/de4/usb_8h.html#a628ac2641a11205611acfdd540e18809", null ]
@@ -131,17 +131,17 @@ var usb_8h =
     [ "USBHubStatus.wHubChange", "dc/de4/usb_8h.html#d0/de8/unionUSBHubStatus_8wHubChange", [
       [ "raw", "dc/de4/usb_8h.html#abdd166af3a63f7be696dd17a218a6ffb", null ]
     ] ],
-    [ "USBHubStatus.wHubChange.__unnamed34__", "dc/de4/usb_8h.html#d7/ddd/structUSBHubStatus_8wHubChange_8____unnamed34____", [
+    [ "USBHubStatus.wHubChange.__unnamed22__", "dc/de4/usb_8h.html#d6/da5/structUSBHubStatus_8wHubChange_8____unnamed22____", [
       [ "__reserved", "dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3", null ],
       [ "LPSC", "dc/de4/usb_8h.html#a1d68e7883970b1ca56623cd245b7d368", null ],
       [ "OCC", "dc/de4/usb_8h.html#adcb1c29255ec9645f8be15096fae7b93", null ]
     ] ],
-    [ ".__unnamed38__", "dc/de4/usb_8h.html#d8/d78/struct_8____unnamed38____", [
+    [ ".__unnamed26__", "dc/de4/usb_8h.html#df/de8/struct_8____unnamed26____", [
       [ "__reserved", "dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3", null ],
       [ "LPS", "dc/de4/usb_8h.html#af0bd8ffe783f0ce4bf0fb76c508284f7", null ],
       [ "OC", "dc/de4/usb_8h.html#a628ac2641a11205611acfdd540e18809", null ]
     ] ],
-    [ ".__unnamed40__", "dc/de4/usb_8h.html#d7/d4b/struct_8____unnamed40____", [
+    [ ".__unnamed28__", "dc/de4/usb_8h.html#d4/d60/struct_8____unnamed28____", [
       [ "__reserved", "dc/de4/usb_8h.html#ad07ee03cbfb2ff9b6622e6ea4d91f9f3", null ],
       [ "LPSC", "dc/de4/usb_8h.html#a1d68e7883970b1ca56623cd245b7d368", null ],
       [ "OCC", "dc/de4/usb_8h.html#adcb1c29255ec9645f8be15096fae7b93", null ]
@@ -149,7 +149,7 @@ var usb_8h =
     [ "USBPortStatus.wPortStatus", "dc/de4/usb_8h.html#dc/ddb/unionUSBPortStatus_8wPortStatus", [
       [ "raw", "dc/de4/usb_8h.html#abdd166af3a63f7be696dd17a218a6ffb", null ]
     ] ],
-    [ "USBPortStatus.wPortStatus.__unnamed44__", "dc/de4/usb_8h.html#db/d98/structUSBPortStatus_8wPortStatus_8____unnamed44____", [
+    [ "USBPortStatus.wPortStatus.__unnamed32__", "dc/de4/usb_8h.html#d8/d42/structUSBPortStatus_8wPortStatus_8____unnamed32____", [
       [ "__reserved0", "dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21", null ],
       [ "__reserved1", "dc/de4/usb_8h.html#acd8949ff69e5a2a014100db38cb62a6d", null ],
       [ "PORT_CONNECTION", "dc/de4/usb_8h.html#a2a356a25b9433f52530a968d07467fd0", null ],
@@ -166,7 +166,7 @@ var usb_8h =
     [ "USBPortStatus.wPortChange", "dc/de4/usb_8h.html#d2/d9f/unionUSBPortStatus_8wPortChange", [
       [ "raw", "dc/de4/usb_8h.html#abdd166af3a63f7be696dd17a218a6ffb", null ]
     ] ],
-    [ "USBPortStatus.wPortChange.__unnamed46__", "dc/de4/usb_8h.html#d1/d79/structUSBPortStatus_8wPortChange_8____unnamed46____", [
+    [ "USBPortStatus.wPortChange.__unnamed34__", "dc/de4/usb_8h.html#d7/d2e/structUSBPortStatus_8wPortChange_8____unnamed34____", [
       [ "__reserved0", "dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21", null ],
       [ "C_PORT_CONNECTION", "dc/de4/usb_8h.html#ae0c50ce312153bfc94f5c30091d02e1c", null ],
       [ "C_PORT_ENABLE", "dc/de4/usb_8h.html#ad878656e48dab047c2c29fa61c2d148b", null ],
@@ -174,7 +174,7 @@ var usb_8h =
       [ "C_PORT_RESET", "dc/de4/usb_8h.html#a441236095df05d77e2dd236c6c7e4a8f", null ],
       [ "C_PORT_SUSPEND", "dc/de4/usb_8h.html#a0dccdb7cd734d0a15bb06a9da270cf37", null ]
     ] ],
-    [ ".__unnamed50__", "dc/de4/usb_8h.html#d8/dc4/struct_8____unnamed50____", [
+    [ ".__unnamed38__", "dc/de4/usb_8h.html#d8/d78/struct_8____unnamed38____", [
       [ "__reserved0", "dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21", null ],
       [ "__reserved1", "dc/de4/usb_8h.html#acd8949ff69e5a2a014100db38cb62a6d", null ],
       [ "PORT_CONNECTION", "dc/de4/usb_8h.html#a2a356a25b9433f52530a968d07467fd0", null ],
@@ -188,7 +188,7 @@ var usb_8h =
       [ "PORT_SUSPEND", "dc/de4/usb_8h.html#a29367fe786d12ede740dcd1d99cf2615", null ],
       [ "PORT_TEST", "dc/de4/usb_8h.html#adbb7face025abf9e9e4158160a5b7a45", null ]
     ] ],
-    [ ".__unnamed52__", "dc/de4/usb_8h.html#d4/da7/struct_8____unnamed52____", [
+    [ ".__unnamed40__", "dc/de4/usb_8h.html#d7/d4b/struct_8____unnamed40____", [
       [ "__reserved0", "dc/de4/usb_8h.html#a2850bea91b0c551f37f3f5e32a238a21", null ],
       [ "C_PORT_CONNECTION", "dc/de4/usb_8h.html#ae0c50ce312153bfc94f5c30091d02e1c", null ],
       [ "C_PORT_ENABLE", "dc/de4/usb_8h.html#ad878656e48dab047c2c29fa61c2d148b", null ],
@@ -352,7 +352,7 @@ var usb_8h =
     [ "bmAttributes", "dc/de4/usb_8h.html#ae7c63b4cda39953db5710012a5d91c6f", null ],
     [ "bMaxPacketSize0", "dc/de4/usb_8h.html#a93b2c926b005917cdf2b5e7e4b3f80a2", null ],
     [ "bMaxPower", "dc/de4/usb_8h.html#ad3ac74420252d7a6a03e1e9d7b481f9b", null ],
-    [ "bmRequestType", "dc/de4/usb_8h.html#a1fb45c38180bf67f6be87ba69f51767d", null ],
+    [ "bmRequestType", "dc/de4/usb_8h.html#a906b7aea45695d8b40be8c382692fdb6", null ],
     [ "bNbrPorts", "dc/de4/usb_8h.html#a0f124f6852780f9484b9641e72cc9190", null ],
     [ "bNumConfigurations", "dc/de4/usb_8h.html#abde4f60e84b2d9b10c27aa23bae62595", null ],
     [ "bNumDescriptors", "dc/de4/usb_8h.html#a86ff434026085d9c0c751185eb3700c5", null ],
@@ -360,7 +360,7 @@ var usb_8h =
     [ "bNumInterfaces", "dc/de4/usb_8h.html#a1ad144333e75b0d867e72f8a337cd510", null ],
     [ "bPwrOn2PwrGood", "dc/de4/usb_8h.html#a5aa3533e5cf6dd5076f10b0f85e568bc", null ],
     [ "bRequest", "dc/de4/usb_8h.html#a1e7be110861bd4ff75c86d5214f31543", null ],
-    [ "Descriptor", "dc/de4/usb_8h.html#a88f7cce7b89dc378890059b1377ac1e8", null ],
+    [ "Descriptor", "dc/de4/usb_8h.html#a7c21f27f7f855ab2be0e91f519b1b446", null ],
     [ "DeviceRemovable", "dc/de4/usb_8h.html#ac8ffaa3ae4023b969f1f35e99b9dd66e", null ],
     [ "iConfiguration", "dc/de4/usb_8h.html#a5ad4440b4eb1935d66b154d274f8a272", null ],
     [ "idProduct", "dc/de4/usb_8h.html#a2cf29745398a958349d784b1911c6b2b", null ],
@@ -370,16 +370,16 @@ var usb_8h =
     [ "iProduct", "dc/de4/usb_8h.html#a77c33850b90ff7617243c40ce61d9168", null ],
     [ "iSerialNumber", "dc/de4/usb_8h.html#aeb129fc0d41494f69369da70d73eac11", null ],
     [ "PortPwrCtrlMask", "dc/de4/usb_8h.html#a6803d10ccddb9227fcfe427724eabf69", null ],
-    [ "u", "dc/de4/usb_8h.html#aa24b93ab6e4356aa508f3c530aa20312", null ],
-    [ "wHubChange", "dc/de4/usb_8h.html#a7a3e287b3bcaa3c1e81cc0696576c797", null ],
+    [ "u", "dc/de4/usb_8h.html#a013dca3fceb944ea074e3e8ed9b4bbaf", null ],
+    [ "wHubChange", "dc/de4/usb_8h.html#a334295ab6f8f66b5570b545f376a1ae3", null ],
     [ "wHubCharacteristics", "dc/de4/usb_8h.html#a4801dfd24b5876e0cf3f7c9a096f69ac", null ],
     [ "wHubDelay", "dc/de4/usb_8h.html#a51a07786646661a4d07877edb934e4fb", null ],
-    [ "wHubStatus", "dc/de4/usb_8h.html#a30b4856315882c80163667eef569bd78", null ],
+    [ "wHubStatus", "dc/de4/usb_8h.html#a7786c397aa33ea94ae4e27ad2815c11b", null ],
     [ "wIndex", "dc/de4/usb_8h.html#adc578ce35d89d52deba61ee6f312f177", null ],
     [ "wLength", "dc/de4/usb_8h.html#a496c03443b177fd2e6c93616064d2934", null ],
     [ "wMaxPacketSize", "dc/de4/usb_8h.html#abcc8edb1d5094ce6a16b42c1a7ae67d8", null ],
-    [ "wPortChange", "dc/de4/usb_8h.html#a95f8abdfeb160bee442f4e1a655c6a55", null ],
-    [ "wPortStatus", "dc/de4/usb_8h.html#aa68583e7d8288c9f2ecdeb450806a276", null ],
+    [ "wPortChange", "dc/de4/usb_8h.html#a6f415dc409410c9d3d9d07fedce776db", null ],
+    [ "wPortStatus", "dc/de4/usb_8h.html#aad554aa1ead41cd798714c1c2bb0d357", null ],
     [ "wString", "dc/de4/usb_8h.html#aebea3a21f860fa17ee661babb9c1170f", null ],
     [ "wTotalLength", "dc/de4/usb_8h.html#a866c5d9bb8a60f25805d37b7a5b5f9e8", null ],
     [ "wValue", "dc/de4/usb_8h.html#a7383d0165ad8eab48aa239c005199121", null ]
