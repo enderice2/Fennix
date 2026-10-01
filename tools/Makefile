@@ -5,7 +5,7 @@ export PATH := $(CROSS_DIR):$(PATH)
 
 BINUTILS_TAG = binutils-2_43_1
 GCC_TAG = releases/gcc-14.2.0
-QEMU_TAG = v9.2.0
+QEMU_TAG = v11.1.2
 
 QEMU_CLONE_PATH = /tmp/qemu
 GCC_CLONE_PATH = /tmp/gcc
@@ -42,7 +42,7 @@ ifeq ("$(wildcard $(QEMU_CLONE_PATH))", "")
 else
 	$(info > TOOLS: Reseting qemu...)
 	cd $(QEMU_CLONE_PATH) && \
-	git fetch origin && \
+	git fetch origin --tags && \
 	git reset --hard ${QEMU_TAG} && \
 	git clean -dfx
 	$(info > TOOLS: Operation completed for qemu)
@@ -56,7 +56,7 @@ ifeq ("$(wildcard $(BINUTILS_CLONE_PATH))", "")
 else
 	$(info > TOOLS: Reseting binutils-gdb...)
 	cd $(BINUTILS_CLONE_PATH) && \
-	git fetch origin && \
+	git fetch origin --tags && \
 	git reset --hard $(BINUTILS_TAG) && \
 	git clean -dfx
 	$(info > TOOLS: Operation completed for binutils-gdb)
@@ -68,7 +68,7 @@ ifeq ("$(wildcard $(GCC_CLONE_PATH))", "")
 else
 	$(info > TOOLS: Reseting gcc...)
 	cd $(GCC_CLONE_PATH) && \
-	git fetch origin && \
+	git fetch origin --tags && \
 	git reset --hard $(GCC_TAG) && \
 	git clean -dfx
 	$(info > TOOLS: Operation completed for gcc)
@@ -198,7 +198,7 @@ do_qemu:
 	bash ./configure --target-list=x86_64-softmmu,i386-softmmu,arm-softmmu,aarch64-softmmu \
 	--prefix="$(CROSS_DIR)" \
 	--enable-gtk \
-	--disable-tools \
+	--enable-tools \
 	--disable-gio \
 	--disable-virtfs \
 	--disable-vnc \
