@@ -78,7 +78,7 @@ namespace Log
 #define fixme(fmt, ...) Log::printk(Log::LogLevel::LogLevelFixme, __FILE__, __LINE__, __FUNCTION__, fmt, ##__VA_ARGS__)
 #define info(fmt, ...) Log::printk(Log::LogLevel::LogLevelInfo, __FILE__, __LINE__, __FUNCTION__, fmt, ##__VA_ARGS__)
 #define klog(fmt, ...) Log::printk(Log::LogLevel::LogLevelNone, __FILE__, __LINE__, __FUNCTION__, fmt, ##__VA_ARGS__)
-#define stub Log::printk(Log::LogLevel::LogLevelStub, __FILE__, __LINE__, __FUNCTION__, "")
+#define stub Log::printk(Log::LogLevel::LogLevelStub, __FILE__, __LINE__, __FUNCTION__, " ")
 
 #define trace(fmt, ...) klog(fmt, ##__VA_ARGS__)
 
