@@ -28,7 +28,7 @@ void TaskHeartbeat()
 
 	while (true)
 	{
-		debug("Task Heartbeat");
+		debug("Task Heartbeat %llu", GlobalClock->Now());
 		TaskManager->Sleep(5000 * 1'000'000ULL);
 	}
 }
