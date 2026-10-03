@@ -223,27 +223,15 @@ namespace APIC
 		if (TicksPerSecond == 0)
 			warn("APIC timer calibration failed on CPU %d", GetCurrentCPU()->ID);
 
-		// Config for IRQ0 timer
+		// Keep the timer stopped until a caller requests a deadline.
 		LVTTimer timer{};
-		timer.VEC = IRQ0 + CPU::x86::IRQ0;
-		timer.M = Unmasked;
+		timer.VEC = CPU::x86::IRQ0;
+		timer.M = Masked;
 		timer.TMM = OneShot;
+		WriteInitCount(this->lapic, 0);
+		WriteLvtTimer(this->lapic, timer.raw);
 
-		// Initialize APIC timer
-		if (this->lapic->x2APIC)
-		{
-			WriteDivider(this->lapic, divider);
-			WriteInitCount(this->lapic, (uint32_t)TicksPerSecond);
-			WriteLvtTimer(this->lapic, timer.raw);
-		}
-		else
-		{
-			WriteDivider(this->lapic, divider);
-			WriteInitCount(this->lapic, (uint32_t)TicksPerSecond);
-			WriteLvtTimer(this->lapic, uint32_t(timer.raw));
-		}
-
-		debug("%d APIC Timer %d ticks in", GetCurrentCPU()->ID, TicksPerSecond);
+		debug("%d APIC Timer calibrated at %d ticks per second", GetCurrentCPU()->ID, TicksPerSecond);
 	}
 
 	Timer::~Timer()
