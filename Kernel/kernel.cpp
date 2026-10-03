@@ -168,7 +168,7 @@ int main()
 	__early_playground();
 #endif
 
-	klog("\x1b[1;32m################################");
+	klog("\x1b[1;32m################################\x1b[0m");
 	TaskManager = new Tasking::Task(Tasking::IP(main_thread));
 	TaskManager->StartScheduler();
 	CPU::Halt(true);

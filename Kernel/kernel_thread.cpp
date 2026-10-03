@@ -154,7 +154,7 @@ void main_thread()
 	int tid = SpawnInit();
 	if (tid < 0)
 	{
-		klog("\x1b[1;37;41mFailed to start init program! Error: %s (%d)", strerror(tid), tid);
+		klog("\x1b[1;37;41mFailed to start init program! Error: %s (%d)\x1b[0m", strerror(tid), tid);
 		goto Exit;
 	}
 
@@ -169,7 +169,7 @@ void main_thread()
 	else
 		ExitCode = 0xEBAD;
 Exit:
-	klog("\x1b[31mUserspace process exited with code %d (%#x)",
+	klog("\x1b[31mUserspace process exited with code %d (%#x)\x1b[0m",
 		 ExitCode, ExitCode < 0 ? -ExitCode : ExitCode);
 
 	klog("Dropping to kernel shell");
