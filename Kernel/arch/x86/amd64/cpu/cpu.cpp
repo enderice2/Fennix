@@ -176,7 +176,29 @@ namespace CPU
 		writecr4(cr4);
 
 		debug("enabling PAT support");
-		CPU::x86::wrmsr(CPU::x86::MSR_CR_PAT, 0x6 | (0x0 << 8) | (0x1 << 16));
+		CPU::x86::PAT_MSR pat{.raw = CPU::x86::rdmsr(CPU::x86::MSR_PAT)};
+		debug("CPU %d IA32_PAT=%#018lx", CoreID, pat.raw);
+		pat.PAT[1].Type = CPU::x86::PAT_WC;
+		CPU::x86::wrmsr(CPU::x86::MSR_PAT, pat.raw);
+
+#ifdef DEBUG
+		if (CoreID == 0)
+		{
+			uint64_t mtrrCap = CPU::x86::rdmsr(CPU::x86::MSR_MTRRCAP);
+			uint64_t mtrrDefType = CPU::x86::rdmsr(CPU::x86::MSR_MTRR_DEF_TYPE);
+			debug("MTRR CAP=%#lx DEF_TYPE=%#lx", mtrrCap, mtrrDefType);
+
+			uint8_t variableCount = mtrrCap & 0xFF;
+			if (variableCount > 10)
+				variableCount = 10;
+			for (uint8_t i = 0; i < variableCount; i++)
+			{
+				uint32_t baseMsr = CPU::x86::MSR_MTRR_PHYSBASE0 + i * 2;
+				uint32_t maskMsr = CPU::x86::MSR_MTRR_PHYSMASK0 + i * 2;
+				debug("MTRR%u BASE=%#lx MASK=%#lx", i, CPU::x86::rdmsr(baseMsr), CPU::x86::rdmsr(maskMsr));
+			}
+		}
+#endif
 	}
 
 	void InitializeInterrupts(int CoreID)

@@ -85,7 +85,7 @@ nif static void MapFramebuffer(PageTable *PT)
 
 		vmm.OptimizedMap(bInfo.Framebuffer[itrfb].BaseAddress,
 						 bInfo.Framebuffer[itrfb].BaseAddress,
-						 fbSize, RW | G | KRsv);
+						 fbSize, RW | PWT | G | KRsv);
 
 		itrfb++;
 	}

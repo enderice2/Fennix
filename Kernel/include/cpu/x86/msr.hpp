@@ -24,6 +24,10 @@ namespace CPU
 {
 	namespace x86
 	{
+		/**
+		 * https://sandpile.org/x86/msr.htm
+		 * https://github.com/xen-project/xen/blob/master/xen/arch/x86/include/asm/msr-index.h
+		 */
 		enum MSRID
 		{
 			MSR_MONITOR_FILTER_SIZE = 0x6,
@@ -36,12 +40,15 @@ namespace CPU
 			MSR_PRED_CMD = 0x49,
 			MSR_BIOS_UPDT_TRIG = 0x79,
 			MSR_BIOS_SIGN_ID = 0x8B,
+
 			MSR_SGXLEPUBKEYHASH0 = 0x8C,
 			MSR_SGXLEPUBKEYHASH1 = 0x8D,
 			MSR_SGXLEPUBKEYHASH2 = 0x8E,
 			MSR_SGXLEPUBKEYHASH3 = 0x8F,
+
 			MSR_SMM_MONITOR_CTL = 0x9B,
 			MSR_SMBASE = 0x9E,
+
 			MSR_PMC0 = 0xC1,
 			MSR_PMC1 = 0xC2,
 			MSR_PMC2 = 0xC3,
@@ -50,37 +57,49 @@ namespace CPU
 			MSR_PMC5 = 0xC6,
 			MSR_PMC6 = 0xC7,
 			MSR_PMC7 = 0xC8,
+
 			MSR_UMWAIT_CONTROL = 0xE1,
 			MSR_MPERF = 0xE7,
 			MSR_APERF = 0xE8,
 			MSR_MTRRCAP = 0xFE,
 			MSR_ARCH_CAPABILITIES = 0x10A,
 			MSR_FLUSH_CMD = 0x10B,
+
 			MSR_SYSENTER_CS = 0x17A,
 			MSR_SYSENTER_ESP = 0x175,
 			MSR_SYSENTER_EIP = 0x176,
+
 			MSR_MCG_CAP = 0x179,
 			MSR_MCG_STATUS = 0x17A,
 			MSR_MCG_CTL = 0x17B,
+
 			MSR_PERFEVTSEL0 = 0x186,
 			MSR_PERFEVTSEL1 = 0x187,
 			MSR_PERFEVTSEL2 = 0x188,
 			MSR_PERFEVTSEL3 = 0x189,
 			MSR_PERF_STATUS = 0x198,
 			MSR_PERF_CTL = 0x199,
+
 			MSR_CLOCK_MODULATION = 0x19A,
+
 			MSR_THERM_INTERRUPT = 0x19B,
 			MSR_THERM_STATUS = 0x19C,
+
 			MSR_MISC_ENABLE = 0x1A0,
 			MSR_ENERGY_PERF_BIAS = 0x1B0,
+
 			MSR_PACKAGE_THERM_STATUS = 0x1B1,
 			MSR_PACKAGE_THERM_INTERRUPT = 0x1B2,
+
 			MSR_DEBUGCTL = 0x1D9,
+
 			MSR_SMRR_PHYSBASE = 0x1F2,
 			MSR_SMRR_PHYSMASK = 0x1F3,
+
 			MSR_PLATFORM_DCA_CAP = 0x1F8,
 			MSR_CPU_DCA_CAP = 0x1F9,
 			MSR_DCA_0_CAP = 0x1FA,
+
 			MSR_MTRR_PHYSBASE0 = 0x200,
 			MSR_MTRR_PHYSMASK0 = 0x201,
 			MSR_MTRR_PHYSBASE1 = 0x202,
@@ -101,6 +120,7 @@ namespace CPU
 			MSR_MTRR_PHYSMASK8 = 0x211,
 			MSR_MTRR_PHYSBASE9 = 0x212,
 			MSR_MTRR_PHYSMASK9 = 0x213,
+
 			MSR_MTRR_FIX64K_00000 = 0x250,
 			MSR_MTRR_FIX16K_80000 = 0x258,
 			MSR_MTRR_FIX16K_A0000 = 0x259,
@@ -112,7 +132,9 @@ namespace CPU
 			MSR_MTRR_FIX4K_E8000 = 0x26D,
 			MSR_MTRR_FIX4K_F0000 = 0x26E,
 			MSR_MTRR_FIX4K_F8000 = 0x26F,
+
 			MSR_PAT = 0x277,
+
 			MSR_MC0_CTL2 = 0x280,
 			MSR_MC1_CTL2 = 0x281,
 			MSR_MC2_CTL2 = 0x282,
@@ -145,18 +167,24 @@ namespace CPU
 			MSR_MC29_CTL2 = 0x29D,
 			MSR_MC30_CTL2 = 0x29E,
 			MSR_MC31_CTL2 = 0x29F,
+
 			MSR_MTRR_DEF_TYPE = 0x2FF,
+
 			MSR_FIXED_CTR0 = 0x309,
 			MSR_FIXED_CTR1 = 0x30A,
 			MSR_FIXED_CTR2 = 0x30B,
+
 			MSR_PERF_CAPABILITIES = 0x345,
 			MSR_FIXED_CTR_CTRL = 0x38D,
+
 			MSR_PERF_GLOBAL_STATUS = 0x38E,
 			MSR_PERF_GLOBAL_CTRL = 0x38F,
 			MSR_PERF_GLOBAL_STATUS_RESET = 0x390,
 			MSR_PERF_GLOBAL_STATUS_SET = 0x391,
 			MSR_PERF_GLOBAL_INUSE = 0x392,
+
 			MSR_PEBS_ENABLE = 0x3F1,
+
 			MSR_MC0_CTL = 0x400,
 			MSR_MC0_STATUS = 0x401,
 			MSR_MC0_ADDR = 0x402,
@@ -273,6 +301,7 @@ namespace CPU
 			MSR_MC28_STATUS = 0x471,
 			MSR_MC28_ADDR = 0x472,
 			MSR_MC28_MISC = 0x473,
+
 			MSR_VMX_BASIC = 0x480,
 			MSR_VMX_PINBASED_CTLS = 0x481,
 			MSR_VMX_PROCBASED_CTLS = 0x482,
@@ -291,6 +320,7 @@ namespace CPU
 			MSR_VMX_TRUE_EXIT_CTLS = 0x48F,
 			MSR_VMX_TRUE_ENTRY_CTLS = 0x490,
 			MSR_VMX_VMFUNC = 0x491,
+
 			MSR_A_PMC0 = 0x4C1,
 			MSR_A_PMC1 = 0x4C2,
 			MSR_A_PMC2 = 0x4C3,
@@ -299,8 +329,10 @@ namespace CPU
 			MSR_A_PMC5 = 0x4C6,
 			MSR_A_PMC6 = 0x4C7,
 			MSR_A_PMC7 = 0x4C8,
+
 			MSR_MCG_EXT_CTL = 0x4D0,
 			MSR_SGX_SVN_STATUS = 0x500,
+
 			MSR_RTIT_OUTPUT_BASE = 0x560,
 			MSR_RTIT_OUTPUT_MASK_PTRS = 0x561,
 			MSR_RTIT_CTL = 0x570,
@@ -314,14 +346,17 @@ namespace CPU
 			MSR_RTIT_ADDR2_B = 0x585,
 			MSR_RTIT_ADDR3_A = 0x586,
 			MSR_RTIT_ADDR3_B = 0x587,
+
 			MSR_DS_AREA = 0x600,
 			MSR_TSC_DEADLINE = 0x6E0,
 			MSR_PM_ENABLE = 0x770,
+
 			MSR_HWP_CAPABILITIES = 0x771,
 			MSR_HWP_REQUEST_PKG = 0x772,
 			MSR_HWP_INTERRUPT = 0x773,
 			MSR_HWP_REQUEST = 0x774,
 			MSR_HWP_STATUS = 0x777,
+
 			MSR_X2APIC_APICID = 0x802,
 			MSR_X2APIC_VERSION = 0x803,
 			MSR_X2APIC_TPR = 0x808,
@@ -366,6 +401,7 @@ namespace CPU
 			MSR_X2APIC_CUR_COUNT = 0x839,
 			MSR_X2APIC_DIV_CONF = 0x83E,
 			MSR_X2APIC_SELF_IPI = 0x83F,
+
 			MSR_DEBUG_INTERFACE = 0xC80,
 			MSR_L3_QOS_CFG = 0xC81,
 			MSR_L2_QOS_CFG = 0xC82,
@@ -379,27 +415,69 @@ namespace CPU
 			MSR_PKG_HDC_CTL = 0xDB0,
 			MSR_PM_CTL1 = 0xDB1,
 			MSR_THREAD_STALL = 0xDB2,
-			/** @brief Extended Feature Enable Register (0xc0000080) */
+
+			/* Extended Feature Enable Register */
 			MSR_EFER = 0xC0000080,
-			/** @brief legacy SYSCALL (0xC0000081) */
+			/* legacy SYSCALL */
 			MSR_STAR = 0xC0000081,
-			/** @brief 64bit SYSCALL (0xC0000082) */
+			/* 64bit SYSCALL */
 			MSR_LSTAR = 0xC0000082,
-			/** @brief compatibility mode SYSCALL (0xC0000083) */
+			/* compatibility mode SYSCALL */
 			MSR_CSTAR = 0xC0000083,
-			/** @brief EFLAGS mask for syscall (0xC0000084) */
+			/* EFLAGS mask for syscall */
 			MSR_SYSCALL_MASK = 0xC0000084,
-			/** @brief 64bit FS base (0xC0000100) */
+			/* 64bit FS base */
 			MSR_FS_BASE = 0xC0000100,
-			/** @brief 64bit GS base (0xC0000101) */
+			/* 64bit GS base */
 			MSR_GS_BASE = 0xC0000101,
-			/** @brief SwapGS GS shadow (0xC0000102) */
+			/* SwapGS GS shadow */
 			MSR_SHADOW_GS_BASE = 0xC0000102,
-			/** @brief Auxiliary TSC (0xC0000103) */
+			/* Auxiliary TSC */
 			MSR_TSC_AUX = 0xC0000103,
-			MSR_CR_PAT = 0x00000277,
-			MSR_CR_PAT_RESET = 0x0007040600070406ULL
+			/* TSC Ratio */
+			MSR_TSC_RATIO = 0xC0000104
 		};
+
+/*| PAT | PCD | PWT | Entry | Value |
+  | --- | --- | --- | ----- | ----- |
+  |  .  |  .  |  .  | PAT0  |  WB   |
+  |  .  |  .  |  X  | PAT1  |  WT   |
+  |  .  |  X  |  .  | PAT2  |  UC-  |
+  |  .  |  X  |  X  | PAT3  |  UC   |
+  |  X  |  .  |  .  | PAT4  |  WB   |
+  |  X  |  .  |  X  | PAT5  |  WT   |
+  |  X  |  X  |  .  | PAT6  |  UC-  |
+  |  X  |  X  |  X  | PAT7  |  UC   |*/
+#define MSR_PAT_RESET 0x0007040600070406ULL
+
+		enum PAT_TYPE : uint8_t
+		{
+			/* Uncacheable */
+			PAT_UC = 0,
+			/* Write-Combining */
+			PAT_WC = 1,
+			/* Writethrough */
+			PAT_WT = 4,
+			/* Write-Protect */
+			PAT_WP = 5,
+			/* Writeback */
+			PAT_WB = 6,
+			/* Uncached */
+			PAT_UCMINUS = 7
+		};
+
+		typedef struct
+		{
+			union
+			{
+				struct
+				{
+					PAT_TYPE Type : 3;
+					uint8_t __reserved : 5;
+				} PAT[8];
+				uint64_t raw;
+			};
+		} __packed PAT_MSR;
 
 #if defined(__amd64__)
 		nsa static inline uint64_t rdmsr(uint32_t msr)
