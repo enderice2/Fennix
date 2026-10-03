@@ -406,7 +406,8 @@ bool MountAndRootRAMFS(Node Parent, const char *Name, size_t Index)
 	Inode *root = nullptr;
 	ramfs->Create(nullptr, Name, S_IFDIR | 0755, &root);
 
-	fs->Mount(Parent, root, Name, fsi);
-	fs->AddRoot(Index, fs->Convert(root));
-	return true;
+	eNode mounted = fs->Mount(Parent, root, Name, fsi);
+	if (!mounted)
+		return false;
+	return fs->AddRoot(Index, mounted) == 0;
 }
