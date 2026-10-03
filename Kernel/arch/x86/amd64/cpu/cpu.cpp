@@ -222,7 +222,6 @@ namespace CPU
 				APICManager = new APIC::APIC;
 				irq.Initialize(*APICManager);
 			}
-			APICManager->SetupCore(CoreID);
 		}
 		else
 		{

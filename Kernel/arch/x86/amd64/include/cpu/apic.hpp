@@ -384,7 +384,7 @@ namespace APIC
 	private:
 		fnx::void_t APICBaseAddress = nullptr;
 		bool x2APICSupported = false;
-		int Core = -1;
+		uint8_t APICID = -1;
 
 	public:
 		decltype(x2APICSupported) &x2APIC = x2APICSupported;
@@ -399,7 +399,7 @@ namespace APIC
 		void SendInitIPI();
 		void SendStartupIPI(uint64_t StartupAddress);
 
-		Local(int Core);
+		Local(uint8_t APICID);
 		~Local() = default;
 	};
 
@@ -430,7 +430,7 @@ namespace APIC
 		std::vector<Local *> Locals;
 		IO IOAPIC;
 
-		Local *SetupCore(int ID);
+		Local *SetupCore(int ID, uint8_t APICID);
 		int GetID();
 
 		void Mask(uint32_t Line) final;

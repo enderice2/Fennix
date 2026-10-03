@@ -40,26 +40,27 @@ enum SMPTrampolineAddress
 	GDT = 0x580,
 	IDT = 0x590,
 	CORE = 0x600,
+	APIC_ID = 0x610,
 	TRAMPOLINE_START = 0x2000
 };
 
+std::atomic_bool InsideAP = false;
+std::atomic_bool CPUEnabled = false;
+
 static __aligned(PAGE_SIZE) CPUData CPUs[MAX_CPU] = {};
+__aligned(16) int APICIDToCore[256] = {};
 
 hot CPUData *GetCPU(int id) { return &CPUs[id]; }
 
-std::atomic_bool InsideAP = false;
 hot CPUData *GetCurrentCPU()
 {
-	int id;
 	if (unlikely(InsideAP.load(std::memory_order_relaxed)))
-		id = (int)*reinterpret_cast<int *>(CORE);
-	else
-		id = CPU::CurrentID();
-	assert(!(CPUs[id].IsActive == false && id != 0));
+		return &CPUs[(int)*reinterpret_cast<int *>(CORE)];
+
+	int id = APICIDToCore[CPU::CurrentID()];
+	assert(CPUs[id].IsActive == true || id == 0);
 	return &CPUs[id];
 }
-
-std::atomic_bool CPUEnabled = false;
 
 extern "C" __noreturn void APHalt()
 {
@@ -77,8 +78,11 @@ extern "C" __noreturn void StartCPU()
 	InsideAP.store(true);
 
 	int id = (int)*reinterpret_cast<int *>(CORE);
+	int apic_id = (int)*reinterpret_cast<int *>(APIC_ID);
 	CPU::Initialize(id);
 	CPU::InitializeInterrupts(id);
+	if (APICManager)
+		APICManager->SetupCore(id, (uint8_t)apic_id);
 	CPU::InitializeTimeSources(id);
 
 	InsideAP.store(false);
@@ -104,6 +108,14 @@ namespace SMP
 			return;
 
 		int totalCores = madt->CPUCores + 1;
+
+		for (int i = 0; i < totalCores; i++)
+		{
+			auto lapic = madt->lapic[i];
+			APICIDToCore[lapic->APICId] = i;
+			debug("%d: ACPI Processor ID=%d, LAPIC ID=%d, Flags=%#x",
+				  i, lapic->ACPIProcessorId, lapic->APICId, lapic->Flags);
+		}
 
 		if (Config.Cores > madt->CPUCores + 1)
 			klog("More cores requested than available. Using %d cores", madt->CPUCores + 1);
@@ -131,16 +143,12 @@ namespace SMP
 			auto lapic = madt->lapic[i];
 			auto apic = APICManager->Locals[0];
 
-			debug("Initializing CPU %d", lapic->APICId);
-			uint8_t APIC_ID = 0;
-			if (apic->x2APIC)
-				APIC_ID = uint8_t(CPU::x86::rdmsr(CPU::x86::MSR_X2APIC_APICID));
-			else
-				APIC_ID = uint8_t(apic->Read(APIC::APIC_ID) >> 24);
-
-			if (APIC_ID != lapic->APICId)
+			uint8_t apicID = APICManager->GetID();
+			debug("init core %d: ACPI Processor=%d LAPIC=%d APIC_ID=%d", i, lapic->ACPIProcessorId, lapic->APICId, apicID);
+			if (apicID != lapic->APICId)
 			{
 				VPOKE(int, CORE) = i;
+				VPOKE(int, APIC_ID) = int(lapic->APICId);
 				if (!apic->x2APIC)
 				{
 					APIC::InterruptCommandRegister icr{};
@@ -148,8 +156,9 @@ namespace SMP
 					icr.DES = lapic->APICId;
 					apic->ICR(icr);
 				}
+				thisClock->Sleep(10ms);
 
-				/* Init IPI */
+				debug("Init IPI");
 				{
 					APIC::InterruptCommandRegister icr{};
 
@@ -157,7 +166,7 @@ namespace SMP
 					{
 						icr.x2.MT = APIC::INIT;
 						icr.x2.L = APIC::Assert;
-						icr.x2.DES = uint8_t(i);
+						icr.x2.DES = lapic->APICId;
 
 						CPU::x86::wrmsr(CPU::x86::MSR_X2APIC_ICR, icr.raw);
 						apic->WaitForIPI();
@@ -166,7 +175,7 @@ namespace SMP
 					{
 						icr.MT = APIC::INIT;
 						icr.L = APIC::Assert;
-						icr.DES = uint8_t(i);
+						icr.DES = lapic->APICId;
 
 						apic->Write(APIC::APIC_ICRHI, icr.split.High);
 						apic->Write(APIC::APIC_ICRLO, icr.split.Low);
@@ -176,7 +185,7 @@ namespace SMP
 
 				thisClock->Sleep(50ms);
 
-				/* Startup IPI */
+				debug("Startup IPI");
 				{
 					APIC::InterruptCommandRegister icr{};
 
@@ -185,7 +194,7 @@ namespace SMP
 						icr.x2.VEC = static_cast<uint8_t>(TRAMPOLINE_START >> 12);
 						icr.x2.MT = APIC::Startup;
 						icr.x2.L = APIC::Assert;
-						icr.x2.DES = uint8_t(i);
+						icr.x2.DES = lapic->APICId;
 
 						CPU::x86::wrmsr(CPU::x86::MSR_X2APIC_ICR, icr.raw);
 						apic->WaitForIPI();
@@ -195,7 +204,7 @@ namespace SMP
 						icr.VEC = static_cast<uint8_t>(TRAMPOLINE_START >> 12);
 						icr.MT = APIC::Startup;
 						icr.L = APIC::Assert;
-						icr.DES = uint8_t(i);
+						icr.DES = lapic->APICId;
 
 						apic->Write(APIC::APIC_ICRHI, icr.split.High);
 						apic->Write(APIC::APIC_ICRLO, icr.split.Low);

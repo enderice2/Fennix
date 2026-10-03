@@ -89,6 +89,8 @@ extern "C" __no_stack_protector nif cold void KernelEntry(BootInfo *Info)
 
 	klog("Initializing Interrupts");
 	CPU::InitializeInterrupts();
+	if (APICManager)
+		APICManager->SetupCore(0, 0); /* TODO: detect the correct APIC ID, is it always 0? */
 	klog("Initializing Timer & Clock Sources");
 	CPU::InitializeTimeSources();
 	klog("Initializing SMP");

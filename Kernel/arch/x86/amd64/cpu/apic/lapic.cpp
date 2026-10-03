@@ -71,23 +71,15 @@ namespace APIC
 
 	void Local::WaitForIPI()
 	{
-		if (this->x2APICSupported)
+		InterruptCommandRegister icr{};
+		do
 		{
-			ErrorStatusRegister esr{};
-			esr.raw = uint32_t(rdmsr(MSR_X2APIC_ESR));
-			UNUSED(esr);
-			/* FIXME: Not sure if this is required or
-				how to implement it. */
-		}
-		else
-		{
-			InterruptCommandRegister icr{};
-			do
-			{
+			if (this->x2APICSupported)
+				icr.raw = rdmsr(MSR_X2APIC_ICR);
+			else
 				icr.split.Low = this->Read(APIC_ICRLO);
-				CPU::Pause();
-			} while (icr.DS != Idle);
-		}
+			CPU::Pause();
+		} while (icr.DS != Idle);
 	}
 
 	void Local::ICR(InterruptCommandRegister icr)
@@ -116,7 +108,7 @@ namespace APIC
 		{
 			icr.x2.MT = INIT;
 			icr.x2.L = Assert;
-			icr.x2.DES = uint8_t(Core);
+			icr.x2.DES = APICID;
 
 			wrmsr(MSR_X2APIC_ICR, icr.raw);
 			this->WaitForIPI();
@@ -125,7 +117,7 @@ namespace APIC
 		{
 			icr.MT = INIT;
 			icr.L = Assert;
-			icr.DES = uint8_t(Core);
+			icr.DES = APICID;
 
 			this->Write(APIC_ICRHI, icr.split.High);
 			this->Write(APIC_ICRLO, icr.split.Low);
@@ -142,7 +134,7 @@ namespace APIC
 			icr.x2.VEC = static_cast<uint8_t>(StartupAddress >> 12);
 			icr.x2.MT = Startup;
 			icr.x2.L = Assert;
-			icr.x2.DES = uint8_t(Core);
+			icr.x2.DES = APICID;
 
 			wrmsr(MSR_X2APIC_ICR, icr.raw);
 			this->WaitForIPI();
@@ -152,7 +144,7 @@ namespace APIC
 			icr.VEC = static_cast<uint8_t>(StartupAddress >> 12);
 			icr.MT = Startup;
 			icr.L = Assert;
-			icr.DES = uint8_t(Core);
+			icr.DES = APICID;
 
 			this->Write(APIC_ICRHI, icr.split.High);
 			this->Write(APIC_ICRLO, icr.split.Low);
@@ -160,7 +152,7 @@ namespace APIC
 		}
 	}
 
-	Local::Local(int Core) : Core(Core)
+	Local::Local(uint8_t APICID) : APICID(APICID)
 	{
 		APIC_BASE base = {.raw = rdmsr(MSR_APIC_BASE)};
 		uint64_t baseLow = base.ABALow;
@@ -210,8 +202,7 @@ namespace APIC
 
 		for (auto &&i : MADTManager->nmi)
 		{
-			if (i->processor != 0xFF &&
-				Core != i->processor)
+			if (i->processor != 0xFF && APICID != i->processor)
 				break;
 
 			uint32_t nmi = 0x402;

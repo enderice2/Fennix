@@ -37,11 +37,11 @@ namespace APIC
 	// https://www.amd.com/system/files/TechDocs/24593.pdf
 	// https://www.naic.edu/~phil/software/intel/318148.pdf
 
-	Local *APIC::SetupCore(int ID)
+	Local *APIC::SetupCore(int ID, uint8_t APICID)
 	{
 		assert(Locals[ID] == nullptr);
 
-		Local *lapic = new Local(ID);
+		Local *lapic = new Local(APICID);
 		Locals[ID] = lapic;
 		return lapic;
 	}
@@ -60,7 +60,7 @@ namespace APIC
 	void APIC::Mask(uint32_t Line) { IOAPIC.Mask(Line); }
 	void APIC::Unmask(uint32_t Line) { IOAPIC.Unmask(Line); }
 	uint32_t APIC::TranslateToLine(uint32_t Vector) { return Vector - CPU::x86::IRQ0; }
-	void APIC::EOI(uint32_t Vector) { Locals[GetID()]->EOI(); }
+	void APIC::EOI(uint32_t Vector) { Locals[GetCurrentCPU()->ID]->EOI(); }
 	void APIC::Route(uint32_t Vector, uint32_t Core) { IOAPIC.RedirectIRQ(Core, TranslateToLine(Vector), 1); }
 
 	APIC::APIC()
