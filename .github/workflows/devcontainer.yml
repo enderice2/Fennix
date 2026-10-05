@@ -6,6 +6,7 @@ on:
     paths:
       - tools/**
       - .github/workflows/devcontainer.yml
+      - .devcontainer/**
   workflow_dispatch:
 
 permissions:
