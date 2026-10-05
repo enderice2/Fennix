@@ -65,7 +65,7 @@ void KernelVFS();
 
 int main()
 {
-	Display = new Video::Display(bInfo.Framebuffer[0]);
+	Display = new Video::Display(bInfo.Framebuffer[0], false);
 	KernelConsole::EarlyInit();
 	printf("\x1b[H\x1b[2J");
 
