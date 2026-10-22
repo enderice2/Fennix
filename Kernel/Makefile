@@ -15,8 +15,8 @@ OBJROOT   := $(BUILD_DIR)/obj
 DEPROOT   := $(BUILD_DIR)/dep
 OUTROOT   := $(BUILD_DIR)
 
-GIT_COMMIT ?= $(shell git rev-parse HEAD 2>/dev/null || echo unknown)
-GIT_COMMIT_SHORT ?= $(shell git rev-parse --short HEAD 2>/dev/null || echo unknown)
+GIT_COMMIT ?= $(shell git rev-parse HEAD 2>/dev/null || echo 0000000000000000000000000000000000000000)
+GIT_COMMIT_SHORT ?= $(shell git rev-parse --short HEAD 2>/dev/null || echo 00000000)
 
 # -----------------------------------------------------------------------------
 # Toolchain
