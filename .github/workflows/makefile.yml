@@ -7,45 +7,44 @@ on:
     branches: [ master ]
 
 jobs:
-  buildcompiler:
-    name: Build Cross-Compiler & Toolchain
+  build_toolchain:
+    name: Build and Publish Toolchain Image
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
-    - uses: actions/checkout@v7
-      with:
-        submodules: recursive
+    - name: Checkout
+      uses: actions/checkout@v7
 
-    - name: Cache cross Folder
-      id: cache-cross
-      uses: actions/cache@v6
-      with:
-        path: tools/cross
-        key: ${{ runner.os }}-cross-${{ hashFiles('tools/Makefile') }}
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v4
 
-    - name: Prepare Environment for Dev Container
-      run: |
-        sudo mkdir -p /tmp/.X11-unix
-        sudo mkdir -p /run/user/1000/pulse
-        sudo touch /run/user/1000/pulse/native
-        sudo touch /run/user/1000/xauth_ci
-      env:
-        XAUTHORITY: /run/user/1000/xauth_ci
-        XDG_RUNTIME_DIR: /run/user/1000
-        DISPLAY: :0
-        WAYLAND_DISPLAY: wayland-0
-
-    - name: Run make ci-setup in dev container
-      if: steps.cache-cross.outputs.cache-hit != 'true'
-      uses: devcontainers/ci@v0.3
+    - name: Log in to GitHub Container Registry
+      uses: docker/login-action@v4
       with:
-        push: never
-        runCmd: |
-          /usr/bin/make ci-setup
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build and publish toolchain image
+      uses: docker/build-push-action@v7
+      with:
+        context: .
+        file: tools/Dockerfile
+        push: true
+        tags: ghcr.io/enderice2/fennix-toolchain:latest
+        cache-from: type=gha,scope=toolchain
+        cache-to: type=gha,mode=max,scope=toolchain
 
   analyze:
     name: Analyze (${{ matrix.language }})
     runs-on: ubuntu-latest
-    needs: [buildcompiler]
+    needs: [build_toolchain]
+    if: always() && (needs.build_toolchain.result == 'success' || needs.build_toolchain.result == 'skipped')
+    container:
+      image: ghcr.io/enderice2/fennix-toolchain:latest
     permissions:
       security-events: write
       packages: read
@@ -67,14 +66,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v7
 
-    - name: Check for cache
-      id: check-cache
-      run: |
-        if [ -z "${{ runner.os }}-cross-${{ hashFiles('tools/Makefile') }}" ]; then
-          echo "No cache found, cancelling job."
-          exit 1
-        fi
-
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v4
       with:
@@ -91,19 +82,15 @@ jobs:
         echo '  make release'
         exit 0
 
-    - name: Install Packages
+    - name: Install OS build packages
       run: |
-        sudo apt update
-        sudo apt --no-install-recommends -y install rustc xorriso mtools genisoimage ovmf nasm doxygen make gcc-mingw-w64-x86-64 gcc-mingw-w64-i686 mingw-w64 build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo
+        apt update
+        apt --no-install-recommends -y install rustc xorriso mtools genisoimage ovmf nasm doxygen gcc-mingw-w64-x86-64 gcc-mingw-w64-i686 mingw-w64 libtool libltdl-dev grub-efi-amd64-bin grub-pc-bin grub-pc grub-common grub2-common cmake npm ripgrep
+        test -x /usr/local/bin/x86_64-fennix-gcc
+        if [ -e tools/cross ] && [ ! -L tools/cross ]; then echo "tools/cross already exists and is not a symlink"; exit 1; fi
+        ln -sfn /usr/local tools/cross
         make --quiet -C tools do_limine
         make --quiet prepare
-
-    - name: Cache cross
-      id: cache-cross
-      uses: actions/cache@v6
-      with:
-        path: tools/cross
-        key: ${{ runner.os }}-cross-${{ hashFiles('tools/Makefile') }}
 
     - name: Build OS
       run: |
@@ -120,7 +107,13 @@ jobs:
   compile:
     name: Build ${{ matrix.arch }} (${{ matrix.type }})
     runs-on: ubuntu-latest
-    needs: [buildcompiler]
+    needs: [build_toolchain]
+    if: always() && (needs.build_toolchain.result == 'success' || needs.build_toolchain.result == 'skipped')
+    container:
+      image: ghcr.io/enderice2/fennix-toolchain:latest}}
+    permissions:
+      contents: read
+      packages: read
     strategy:
       fail-fast: false
       matrix:
@@ -134,37 +127,20 @@ jobs:
         submodules: recursive
         fetch-depth: 0
 
-    - name: Cache cross Folder 💾
-      id: cache-cross
-      uses: actions/cache@v6
-      with:
-        path: tools/cross
-        key: ${{ runner.os }}-cross-${{ hashFiles('tools/Makefile') }}
-
-    - name: Prepare Environment for Dev Container
+    - name: Install OS build packages
       run: |
-        sudo mkdir -p /tmp/.X11-unix
-        sudo mkdir -p /run/user/1000/pulse
-        sudo touch /run/user/1000/pulse/native
-        sudo touch /run/user/1000/xauth_ci
-      env:
-        XAUTHORITY: /run/user/1000/xauth_ci
-        XDG_RUNTIME_DIR: /run/user/1000
-        DISPLAY: :0
-        WAYLAND_DISPLAY: wayland-0
+        apt update
+        apt --no-install-recommends -y install xorriso mtools genisoimage ovmf nasm mingw-w64 libtool libltdl-dev grub-efi-amd64-bin grub-pc-bin grub-pc grub-common grub2-common cmake npm ripgrep
+        if [ -e tools/cross ] && [ ! -L tools/cross ]; then echo "tools/cross already exists and is not a symlink"; exit 1; fi
+        ln -sfn /usr/local tools/cross
+        make --quiet -C tools do_limine
 
     - name: Build 🏗️
-      uses: devcontainers/ci@v0.3
-      with:
-        push: never
-        runCmd: /usr/bin/make __ci-${{ matrix.arch }}-${{ matrix.type }}
+      run: make __ci-${{ matrix.arch }}-${{ matrix.type }}
   
     - name: Build Prepare Archive 📦
       if: always()
-      uses: devcontainers/ci@v0.3
-      with:
-        push: never
-        runCmd: /usr/bin/make __ci-prepare-archive
+      run: make __ci-prepare-archive
 
     - name: Upload Artifact 📁
       if: always()

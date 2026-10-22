@@ -1,5 +1,6 @@
 *
 !/acpi
+!/Dockerfile
 !/doxygen
 !/website
 !/Makefile
