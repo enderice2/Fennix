@@ -1,5 +1,7 @@
 /* I don't remember where I got this code from, but it seems to work fine for me. */
 
+#define _GNU_SOURCE
+#include <unistd.h>
 #include <arpa/inet.h>
 #include <linux/if_packet.h>
 #include <linux/ip.h>
