@@ -17,13 +17,13 @@ default:
 	$(error Do not run this Makefile directly!)
 
 prepare:
-ifeq ("$(wildcard ./gnu-efi)", "")
-	wget https://freefr.dl.sourceforge.net/project/gnu-efi/gnu-efi-$(GNUEFI_RELEASE_VERSION).tar.bz2
-	tar -xf gnu-efi-$(GNUEFI_RELEASE_VERSION).tar.bz2
-	rm gnu-efi-$(GNUEFI_RELEASE_VERSION).tar.bz2
-	mv ./gnu-efi-$(GNUEFI_RELEASE_VERSION) ./gnu-efi
-	cp -a ./gnu-efi/inc/. ./include
-endif
+# ifeq ("$(wildcard ./gnu-efi)", "")
+# 	wget https://freefr.dl.sourceforge.net/project/gnu-efi/gnu-efi-$(GNUEFI_RELEASE_VERSION).tar.bz2
+# 	tar -xf gnu-efi-$(GNUEFI_RELEASE_VERSION).tar.bz2
+# 	rm gnu-efi-$(GNUEFI_RELEASE_VERSION).tar.bz2
+# 	mv ./gnu-efi-$(GNUEFI_RELEASE_VERSION) ./gnu-efi
+# 	cp -a ./gnu-efi/inc/. ./include
+# endif
 #	echo "PREPARE > Compiling gnu-efi for x86_64"
 #	make -C gnu-efi all ARCH=x86_64 \
 #		AR=$(TOOLCHAIN_AMD64_PREFIX)ar \
