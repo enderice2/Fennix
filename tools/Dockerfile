@@ -6,6 +6,7 @@ ENV PATH="/usr/local/bin:${PATH}"
 RUN apt-get update
 
 RUN apt-get -y install --no-install-recommends \
+	sudo \
 	wget \
 	git \
 	gnupg \
