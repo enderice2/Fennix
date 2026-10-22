@@ -8,6 +8,7 @@ on:
 
 jobs:
   changes:
+    name: Detect Toolchain Changes
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -15,12 +16,12 @@ jobs:
     outputs:
       tools: ${{ steps.filter.outputs.tools }}
     steps:
-    - name: Checkout
+    - name: Checkout 🛎️
       uses: actions/checkout@v7
       with:
         fetch-depth: 0
 
-    - name: Detect toolchain changes
+    - name: Detect toolchain changes 🔍
       id: filter
       uses: dorny/paths-filter@v4
       with:
@@ -37,20 +38,20 @@ jobs:
       contents: read
       packages: write
     steps:
-    - name: Checkout
+    - name: Checkout 🛎️
       uses: actions/checkout@v7
 
-    - name: Set up Docker Buildx
+    - name: Set up Docker Buildx 🏗️
       uses: docker/setup-buildx-action@v4
 
-    - name: Log in to GitHub Container Registry
+    - name: Log in to GitHub Container Registry 🔑
       uses: docker/login-action@v4
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build and publish toolchain image
+    - name: Build and publish toolchain image 🚀
       uses: docker/build-push-action@v7
       with:
         context: .
@@ -108,13 +109,9 @@ jobs:
         echo '  make release'
         exit 0
 
-    - name: Install OS build packages
-      run: |
-        apt update
-        apt --no-install-recommends -y install rustc xorriso mtools genisoimage ovmf nasm doxygen gcc-mingw-w64-x86-64 gcc-mingw-w64-i686 mingw-w64 libtool libltdl-dev grub-efi-amd64-bin grub-pc-bin grub-pc grub-common grub2-common cmake npm ripgrep
+    - run: |
         test -x /usr/local/bin/x86_64-fennix-gcc
         if [ -e tools/cross ] && [ ! -L tools/cross ]; then echo "tools/cross already exists and is not a symlink"; exit 1; fi
-        ln -sfn /usr/local tools/cross
         make --quiet -C tools do_limine
         make --quiet prepare
 
@@ -157,13 +154,8 @@ jobs:
         submodules: recursive
         fetch-depth: 0
 
-    - name: Install OS build packages
-      run: |
-        apt update
-        apt --no-install-recommends -y install xorriso mtools genisoimage ovmf nasm mingw-w64 libtool libltdl-dev grub-efi-amd64-bin grub-pc-bin grub-pc grub-common grub2-common cmake npm ripgrep
-        if [ -e tools/cross ] && [ ! -L tools/cross ]; then echo "tools/cross already exists and is not a symlink"; exit 1; fi
-        ln -sfn /usr/local tools/cross
-        make --quiet -C tools do_limine
+    - name: Install Limine Bootloader 🖥️
+      run: make --quiet -C tools do_limine
 
     - name: Build 🏗️
       run: make __ci-${{ matrix.arch }}-${{ matrix.type }}
