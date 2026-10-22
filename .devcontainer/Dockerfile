@@ -1,12 +1,15 @@
 FROM ghcr.io/enderice2/fennix-toolchain:latest
 
-RUN useradd --create-home --shell /bin/bash vscode && \
-	printf 'vscode ALL=(root) NOPASSWD:ALL\n' > /etc/sudoers.d/vscode && \
-	chmod 0440 /etc/sudoers.d/vscode
+ARG USERNAME=vscode
+
+RUN usermod --login "$USERNAME" --home "/home/$USERNAME" --move-home ubuntu && \
+	groupmod --new-name "$USERNAME" ubuntu && \
+	printf '%s ALL=(root) NOPASSWD:ALL\n' "$USERNAME" > "/etc/sudoers.d/$USERNAME" && \
+	chmod 0440 "/etc/sudoers.d/$USERNAME"
 
 ARG REINSTALL_CMAKE_VERSION_FROM_SOURCE="none"
 
-COPY .devcontainer/reinstall-cmake.sh /tmp/
+COPY reinstall-cmake.sh /tmp/
 RUN <<EOF
 if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then
 	chmod +x /tmp/reinstall-cmake.sh && /tmp/reinstall-cmake.sh ${REINSTALL_CMAKE_VERSION_FROM_SOURCE};
@@ -16,6 +19,9 @@ EOF
 
 # Update system and set noninteractive env
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get update
+
+# Fix autoconf dependencies...
+RUN sudo apt -y --fix-broken install
 
 # Required packages for building test apps in userspace
 RUN apt-get -y install --no-install-recommends \
@@ -71,3 +77,5 @@ EOF
 ENV CHMOD_KVM=1
 
 ENV PATH="/usr/local/bin:${PATH}"
+
+USER $USERNAME
