@@ -167,7 +167,9 @@ jobs:
   
     - name: Build Prepare Archive 📦
       if: always()
-      run: make __ci-prepare-archive
+      run: |
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        make __ci-prepare-archive
 
     - name: Upload Artifact 📁
       if: always()

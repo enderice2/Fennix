@@ -198,6 +198,9 @@ endif
 
 build: kernel
 
+prepare:
+	$(info Nothing to prepare)
+
 kernel: $(OUTROOT)/$(KERNEL_FILENAME)
 
 info:
