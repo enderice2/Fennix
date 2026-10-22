@@ -110,7 +110,7 @@ jobs:
     needs: [build_toolchain]
     if: always() && (needs.build_toolchain.result == 'success' || needs.build_toolchain.result == 'skipped')
     container:
-      image: ghcr.io/enderice2/fennix-toolchain:latest}}
+      image: ghcr.io/enderice2/fennix-toolchain:latest
     permissions:
       contents: read
       packages: read
