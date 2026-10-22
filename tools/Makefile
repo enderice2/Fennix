@@ -14,6 +14,9 @@ BINUTILS_CLONE_PATH = /tmp/binutils-gdb
 default:
 	$(error Please specify a target)
 
+prepare:
+	$(info Nothing to prepare)
+
 all: do_tools do_limine __clone_qemu __clone_all_no_qemu do_binutils do_gcc do_qemu
 ci: do_tools do_limine __clone_all_no_qemu do_binutils do_gcc
 
