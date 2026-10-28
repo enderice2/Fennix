@@ -1,3 +1,4 @@
 *.bk
+limine
 rootfs/usr/include/*
 !rootfs/usr/include/.gitkeep
