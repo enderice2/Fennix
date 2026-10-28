@@ -5,16 +5,16 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://fennix.enderice2.com/docs/da/d09/audio_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://fennix.enderice2.com/docs/de/d40/block_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://fennix.enderice2.com/docs/db/de9/device_8h_source.html</loc>
+    <loc>https://fennix.enderice2.com/docs/da/d09/audio_8h_source.html</loc>
   </url>
   <url>
     <loc>https://fennix.enderice2.com/docs/db/de4/driver_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://fennix.enderice2.com/docs/db/de9/device_8h_source.html</loc>
   </url>
   <url>
     <loc>https://fennix.enderice2.com/docs/d8/dc2/errno_8h_source.html</loc>
@@ -26,10 +26,10 @@
     <loc>https://fennix.enderice2.com/docs/df/d26/fs_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://fennix.enderice2.com/docs/de/ded/input_8h_source.html</loc>
+    <loc>https://fennix.enderice2.com/docs/d9/d94/network_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://fennix.enderice2.com/docs/d9/d94/network_8h_source.html</loc>
+    <loc>https://fennix.enderice2.com/docs/de/ded/input_8h_source.html</loc>
   </url>
   <url>
     <loc>https://fennix.enderice2.com/docs/d9/d97/pci_8h_source.html</loc>
@@ -39,6 +39,9 @@
   </url>
   <url>
     <loc>https://fennix.enderice2.com/docs/dc/de4/usb_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://fennix.enderice2.com/docs/de/d40/block_8h.html</loc>
   </url>
   <url>
     <loc>https://fennix.enderice2.com/docs/da/d09/audio_8h.html</loc>
@@ -57,9 +60,6 @@
   </url>
   <url>
     <loc>https://fennix.enderice2.com/docs/df/d26/fs_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://fennix.enderice2.com/docs/de/d40/block_8h.html</loc>
   </url>
   <url>
     <loc>https://fennix.enderice2.com/docs/de/ded/input_8h.html</loc>
@@ -110,7 +110,7 @@
     <loc>https://fennix.enderice2.com/docs/dd/d35/md_Kernel_2README.html</loc>
   </url>
   <url>
-    <loc>https://fennix.enderice2.com/docs/d2/d55/structSuperBlockOperations.html</loc>
+    <loc>https://fennix.enderice2.com/docs/db/de6/structInodeOperations.html</loc>
   </url>
   <url>
     <loc>https://fennix.enderice2.com/docs/d2/d22/structUSBController.html</loc>
@@ -119,7 +119,7 @@
     <loc>https://fennix.enderice2.com/docs/d8/dd1/structUSBRequestBlock.html</loc>
   </url>
   <url>
-    <loc>https://fennix.enderice2.com/docs/db/de6/structInodeOperations.html</loc>
+    <loc>https://fennix.enderice2.com/docs/d2/d55/structSuperBlockOperations.html</loc>
   </url>
   <url>
     <loc>https://fennix.enderice2.com/docs/dir_2b1679bdc089c66bbf71953a395e87ea.html</loc>
