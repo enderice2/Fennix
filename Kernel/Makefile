@@ -1,14 +1,21 @@
+######################################################
+#  ___              _       _  __                 _  #
+# | __|__ _ _  _ _ (_)_ __ | |/ /___ _ _ _ _  ___| | #
+# | _/ -_) ' \| ' \| \ \ / | ' </ -_) '_| ' \/ -_) | #
+# |_|\___|_||_|_||_|_/_\_\ |_|\_\___|_| |_||_\___|_| #
+#                                                    #
+######################################################
+
+
 # -----------------------------------------------------------------------------
+# Useful links:
 # https://www.gnu.org/software/make/manual/html_node/Automatic-Prerequisites.html
 # https://gcc.gnu.org/onlinedocs/gcc/Preprocessor-Options.html
 # -----------------------------------------------------------------------------
 
-KERNEL_FILENAME ?= fennix.elf
-
-KERNEL_NAME ?= Fennix
-KERNEL_VERSION ?= 0.0.0
-KERNEL_ARCH ?= amd64
-KERNEL_DEBUG  ?= 1
+# General configuration
+#
+include config.mk
 
 BUILD_DIR ?= build
 OBJROOT   := $(BUILD_DIR)/obj
@@ -22,9 +29,9 @@ GIT_COMMIT_SHORT ?= $(shell git rev-parse --short HEAD 2>/dev/null || echo 00000
 # Toolchain
 # -----------------------------------------------------------------------------
 
-TRIPLET_amd64 ?= x86_64-fennix
-TRIPLET_i386  ?= i386-fennix
-TRIPLET_arm64 ?= aarch64-fennix
+TRIPLET_amd64 := x86_64-fennix
+TRIPLET_i386  := i386-fennix
+TRIPLET_arm64 := aarch64-fennix
 
 TRIPLET ?= $(TRIPLET_$(KERNEL_ARCH))
 
@@ -163,6 +170,7 @@ LDFLAGS += \
 	-Wl,-Map,$(OUTROOT)/kernel.map
 
 # Architecture-specific tuning
+#
 ifeq ($(KERNEL_ARCH),amd64)
 CFLAGS   += -march=core2 -mcmodel=kernel -m64 -mno-red-zone
 CXXFLAGS += -march=core2 -mcmodel=kernel -m64 -mno-red-zone

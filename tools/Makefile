@@ -17,20 +17,13 @@ default:
 prepare:
 	$(info Nothing to prepare)
 
-all: do_tools do_limine __clone_qemu __clone_all_no_qemu do_binutils do_gcc do_qemu
-ci: do_tools do_limine __clone_all_no_qemu do_binutils do_gcc
+all: do_limine __clone_qemu __clone_all_no_qemu do_binutils do_gcc do_qemu
 
 clean:
 	rm -f rep ep
 	rm -rf $(BINUTILS_CLONE_PATH)
 	rm -rf $(GCC_CLONE_PATH)
 	rm -rf $(QEMU_CLONE_PATH)
-
-do_tools:
-	gcc -w ReadEthernetPackets.c -o rep
-	g++ -w ErrorParser.cpp -o ep
-	chmod +x rep
-	chmod +x ep
 
 do_limine:
 ifeq ("$(wildcard ./limine)", "")

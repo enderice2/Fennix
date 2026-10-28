@@ -1,13 +1,3 @@
-*
-!/acpi
-!/Dockerfile
-!/doxygen
-!/website
-!/Makefile
-!/.gdbinit
-!/*.c
-!/*.cpp
-!/*.cfg
-!/*.md
-!/*.patch
-!/*.gitignore
+*.bk
+rootfs/usr/include/*
+!rootfs/usr/include/.gitkeep

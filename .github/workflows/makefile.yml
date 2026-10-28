@@ -109,19 +109,11 @@ jobs:
         echo '  make release'
         exit 0
 
-    - name: Install Build Dependencies ⚙️
-      run: |
-        python3 -m pip install git-cliff --break-system-packages
-        if [ -e tools/cross ] && [ ! -L tools/cross ]; then echo "tools/cross already exists and is not a symlink"; exit 1; fi
-        make --quiet -C tools do_limine
-        make --quiet prepare
+    - name: Install Build Dependencies
+      run: make -C Kernel prepare
 
-    - name: Build OS
-      run: |
-        make build_userspace
-        make build_drivers
-        make build_kernel
-        make build_userspace
+    - name: Build Kernel
+      run: make build_kernel
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4

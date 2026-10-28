@@ -1,10 +1,3 @@
-export CC := $(__CONF_CC)
-export CXX := $(__CONF_CXX)
-export LD := $(__CONF_LD)
-export AS := $(__CONF_AS)
-export AR := $(__CONF_AR)
-export OBJDUMP := $(__CONF_OBJDUMP)
-
 export WORKSPACE_DIR = $(CURDIR)
 
 ifeq ($(DEBUG), 1)

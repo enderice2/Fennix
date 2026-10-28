@@ -1,8 +1,6 @@
 iso_tmp_data
 artifacts
 tmp_rootfs
-rootfs/usr/include/*
-!rootfs/usr/include/.gitkeep
 doxygen-doc
 rootfs.tar.gz
 .dccache

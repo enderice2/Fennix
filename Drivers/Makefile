@@ -1,12 +1,6 @@
 default:
 	$(error Do not run this Makefile directly!)
 
-export CC := $(__CONF_CC)
-export CXX := $(__CONF_CXX)
-export LD := $(__CONF_LD)
-export AS := $(__CONF_AS)
-export OBJDUMP := $(__CONF_OBJDUMP)
-
 export OUTPUT_DIR := $(CURDIR)/out/
 export INCLUDE_DIR := $(CURDIR)/include
 

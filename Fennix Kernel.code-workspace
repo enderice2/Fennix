@@ -28,6 +28,16 @@
 			"kernel/bootstrap",
 			"kernel/usb",
 			"kernel/interrupt"
-		]
+		],
+		"chat.tools.terminal.autoApprove": {
+			"/^make build$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"/^make run$/": {
+				"approve": true,
+				"matchCommandLine": true
+			}
+		}
 	}
 }

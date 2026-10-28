@@ -5,8 +5,8 @@ on:
     branches: [ master ]
     paths:
       - tools/website/**
+      - tools/Doxyfile
       - Kernel/include/interface/**
-      - Doxyfile
 
 jobs:
   deploydoc:

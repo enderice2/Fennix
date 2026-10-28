@@ -75,4 +75,4 @@ Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to
 Fennix is licensed under the GNU General Public License v3.0.
 See the [LICENSE.md](LICENSE.md) file for more details.
 
-Other licenses used in the project can be found in the [LICENSES.md](LICENSES.md) file.
+Other licenses used in the project can be found in the [ATTRIBUTION.md](ATTRIBUTION.md) file.

@@ -5,6 +5,7 @@ ENV PATH="/usr/local/bin:${PATH}"
 
 RUN apt-get update
 
+# QoL packages
 RUN apt-get -y install --no-install-recommends \
 	sudo \
 	wget \
@@ -12,7 +13,8 @@ RUN apt-get -y install --no-install-recommends \
 	gnupg \
 	ca-certificates \
 	lsb-release \
-	apt-utils
+	apt-utils \
+	bash-completion
 
 # Required packages for building gcc & binutils
 RUN apt-get -y install --no-install-recommends \

@@ -74,7 +74,7 @@ RUN <<EOF
 echo PATH=$PATH:/usr/local/bin >> /etc/profile
 EOF
 
-ENV CHMOD_KVM=1
+ENV USING_DEVCONTAINER=1
 
 ENV PATH="/usr/local/bin:${PATH}"
 
