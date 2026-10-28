@@ -187,6 +187,7 @@ jobs:
       with:
         path: artifacts
         merge-multiple: true
+        pattern: 'build-*'
 
     - name: Update Nightly 🚀
       run: gh release upload nightly artifacts/* -R ${{github.repository}} --clobber
