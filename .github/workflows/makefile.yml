@@ -110,7 +110,9 @@ jobs:
         exit 0
 
     - name: Install Build Dependencies
-      run: make -C Kernel prepare
+      run: |
+        make --quiet -C tools do_limine
+        make -C Kernel prepare
 
     - name: Build Kernel
       run: make build_kernel
