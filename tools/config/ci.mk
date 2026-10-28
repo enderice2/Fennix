@@ -91,3 +91,4 @@ prepare-archive:
 	cp -f CHANGELOG.md artifacts/
 	mv -f Fennix-*.iso artifacts/
 	mv -f fennix-*.elf artifacts/
+	sha256sum artifacts/Fennix-*.iso artifacts/fennix-*.elf > artifacts/SHA256SUMS

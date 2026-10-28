@@ -65,7 +65,11 @@ mkdir_rootfs:
 
 setup:
 	$(MAKE) prepare
-	$(MAKE) tools
+ifeq ($(USING_DEVCONTAINER), 1)
+	$(MAKE) --quiet -C tools do_limine
+else
+	$(MAKE) --quiet -C tools all
+endif
 
 build:
 	$(MAKE) $(MAKE_QUIET_FLAG) mkdir_rootfs

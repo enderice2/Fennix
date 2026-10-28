@@ -2,107 +2,195 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="home">Fennix</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>Fennix</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-    <header>
-        <img src="assets/logo.png" alt="Fennix Logo">
-        <div class="div-warning">
-            <a data-i18n="warning_message"></a>
-        </div>
-        <div class="div-dropdown">
-            <button class="header-button" onclick="toggleDropdown()">🌐</button>
-            <div class="dropdown-content" id="dropdownMenu">
-                <a href="" onclick="changeLanguage('bg')">Български</a>
-                <a href="" onclick="changeLanguage('de')">Deutsch</a>
-                <a href="" onclick="changeLanguage('en')">English</a>
-                <a href="" onclick="changeLanguage('es')">Español</a>
-                <a href="" onclick="changeLanguage('fr')">Français</a>
-                <a href="" onclick="changeLanguage('hu')">Magyar</a>
-                <a href="" onclick="changeLanguage('it')">Italiano</a>
-                <a href="" onclick="changeLanguage('ja')">日本語</a>
-                <a href="" onclick="changeLanguage('ko')">한국어</a>
-                <a href="" onclick="changeLanguage('pl')">Polski</a>
-                <a href="" onclick="changeLanguage('pt')">Português</a>
-                <a href="" onclick="changeLanguage('ro')">Română</a>
-                <a href="" onclick="changeLanguage('ru')">Русский</a>
-                <a href="" onclick="changeLanguage('tr')">Türkçe</a>
-                <a href="" onclick="changeLanguage('zh-CN')">中文(简体)</a>
-                <a href="" onclick="changeLanguage('zh-TW')">中文(繁體)</a>
-            </div>
-        </div>
-    </header>
+	<h1>Fennix</h1>
+	<p class="tag">Opeating System from scratch made in C and C++</p>
 
-    <section class="hero">
-        <h1 data-i18n="welcome_message"></h1>
-        <p data-i18n="welcome_subtitle"></p>
-        <button id="downloadBtn" data-i18n="download_button" onclick="downloadFennix()"></button>
-    </section>
+	<nav>
+		<a href="#about">About</a>
+		<a href="#news">News</a>
+		<a href="#download">Download</a>
+		<a href="./docs/index.html">Documentation</a>
+		<a href="#source">Source</a>
+		<a href="#community">Community</a>
+	</nav>
 
-    <section class="screenshot-section">
-        <h2 data-i18n="screenshot_title"></h2>
-        <img data-i18n="screenshot_image" src="assets/images/screenshot-default.png" alt="Fennix Screenshot" class="screenshot">
-    </section>
+	<h2 id="about">About</h2>
+	<p>
+		Fennix is an operating system written from scratch: its own kernel, its own
+		drivers, its own userland. It does not derive from Linux, BSD, or any other
+		existing system.
+	</p>
+	<ul>
+		<li>Custom kernel with its own scheduler and memory manager</li>
+		<li>Minimal userland and shell</li>
+		<!-- TODO: add more -->
+	</ul>
+	<p class="note">
+		The project is still in early developement.
+	</p>
 
-    <section class="buttons-section">
-        <h2 data-i18n="get_involved"></h2>
-        <button data-i18n="get_involved_btn1" class="button" onclick="window.location.href='https://github.com/EnderIce2/Fennix'"></button>
-        <button data-i18n="get_involved_btn2" class="button" onclick="window.location.href='./docs/index.html'"></button>
-        <button data-i18n="get_involved_btn3" class="button" onclick="window.location.href='./docs/df/d03/md_tools_doxygen_api.html'"></button>
-        <button data-i18n="get_involved_btn4" class="button" onclick="window.location.href='./docs/d9/d7f/md_tools_doxygen_develop.html'"></button>
-    </section>
+	<h2 id="news">News</h2>
+	<dl>
+		No news yet.
+		<!-- <dt>1970-01-01 &mdash; test</dt>
+		<dd>test</dd> -->
+	</dl>
+	<p><a href="#">News archive</a></p>
 
-    <section class="features-section">
-        <h2 data-i18n="features_title"></h2>
-        <div class="features">
-            <div class="card">
-                <h3 data-i18n="card1_title"></h3>
-                <p data-i18n="card1_text"></p>
-            </div>
-            <div class="card">
-                <h3 data-i18n="card2_title"></h3>
-                <p data-i18n="card2_text"></p>
-            </div>
-            <div class="card">
-                <h3 data-i18n="card3_title"></h3>
-                <p data-i18n="card3_text"></p>
-            </div>
-        </div>
-    </section>
+	<h2 id="status">Status</h2>
+	<div class="scroll">
+		<table>
+			<tr>
+				<th>Component</th>
+				<th>State</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<td>Bootloader</td>
+				<td>not implemented</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Memory management</td>
+				<td>working</td>
+				<td>Physical and virtual memory fully implemented</td>
+			</tr>
+			<tr>
+				<td>Scheduler</td>
+				<td>working</td>
+				<td>Preemptive, affinity-aware, round-robin-like</td>
+			</tr>
+			<tr>
+				<td>Filesystem</td>
+				<td>in progress</td>
+				<td>Caching not fully implemented as expected</td>
+			</tr>
+			<tr>
+				<td>Network Stack</td>
+				<td>in progress</td>
+				<td>Core code exists but not used</td>
+			</tr>
+			<tr>
+				<td>Graphics</td>
+				<td>in progress</td>
+				<td>No graphics acceleration yet</td>
+			</tr>
+			<tr>
+				<td>USB Stack</td>
+				<td>in progress</td>
+				<td>Not working as expected</td>
+			</tr>
+			<tr>
+				<td>Kernel API</td>
+				<td>in progress</td>
+				<td>Not fully implemented</td>
+			</tr>
+			<tr>
+				<td>TTY</td>
+				<td>working</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Userspace</td>
+				<td>in progress</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
 
-    <section class="feature-detail">
-        <img data-i18n="feature1_image" src="assets/images/feature-default.png" alt="Feature 1 Screenshot">
-        <div class="text">
-            <h3 data-i18n="feature1_title"></h3>
-            <p data-i18n="feature1_text"></p>
-        </div>
-    </section>
+	<h2 id="download">Download</h2>
+	<div class="scroll">
+		<table>
+			<tr>
+				<th>Release</th>
+				<th>Date</th>
+				<th>Files</th>
+			</tr>
+			<!-- <tr>
+				<td>Fennix 0.0.1 (latest)</td>
+				<td>1970-01-01</td>
+				<td><a href="#">Fennix.iso</a> &middot; <a href="#">SHA256</a></td>
+			</tr> -->
+			<tr>
+				<td>Nightly snapshot</td>
+				<td>daily</td>
+				<td><a href="https://github.com/enderice2/Fennix/releases/tag/nightly" target="_blank">Browse files</a></td>
+			</tr>
+		</table>
+	</div>
+	<p>Try it in an emulator:</p>
+	<pre>$ qemu-system-x86_64 -cdrom Fennix.iso -m 1G -enable-kvm -bios /usr/share/qemu/OVMF.fd</pre>
 
-    <section class="feature-detail">
-        <img data-i18n="feature2_image" src="assets/images/feature-default.png" alt="Feature 2 Screenshot">
-        <div class="text">
-            <h3 data-i18n="feature2_title"></h3>
-            <p data-i18n="feature2_text"></p>
-        </div>
-    </section>
+	<h2 id="docs">Documentation</h2>
+	<ul>
+		<!-- uhh, maybe with doxygen generate these first? -->
+		<li><a href="#">Getting started</a> &mdash; build and boot the system</li>
+		<li><a href="#">Architecture overview</a> &mdash; how the kernel is laid out</li>
+		<li><a href="#">System call reference</a></li>
+		<li><a href="#">Coding style</a></li>
+		<li><a href="#">FAQ</a></li>
+	</ul>
 
-    <section class="feature-detail">
-        <img data-i18n="feature3_image" src="assets/images/feature-default.png" alt="Feature 3 Screenshot">
-        <div class="text">
-            <h3 data-i18n="feature3_title"></h3>
-            <p data-i18n="feature3_text"></p>
-        </div>
-    </section>
+	<h2 id="architecture">Supported architecture</h2>
+	<div class="scroll">
+		<table>
+			<tr>
+				<th>Architecture</th>
+				<th>Support</th>
+			</tr>
+			<tr>
+				<td>amd64 (x86_64)</td>
+				<td>primary, tested in QEMU and on real hardware</td>
+			</tr>
+			<tr>
+				<td>i386 (x86)</td>
+				<td>planned, currently broken</td>
+			</tr>
+			<tr>
+				<td>arm</td>
+				<td>planned</td>
+			</tr>
+			<tr>
+				<td>aarch64</td>
+				<td>planned</td>
+			</tr>
+		</table>
+	</div>
 
-    <footer class="footer">
-        <p data-i18n="footer_text"></p>
-    </footer>
+	<h2 id="source">Source code</h2>
+	<p>
+		The source is kept in a git repository.
+		Browse it at <a href="https://github.com/enderice2/Fennix">github.com/enderice2/Fennix</a> or clone it with:
+	</p>
+	<pre>$ git clone https://github.com/enderice2/Fennix.git</pre>
+	<p>Fennix is released under the <a href="https://github.com/enderice2/Fennix/blob/master/LICENSE.md">GPL-3.0 license</a>.</p>
 
-    <script src="assets/js/script.js"></script>
+	<h2 id="build">Building from source</h2>
+	<pre>$ git clone https://github.com/enderice2/Fennix.git
+$ cd Fennix
+$ make setup
+$ make run</pre>
+
+	<h2 id="community">Community</h2>
+	<ul>
+		<li><a href="https://github.com/enderice2/Fennix/issues">Bug tracker</a> &mdash; report problems</li>
+	</ul>
+	<p>All contributions are welcome.</p>
+
+	<footer>
+		Copyright &copy; 2026 the Fennix developers.
+		Last modified: 2026-10-28.
+	</footer>
+
+	<script src="assets/js/script.js"></script>
 </body>
 
 </html>
