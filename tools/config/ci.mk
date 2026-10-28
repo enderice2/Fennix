@@ -11,7 +11,7 @@ build-set-debug:
 
 amd64-debug:
 	$(MAKE) -C tools do_limine
-	$(MAKE) build-set-debug
+	$(MAKE) -f tools/config/ci.mk build-set-debug
 	sed -i 's/.*OSARCH = .*/OSARCH = amd64/' ./config.mk && cat config.mk | grep OSARCH
 	$(MAKE) build
 	mv Fennix.iso Fennix-amd64-debug.iso
@@ -20,7 +20,7 @@ amd64-debug:
 
 amd64-release:
 	$(MAKE) -C tools do_limine
-	$(MAKE) build-set-release
+	$(MAKE) -f tools/config/ci.mk build-set-release
 	sed -i 's/.*OSARCH = .*/OSARCH = amd64/' ./config.mk && cat config.mk | grep OSARCH
 	$(MAKE) build
 	mv Fennix.iso Fennix-amd64-release.iso
@@ -29,7 +29,7 @@ amd64-release:
 
 i386-debug:
 	$(MAKE) -C tools do_limine
-	$(MAKE) build-set-debug
+	$(MAKE) -f tools/config/ci.mk build-set-debug
 	sed -i 's/.*OSARCH = .*/OSARCH = i386/' ./config.mk && cat config.mk | grep OSARCH
 	$(MAKE) build
 	mv Fennix.iso Fennix-i386-debug.iso
@@ -38,7 +38,7 @@ i386-debug:
 
 i386-release:
 	$(MAKE) -C tools do_limine
-	$(MAKE) build-set-release
+	$(MAKE) -f tools/config/ci.mk build-set-release
 	sed -i 's/.*OSARCH = .*/OSARCH = i386/' ./config.mk && cat config.mk | grep OSARCH
 	$(MAKE) build
 	mv Fennix.iso Fennix-i386-release.iso
@@ -47,7 +47,7 @@ i386-release:
 
 arm-debug:
 	$(MAKE) -C tools do_limine
-	$(MAKE) build-set-debug
+	$(MAKE) -f tools/config/ci.mk build-set-debug
 	sed -i 's/.*OSARCH = .*/OSARCH = arm/' ./config.mk && cat config.mk | grep OSARCH
 	$(MAKE) build
 	mv Fennix.iso Fennix-arm-debug.iso
@@ -56,7 +56,7 @@ arm-debug:
 
 arm-release:
 	$(MAKE) -C tools do_limine
-	$(MAKE) build-set-release
+	$(MAKE) -f tools/config/ci.mk build-set-release
 	sed -i 's/.*OSARCH = .*/OSARCH = arm/' ./config.mk && cat config.mk | grep OSARCH
 	$(MAKE) build
 	mv Fennix.iso Fennix-arm-release.iso
@@ -65,7 +65,7 @@ arm-release:
 
 aarch64-debug:
 	$(MAKE) -C tools do_limine
-	$(MAKE) build-set-debug
+	$(MAKE) -f tools/config/ci.mk build-set-debug
 	sed -i 's/.*OSARCH = .*/OSARCH = aarch64/' ./config.mk && cat config.mk | grep OSARCH
 	$(MAKE) build
 	mv Fennix.iso Fennix-aarch64-debug.iso
@@ -74,7 +74,7 @@ aarch64-debug:
 
 aarch64-release:
 	$(MAKE) -C tools do_limine
-	$(MAKE) build-set-release
+	$(MAKE) -f tools/config/ci.mk build-set-release
 	sed -i 's/.*OSARCH = .*/OSARCH = aarch64/' ./config.mk && cat config.mk | grep OSARCH
 	$(MAKE) build
 	mv Fennix.iso Fennix-aarch64-release.iso
@@ -82,7 +82,7 @@ aarch64-release:
 	$(MAKE) clean
 
 restore-config:
-	$(MAKE) build-set-debug
+	$(MAKE) -f tools/config/ci.mk build-set-debug
 	sed -i 's/.*OSARCH = .*/OSARCH = amd64/' ./config.mk && cat config.mk | grep OSARCH
 
 prepare-archive:
