@@ -61,7 +61,7 @@ namespace Subsystem::Linux
 		if (fs->RootExists(1) == false)
 		{
 			Node root = fs->GetRoot(0);
-			Node cfg = fs->Lookup(root, "/sys/cfg/subsystem/linux");
+			Node cfg = fs->Lookup(root, "/etc/subsystem/linux");
 			if (cfg)
 			{
 				struct kstat st;
@@ -101,7 +101,7 @@ namespace Subsystem::Linux
 			}
 			else
 			{
-				warn("Couldn't open /sys/cfg/subsystem/linux");
+				warn("Couldn't open /etc/subsystem/linux");
 				__CreateStubRoot();
 			}
 		}

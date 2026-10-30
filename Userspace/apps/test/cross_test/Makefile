@@ -13,7 +13,7 @@ ifneq ($(shell uname -s), Linux)
 endif
 	$(info Compiling $(FILENAME)linux)
 	gcc linux_glibc.c $(CFLAGS) -o $(FILENAME)linux
-	cp $(FILENAME)linux $(WORKSPACE_DIR)/out/sys/bin/$(FILENAME)linux
+	cp $(FILENAME)linux $(WORKSPACE_DIR)/out/bin/$(FILENAME)linux
 
 $(FILENAME)win.exe:
 ifneq ($(shell uname -s), Linux)
@@ -22,7 +22,7 @@ ifneq ($(shell uname -s), Linux)
 endif
 	$(info Compiling $(FILENAME)win)
 	x86_64-w64-mingw32-gcc win_mingw.c $(CFLAGS) -o $(FILENAME)win.exe
-	cp $(FILENAME)win.exe $(WORKSPACE_DIR)/out/sys/bin/$(FILENAME)win.exe
+	cp $(FILENAME)win.exe $(WORKSPACE_DIR)/out/bin/$(FILENAME)win.exe
 
 build: $(FILENAME)linux $(FILENAME)win.exe
 

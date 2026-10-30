@@ -31,8 +31,6 @@ do_rust:
 do_limine:
 ifeq ("$(wildcard ./limine)", "")
 	git clone https://github.com/limine-bootloader/limine.git --branch=v9.x-binary --depth=1 limine
-else
-	$(info > TOOLS: Skipping cloning limine because directory already exists.)
 endif
 
 __clone_qemu:
@@ -44,7 +42,6 @@ else
 	git fetch origin --tags && \
 	git reset --hard ${QEMU_TAG} && \
 	git clean -dfx
-	$(info > TOOLS: Operation completed for qemu)
 endif
 
 .PHONY: all clean __clone_binutils __clone_gcc __prep_cross __patch_cross __patch_cross_binutils __patch_cross_gcc
@@ -58,7 +55,6 @@ else
 	git fetch origin --tags && \
 	git reset --hard $(BINUTILS_TAG) && \
 	git clean -dfx
-	$(info > TOOLS: Operation completed for binutils-gdb)
 endif
 
 __clone_gcc:
@@ -70,7 +66,6 @@ else
 	git fetch origin --tags && \
 	git reset --hard $(GCC_TAG) && \
 	git clean -dfx
-	$(info > TOOLS: Operation completed for gcc)
 endif
 
 __patch_cross_binutils: __clone_binutils
@@ -118,17 +113,25 @@ ifeq ("$(wildcard ./qemu.patch.bk)", "")
 	mv qemu.patch qemu.patch.bk
 endif
 # binutils-gdb
+ifneq ("$(wildcard $(BINUTILS_CLONE_PATH))", "")
+	cd $(BINUTILS_CLONE_PATH)/ld && automake && \
 	cd $(BINUTILS_CLONE_PATH) && \
 	git add . && \
 	git diff --cached > $(CURDIR)/binutils-gdb.patch
+endif
 # gcc
+ifneq ("$(wildcard $(GCC_CLONE_PATH))", "")
+	cd $(GCC_CLONE_PATH)/libstdc++-v3 && autoconf && \
 	cd $(GCC_CLONE_PATH) && \
 	git add . && \
 	git diff --cached > $(CURDIR)/gcc.patch
+endif
 # qemu
+ifneq ("$(wildcard $(QEMU_CLONE_PATH))", "")
 	cd $(QEMU_CLONE_PATH) && \
 	git add . && \
 	git diff --cached > $(CURDIR)/qemu.patch
+endif
 
 __do_binutils:
 	mkdir -p $(BINUTILS_CLONE_PATH)/__build

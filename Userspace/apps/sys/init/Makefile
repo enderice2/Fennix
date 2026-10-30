@@ -11,7 +11,7 @@ FILENAME = $(notdir $(shell pwd))
 WARNCFLAG = -Wall -Wextra
 
 build: $(FILENAME).elf
-	cp $(FILENAME).elf $(WORKSPACE_DIR)/out/sys/bin/$(FILENAME)
+	cp $(FILENAME).elf $(WORKSPACE_DIR)/out/bin/$(FILENAME)
 
 $(FILENAME).elf: $(OBJ)
 	$(info Linking $@)

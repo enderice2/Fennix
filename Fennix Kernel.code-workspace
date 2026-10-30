@@ -38,6 +38,7 @@
 				"approve": true,
 				"matchCommandLine": true
 			}
-		}
+		},
+		"editor.formatOnSave": true
 	}
 }

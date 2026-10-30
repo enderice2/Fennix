@@ -11,7 +11,7 @@ FILENAME = $(notdir $(shell pwd))
 WARNCFLAG = -Wall -Wextra
 
 build: $(FILENAME).elf
-	cp $(FILENAME).elf $(WORKSPACE_DIR)/out/sys/bin/$(FILENAME)
+	cp $(FILENAME).elf $(WORKSPACE_DIR)/out/bin/$(FILENAME)
 
 # Use static linking
 LDFLAGS += -ggdb3 -g -static -fno-pic -fno-pie -Wl,-static -Wl,-Ttext=0x00600000

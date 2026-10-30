@@ -344,7 +344,7 @@ void test_file()
 {
 	printf("- Testing file operations\n");
 
-	FILE *test = fopen("/sys/cfg/passwd", "r");
+	FILE *test = fopen("/etc/passwd", "r");
 	if (test == NULL)
 	{
 		perror("fopen");
@@ -353,7 +353,7 @@ void test_file()
 		return;
 	}
 
-	printf("/sys/cfg/passwd contents: ");
+	printf("/etc/passwd contents: ");
 	char ch;
 	while (1)
 	{
@@ -373,7 +373,7 @@ void test_stat()
 	printf("- Testing stat\n");
 
 	struct stat st;
-	if (stat("/sys/cfg/passwd", &st) == -1)
+	if (stat("/etc/passwd", &st) == -1)
 	{
 		perror("stat");
 		fflush(stdout);
@@ -385,7 +385,7 @@ void test_stat()
 	printf("File mode: %o\n", st.st_mode);
 	printf("File inode: %ld\n", st.st_ino);
 
-	int fd = open("/sys/cfg/passwd", O_RDONLY);
+	int fd = open("/etc/passwd", O_RDONLY);
 	if (fd == -1)
 	{
 		perror("open");
@@ -407,7 +407,7 @@ void test_stat()
 	printf("File inode: %ld\n", st.st_ino);
 	close(fd);
 
-	if (lstat("/sys/cfg/passwd", &st) == -1)
+	if (lstat("/etc/passwd", &st) == -1)
 	{
 		perror("lstat");
 		fflush(stdout);

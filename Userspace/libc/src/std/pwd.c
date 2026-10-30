@@ -33,7 +33,7 @@ export struct passwd *getpwent(void)
 
 	if (pwfile == NULL)
 	{
-		pwfile = fopen("/sys/cfg/passwd", "r"); /* FIXME: this path should be OS dependent */
+		pwfile = fopen("/etc/passwd", "r"); /* FIXME: this path should be OS dependent */
 		if (pwfile == NULL)
 			return NULL;
 	}

@@ -391,7 +391,7 @@ void ProcessNeededLibraries(Elf_Dyn *elem, ElfInfo *Info)
 	}
 
 	const char *standardPaths[] = {
-		"/sys/lib/",
+		"/lib/",
 		"/usr/lib/",
 		"/lib/",
 		"/usr/local/lib/",

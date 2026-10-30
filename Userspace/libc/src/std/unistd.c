@@ -209,7 +209,7 @@ export int gethostname(char *name, size_t namelen)
 		return 0;
 	}
 
-	int fd = open("/sys/cfg/hostname", O_RDONLY); /* FIXME: this path should be OS dependent */
+	int fd = open("/etc/hostname", O_RDONLY); /* FIXME: this path should be OS dependent */
 	if (fd == -1)
 		return -1;
 

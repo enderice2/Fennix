@@ -1,12 +1,3 @@
-diff --git a/.gitignore b/.gitignore
-index 0a40764c..9aa17853 100644
---- a/.gitignore
-+++ b/.gitignore
-@@ -74,3 +74,4 @@ stamp-*
- /gmp*
- /isl*
- /gettext*
-+/__build
 diff --git a/bfd/config.bfd b/bfd/config.bfd
 index 6553aac1..39008568 100644
 --- a/bfd/config.bfd
@@ -288,18 +279,10 @@ index 6a9833e5..bf4c134d 100644
  	eelf_x86_64_sol2.c \
  	ehppa64linux.c \
 diff --git a/ld/Makefile.in b/ld/Makefile.in
-index 8639e782..f82ec216 100644
+index 8639e782..24738803 100644
 --- a/ld/Makefile.in
 +++ b/ld/Makefile.in
-@@ -543,6 +543,7 @@ pdfdir = @pdfdir@
- prefix = @prefix@
- program_transform_name = @program_transform_name@
- psdir = @psdir@
-+runstatedir = @runstatedir@
- sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- srcdir = @srcdir@
-@@ -676,6 +677,7 @@ ALL_EMULATION_SOURCES = \
+@@ -676,6 +676,7 @@ ALL_EMULATION_SOURCES = \
  	earcv2elfx.c \
  	earm_wince_pe.c \
  	earmelf.c \
@@ -307,7 +290,7 @@ index 8639e782..f82ec216 100644
  	earmelf_fbsd.c \
  	earmelf_fuchsia.c \
  	earmelf_haiku.c \
-@@ -790,6 +792,7 @@ ALL_EMULATION_SOURCES = \
+@@ -790,6 +791,7 @@ ALL_EMULATION_SOURCES = \
  	eelf_i386.c \
  	eelf_i386_be.c \
  	eelf_i386_fbsd.c \
@@ -315,7 +298,7 @@ index 8639e782..f82ec216 100644
  	eelf_i386_haiku.c \
  	eelf_i386_ldso.c \
  	eelf_i386_sol2.c \
-@@ -893,6 +896,7 @@ ALL_64_EMULATION_SOURCES = \
+@@ -893,6 +895,7 @@ ALL_64_EMULATION_SOURCES = \
  	eaarch64elf32.c \
  	eaarch64elf32b.c \
  	eaarch64elfb.c \
@@ -323,7 +306,7 @@ index 8639e782..f82ec216 100644
  	eaarch64fbsd.c \
  	eaarch64fbsdb.c \
  	eaarch64haiku.c \
-@@ -973,6 +977,7 @@ ALL_64_EMULATION_SOURCES = \
+@@ -973,6 +976,7 @@ ALL_64_EMULATION_SOURCES = \
  	eelf_x86_64.c \
  	eelf_x86_64_cloudabi.c \
  	eelf_x86_64_fbsd.c \
@@ -331,7 +314,7 @@ index 8639e782..f82ec216 100644
  	eelf_x86_64_haiku.c \
  	eelf_x86_64_sol2.c \
  	ehppa64linux.c \
-@@ -1279,6 +1284,7 @@ distclean-compile:
+@@ -1279,6 +1283,7 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64elfb.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64fbsd.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64fbsdb.Po@am__quote@
@@ -339,7 +322,7 @@ index 8639e782..f82ec216 100644
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64haiku.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64linux.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64linux32.Po@am__quote@
-@@ -1301,6 +1307,7 @@ distclean-compile:
+@@ -1301,6 +1306,7 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earm_wince_pe.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earmelf.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earmelf_fbsd.Po@am__quote@
@@ -347,7 +330,7 @@ index 8639e782..f82ec216 100644
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earmelf_fuchsia.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earmelf_haiku.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earmelf_linux.Po@am__quote@
-@@ -1480,6 +1487,7 @@ distclean-compile:
+@@ -1480,6 +1486,7 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_be.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_fbsd.Po@am__quote@
@@ -355,7 +338,7 @@ index 8639e782..f82ec216 100644
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_haiku.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_ldso.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_sol2.Po@am__quote@
-@@ -1490,6 +1498,7 @@ distclean-compile:
+@@ -1490,6 +1497,7 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_x86_64.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_x86_64_cloudabi.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_x86_64_fbsd.Po@am__quote@
@@ -364,7 +347,7 @@ index 8639e782..f82ec216 100644
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_x86_64_sol2.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eh8300elf.Po@am__quote@
 diff --git a/ld/configure.tgt b/ld/configure.tgt
-index f937f78b..57858cc8 100644
+index f937f78b..01cfcec9 100644
 --- a/ld/configure.tgt
 +++ b/ld/configure.tgt
 @@ -92,6 +92,9 @@ aarch64-*-elf | aarch64-*-rtems* | aarch64-*-genode*)
@@ -415,7 +398,7 @@ index f937f78b..57858cc8 100644
    ;;
  
 +*-*-fennix*)
-+  NATIVE_LIB_DIRS='/sys/lib /usr/lib'
++  NATIVE_LIB_DIRS='/lib /usr/lib /usr/local/lib'
 +  ;;
 +
  *-*-freebsd*)

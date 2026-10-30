@@ -8,12 +8,12 @@ build:
 	mkdir -p tmp_rootfs
 	cp -r tools/rootfs/* tmp_rootfs/
 ifeq ($(BUILD_DRIVERS), 1)
-	cp -r Drivers/out/* tmp_rootfs/sys/drv/
+	cp -r Drivers/out/* tmp_rootfs/lib/modules/
 endif
 ifeq ($(BUILD_USERSPACE), 1)
 	cp -r Userspace/out/* tmp_rootfs/
 endif
-	chmod -R 755 tmp_rootfs/sys/
+	chmod -R 755 tmp_rootfs/lib/
 	chmod -R 755 tmp_rootfs/usr/
 	chmod 755 tmp_rootfs/home/
 	chmod -R 750 tmp_rootfs/home/root/

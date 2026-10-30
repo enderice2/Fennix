@@ -2215,10 +2215,10 @@ static int linux_uname(SysFrm *, struct utsname *buf)
 #elif defined(aa32)
 			.machine = "arm",
 #endif
-		};
+	};
 
 	Node root = fs->GetRoot(0);
-	Node rn = fs->Lookup(root, "/sys/cfg/subsystem/linux");
+	Node rn = fs->Lookup(root, "/etc/subsystem/linux");
 	if (rn)
 	{
 		struct kstat st;
@@ -2260,7 +2260,7 @@ static int linux_uname(SysFrm *, struct utsname *buf)
 		delete[] sh;
 	}
 	else
-		warn("Couldn't open /sys/cfg/subsystem/linux");
+		warn("Couldn't open /etc/subsystem/linux");
 
 	memcpy(pBuf, &uname, sizeof(struct utsname));
 	return 0;
@@ -3547,10 +3547,10 @@ static int linux_prlimit64(SysFrm *, pid_t pid, int resource,
 	case linux_RLIMIT_RTTIME:
 	case linux_RLIMIT_NLIMITS:
 	__stub:
-	{
-		fixme("resource %s(%d) is stub", rlimitStr[resource], resource);
-		return 0; /* just return 0 */
-	}
+		{
+			fixme("resource %s(%d) is stub", rlimitStr[resource], resource);
+			return 0; /* just return 0 */
+		}
 	default:
 	{
 		debug("Invalid resource %d", resource);

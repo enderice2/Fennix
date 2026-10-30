@@ -49,7 +49,7 @@ namespace Subsystem::Windows
 		if (fs->RootExists(2) == false)
 		{
 			Node root = fs->GetRoot(0);
-			Node cfg = fs->Lookup(root, "/sys/cfg/subsystem/windows");
+			Node cfg = fs->Lookup(root, "/etc/subsystem/windows");
 			if (cfg)
 			{
 				struct kstat st;
@@ -89,7 +89,7 @@ namespace Subsystem::Windows
 			}
 			else
 			{
-				warn("Couldn't open /sys/cfg/subsystem/windows");
+				warn("Couldn't open /etc/subsystem/windows");
 				__CreateStubRoot();
 			}
 		}

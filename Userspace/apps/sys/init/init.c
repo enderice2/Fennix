@@ -65,8 +65,8 @@ int main()
 	signal(SIGTERM, HandleSignal);
 	signal(SIGINT, HandleSignal);
 
-	char *shellArgs[] = {"/sys/bin/sh", NULL};
-	StartProcess("/sys/bin/sh", shellArgs);
+	char *shellArgs[] = {"/bin/sh", NULL};
+	StartProcess("/bin/sh", shellArgs);
 
 	// char *dummyServiceArgs[] = {"/usr/bin/dummy_service", NULL};
 	// StartProcess("/usr/bin/dummy_service", dummyServiceArgs);

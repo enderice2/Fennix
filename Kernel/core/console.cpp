@@ -348,7 +348,7 @@ namespace KernelConsole
 
 	bool SetTheme(std::string Theme)
 	{
-		Node rn = fs->Lookup(thisProcess->Info.RootNode, "/sys/cfg/term");
+		Node rn = fs->Lookup(thisProcess->Info.RootNode, "/etc/term");
 		if (rn == nullptr)
 			return false;
 
@@ -676,7 +676,7 @@ namespace KernelConsole
 
 	void LateInit()
 	{
-		Node rn = fs->Lookup(thisProcess->Info.RootNode, "/sys/cfg/term");
+		Node rn = fs->Lookup(thisProcess->Info.RootNode, "/etc/term");
 		if (rn == nullptr)
 			return;
 

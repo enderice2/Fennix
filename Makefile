@@ -46,19 +46,15 @@ mkdir_rootfs:
 	$(MKDIR_ROOTFS)/home/root/videos/
 	$(MKDIR_ROOTFS)/home/root/templates/
 
-	$(MKDIR_ROOTFS)/sys/bin/
-	$(MKDIR_ROOTFS)/sys/lib/
-	$(MKDIR_ROOTFS)/sys/drv/
-	$(MKDIR_ROOTFS)/sys/svc/
-	$(MKDIR_ROOTFS)/sys/cfg/
-	$(MKDIR_ROOTFS)/sys/inc/
-	$(MKDIR_ROOTFS)/sys/res/
-	$(MKDIR_ROOTFS)/sys/log/panic/
+	$(MKDIR_ROOTFS)/bin/
+	$(MKDIR_ROOTFS)/etc/
+	$(MKDIR_ROOTFS)/lib/modules/
+	$(MKDIR_ROOTFS)/var/log/panic/
 
 	$(MKDIR_ROOTFS)/usr/bin/
 	$(MKDIR_ROOTFS)/usr/lib/
-	$(MKDIR_ROOTFS)/usr/share/
 	$(MKDIR_ROOTFS)/usr/include/
+	$(MKDIR_ROOTFS)/usr/share/subsystem/
 
 	$(MKDIR_ROOTFS)/mnt/
 	$(MKDIR_ROOTFS)/tmp/

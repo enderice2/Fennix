@@ -6,4 +6,4 @@ version=#10-Ubuntu SMP Mon Jav 1 00:00:00 UTC 0
 machine=auto
 
 [rootfs]
-path=/sys/res/linux.tar
+path=/usr/share/subsystem/linux.tar

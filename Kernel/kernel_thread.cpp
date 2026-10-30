@@ -35,8 +35,8 @@
 int SpawnNativeInit()
 {
 	const char *envp[] = {
-		"PATH=/sys/bin:/usr/bin",
-		"LD_LIBRARY_PATH=/sys/lib:/usr/lib",
+		"PATH=/bin:/usr/bin",
+		"LD_LIBRARY_PATH=/lib:/usr/lib",
 		"TERM=tty",
 		"HOME=/home/root",
 		"USER=root",

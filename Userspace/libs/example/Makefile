@@ -12,7 +12,7 @@ C_SOURCES = $(shell find ./ -type f -name '*.c')
 CXX_SOURCES = $(shell find ./ -type f -name '*.cpp')
 OBJ = ${S_SOURCES:.S=.o} ${C_SOURCES:.c=.o} ${CXX_SOURCES:.cpp=.o}
 
-CFLAGS := -fvisibility=hidden -fPIC -I../include -I$(WORKSPACE_DIR)/out/sys/inc -DLIBC_GIT_COMMIT='"$(shell git rev-parse HEAD)"'
+CFLAGS := -fvisibility=hidden -fPIC -I../include -I$(WORKSPACE_DIR)/out/usr/include -DLIBC_GIT_COMMIT='"$(shell git rev-parse HEAD)"'
 
 ifeq ($(DEBUG), 1)
 	CFLAGS += -DDEBUG -ggdb3 -O0 -fdiagnostics-color=always
