@@ -550,8 +550,9 @@ namespace KernelConsole
 
 			static std::atomic_flag in_dispatch = ATOMIC_FLAG_INIT;
 
-			while (in_dispatch.test_and_set(std::memory_order_acquire))
-				CPU::Pause();
+			// TODO: check if this is right
+			if (in_dispatch.test_and_set(std::memory_order_acquire))
+				return; /*CPU::Pause();*/
 
 			KernelConsole::VirtualTerminal *vt = KernelConsole::CurrentTerminal.load(std::memory_order_acquire)->Term;
 
