@@ -34,10 +34,6 @@ prepare:
 
 MKDIR_ROOTFS = mkdir -p tools/rootfs
 mkdir_rootfs:
-	$(MKDIR_ROOTFS)/home/root/apps/
-	$(MKDIR_ROOTFS)/home/root/cfg/
-	$(MKDIR_ROOTFS)/home/root/cache/
-	$(MKDIR_ROOTFS)/home/root/trash/
 	$(MKDIR_ROOTFS)/home/root/desktop/
 	$(MKDIR_ROOTFS)/home/root/documents/
 	$(MKDIR_ROOTFS)/home/root/downloads/
