@@ -189,6 +189,7 @@ LDFLAGS += \
 	-nodefaultlibs \
 	-nolibc \
 	-Wl,-static,--no-dynamic-linker,-ztext \
+	-z noexecstack \
 	-zmax-page-size=0x1000 \
 	-Wl,-Map,$(OUTROOT)/kernel.map
 
@@ -248,10 +249,12 @@ info:
 	@echo "AS             = $(AS)"
 	@echo "LD             = $(LD)"
 
-$(OUTROOT):
+.PHONY: FORCE
+FORCE:
+$(OUTROOT): FORCE
 	@mkdir -p $@
 
-$(OUTROOT)/$(KERNEL_FILENAME): $(OBJS) $(RUST_LIB) | $(OUTROOT)
+$(OUTROOT)/$(KERNEL_FILENAME): $(OBJS) $(RUST_LIB)
 	$(LD) $(LDFLAGS) $(OBJS) $(RUST_LIB) -o $@
 
 $(OBJROOT)/%.o: %.c
@@ -262,8 +265,8 @@ $(OBJROOT)/%.o: %.cpp
 	@mkdir -p $(dir $@) $(dir $(DEPROOT)/$*)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CFLAG_STACK_PROTECTOR) -MMD -MP -MF $(DEPROOT)/$*.d -MT $@ -c $< -o $@
 
-$(RUST_LIB): $(RUST_CRATE_ROOT) $(RUST_SOURCES) | $(OUTROOT)
-	$(RUSTC) $(RUST_FLAGS) \
+$(RUST_LIB): $(RUST_CRATE_ROOT) $(RUST_SOURCES)
+	+$(RUSTC) $(RUST_FLAGS) \
 		--target $(RUST_TARGET) \
 		$(RUST_CRATE_ROOT) \
 		-o $@
