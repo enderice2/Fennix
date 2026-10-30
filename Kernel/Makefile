@@ -35,14 +35,14 @@ TRIPLET_arm64 := aarch64-fennix
 
 TRIPLET ?= $(TRIPLET_$(KERNEL_ARCH))
 
-CC      := $(TRIPLET)-gcc
-CXX     := $(TRIPLET)-g++
-AS      := $(TRIPLET)-as
-LD      := $(CC)
-AR      := $(TRIPLET)-ar
-NM      := $(TRIPLET)-nm
-OBJCOPY := $(TRIPLET)-objcopy
-OBJDUMP := $(TRIPLET)-objdump
+CC      ?= $(TRIPLET)-gcc
+CXX     ?= $(TRIPLET)-g++
+AS      ?= $(TRIPLET)-as
+LD      ?= $(CC)
+AR      ?= $(TRIPLET)-ar
+NM      ?= $(TRIPLET)-nm
+OBJCOPY ?= $(TRIPLET)-objcopy
+OBJDUMP ?= $(TRIPLET)-objdump
 
 # -----------------------------------------------------------------------------
 # Arch layout
@@ -72,6 +72,20 @@ $(error Linker script "$(LINKER_SCRIPT)" does not exist)
 endif
 
 # -----------------------------------------------------------------------------
+# Rust
+# -----------------------------------------------------------------------------
+
+RUSTC ?= rustc
+
+RUST_TARGET_amd64 := x86_64-unknown-none
+RUST_TARGET_arm64 := aarch64-unknown-none
+
+RUST_TARGET := $(RUST_TARGET_$(KERNEL_ARCH))
+
+RUST_CRATE_ROOT := kernel.rs
+RUST_LIB := $(OUTROOT)/libfennix_rust.a
+
+# -----------------------------------------------------------------------------
 # Source discovery
 # -----------------------------------------------------------------------------
 
@@ -93,12 +107,13 @@ endef
 SRC_DIRS_RAW := $(ARCH_COMMON_DIR) $(ARCH_DIR)
 SRC_DIRS     := $(filter-out ,$(foreach d,$(SRC_DIRS_RAW),$(if $(wildcard $(d)),$(d))))
 
-C_SOURCES   := $(ROOT_C_SOURCES)   $(call find-src,*.c)   $(shell find $(SRC_DIRS) -type f -name '*.c'   2>/dev/null)
-CPP_SOURCES := $(ROOT_CPP_SOURCES) $(call find-src,*.cpp) $(shell find $(SRC_DIRS) -type f -name '*.cpp' 2>/dev/null)
-S_SOURCES   := $(ROOT_S_SOURCES)   $(call find-src,*.S)   $(shell find $(SRC_DIRS) -type f -name '*.S'   2>/dev/null)
-s_SOURCES   := $(ROOT_s_SOURCES)   $(call find-src,*.s)   $(shell find $(SRC_DIRS) -type f -name '*.s'   2>/dev/null)
-PNG_SOURCES := $(ROOT_PNG_SOURCES) $(call find-src,*.png) $(shell find $(SRC_DIRS) -type f -name '*.png' 2>/dev/null)
-PSF_SOURCES := $(ROOT_PSF_SOURCES) $(call find-src,*.psf) $(shell find $(SRC_DIRS) -type f -name '*.psf' 2>/dev/null)
+C_SOURCES    := $(call find-src,*.c)   $(shell find $(SRC_DIRS) -type f -name '*.c'   2>/dev/null)
+CPP_SOURCES  := $(call find-src,*.cpp) $(shell find $(SRC_DIRS) -type f -name '*.cpp' 2>/dev/null)
+RUST_SOURCES := $(call find-src,*.rs)  $(shell find $(SRC_DIRS) -type f -name '*.rs'  2>/dev/null)
+S_SOURCES    := $(call find-src,*.S)   $(shell find $(SRC_DIRS) -type f -name '*.S'   2>/dev/null)
+s_SOURCES    := $(call find-src,*.s)   $(shell find $(SRC_DIRS) -type f -name '*.s'   2>/dev/null)
+PNG_SOURCES  := $(call find-src,*.png) $(shell find $(SRC_DIRS) -type f -name '*.png' 2>/dev/null)
+PSF_SOURCES  := $(call find-src,*.psf) $(shell find $(SRC_DIRS) -type f -name '*.psf' 2>/dev/null)
 
 C_OBJS   := $(addprefix $(OBJROOT)/,$(C_SOURCES:.c=.o))
 CPP_OBJS := $(addprefix $(OBJROOT)/,$(CPP_SOURCES:.cpp=.o))
@@ -154,6 +169,13 @@ WARNFLAGS := \
 	-Werror \
 	-Wno-unused-parameter \
 	-Wno-error=format
+
+RUST_FLAGS := \
+	--crate-name fennix_kernel \
+	--crate-type staticlib \
+	--edition 2024 \
+	-C panic=abort \
+	-C opt-level=2
 
 CFLAGS   += $(WARNFLAGS)
 CXXFLAGS += $(WARNFLAGS)
@@ -226,8 +248,8 @@ info:
 $(OUTROOT):
 	@mkdir -p $@
 
-$(OUTROOT)/$(KERNEL_FILENAME): $(OBJS) | $(OUTROOT)
-	$(LD) $(LDFLAGS) $(OBJS) -o $@
+$(OUTROOT)/$(KERNEL_FILENAME): $(OBJS) $(RUST_LIB) | $(OUTROOT)
+	$(LD) $(LDFLAGS) $(OBJS) $(RUST_LIB) -o $@
 
 $(OBJROOT)/%.o: %.c
 	@mkdir -p $(dir $@) $(dir $(DEPROOT)/$*)
@@ -236,6 +258,12 @@ $(OBJROOT)/%.o: %.c
 $(OBJROOT)/%.o: %.cpp
 	@mkdir -p $(dir $@) $(dir $(DEPROOT)/$*)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CFLAG_STACK_PROTECTOR) -MMD -MP -MF $(DEPROOT)/$*.d -MT $@ -c $< -o $@
+
+$(RUST_LIB): $(RUST_CRATE_ROOT) $(RUST_SOURCES) | $(OUTROOT)
+	$(RUSTC) $(RUST_FLAGS) \
+		--target $(RUST_TARGET) \
+		$(RUST_CRATE_ROOT) \
+		-o $@
 
 $(OBJROOT)/%.o: %.S
 	@mkdir -p $(dir $@) $(dir $(DEPROOT)/$*)

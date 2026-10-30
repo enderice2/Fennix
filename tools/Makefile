@@ -17,13 +17,16 @@ default:
 prepare:
 	$(info Nothing to prepare)
 
-all: do_limine __clone_qemu __clone_all_no_qemu do_binutils do_gcc do_qemu
+all: do_limine do_rust __clone_qemu __clone_all_no_qemu do_binutils do_gcc do_qemu
 
 clean:
 	rm -f rep ep
 	rm -rf $(BINUTILS_CLONE_PATH)
 	rm -rf $(GCC_CLONE_PATH)
 	rm -rf $(QEMU_CLONE_PATH)
+
+do_rust:
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal
 
 do_limine:
 ifeq ("$(wildcard ./limine)", "")

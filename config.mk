@@ -99,6 +99,7 @@ export BOOTLOADER
 
 export CC      := $(TRIPLET)-gcc
 export CXX     := $(TRIPLET)-g++
+export RUSTC   := rustc
 export AS      := $(TRIPLET)-as
 export LD      := $(CC)
 export AR      := $(TRIPLET)-ar
