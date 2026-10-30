@@ -15,6 +15,10 @@
 			"internalConsoleOptions": "neverOpen",
 			"setupCommands": [
 				{
+					"text": "-enable-pretty-printing",
+					"description": "Enable GDB pretty-printing"
+				},
+				{
 					"text": "set breakpoint pending on",
 					"description": "Make breakpoint pending on future shared library load."
 				},
@@ -47,6 +51,10 @@
 			"externalConsole": false,
 			"internalConsoleOptions": "neverOpen",
 			"setupCommands": [
+				{
+					"text": "-enable-pretty-printing",
+					"description": "Enable GDB pretty-printing"
+				},
 				{
 					"text": "set breakpoint pending on",
 					"description": "Make breakpoint pending on future shared library load."
@@ -81,6 +89,10 @@
 			"internalConsoleOptions": "neverOpen",
 			"setupCommands": [
 				{
+					"text": "-enable-pretty-printing",
+					"description": "Enable GDB pretty-printing"
+				},
+				{
 					"text": "set breakpoint pending on",
 					"description": "Make breakpoint pending on future shared library load."
 				},
@@ -113,6 +125,10 @@
 			"externalConsole": false,
 			"internalConsoleOptions": "neverOpen",
 			"setupCommands": [
+				{
+					"text": "-enable-pretty-printing",
+					"description": "Enable GDB pretty-printing"
+				},
 				{
 					"text": "set breakpoint pending on",
 					"description": "Make breakpoint pending on future shared library load."

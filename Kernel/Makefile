@@ -232,6 +232,7 @@ prepare:
 	$(info Nothing to prepare)
 
 kernel: $(OUTROOT)/$(KERNEL_FILENAME)
+	cp $(OUTROOT)/$(KERNEL_FILENAME) $(OUTROOT)/fennix.elf
 
 info:
 	@echo "KERNEL_NAME    = $(KERNEL_NAME)"

@@ -7,6 +7,8 @@
 python
 import subprocess
 import re
+import os
+import shutil
 
 def relocatesections(filename, addr):
     p = subprocess.Popen(["readelf", "-S", filename], stdout = subprocess.PIPE)
@@ -34,6 +36,36 @@ def relocatesections(filename, addr):
 
     return (textaddr, sections)
 
+def load_rust_pretty_printers():
+    rustc = os.environ.get("RUSTC") or shutil.which("rustc")
+
+    if not rustc:
+        print("Fennix GDB: rustc not found in PATH")
+        return
+
+    try:
+        sysroot = subprocess.check_output(
+            [rustc, "--print", "sysroot"],
+            text=True
+        ).strip()
+
+        printer = os.path.join(
+            sysroot,
+            "lib",
+            "rustlib",
+            "etc",
+            "gdb_load_rust_pretty_printers.py"
+        )
+
+        if not os.path.isfile(printer):
+            print("Fennix GDB: Rust pretty-printers not found:", printer)
+            return
+
+        gdb.execute("source " + printer)
+        print("Fennix GDB: Rust pretty-printers loaded")
+
+    except gdb.error as error:
+        print("Fennix GDB: Failed to load Rust pretty-printers:", error)
 
 class AddSymbolFileAll(gdb.Command):
     """The right version for add-symbol-file"""
@@ -88,4 +120,5 @@ class RemoveSymbolFileAll(gdb.Command):
 
 AddSymbolFileAll()
 RemoveSymbolFileAll()
+load_rust_pretty_printers()
 end

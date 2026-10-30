@@ -72,7 +72,6 @@ else
 endif
 
 build:
-	$(MAKE) $(MAKE_QUIET_FLAG) mkdir_rootfs
 	$(MAKE) $(MAKE_QUIET_FLAG) build_kernel
 	$(MAKE) $(MAKE_QUIET_FLAG) build_bootloader
 	$(MAKE) $(MAKE_QUIET_FLAG) build_userspace

@@ -1,5 +1,6 @@
 {
-	"sysroot": "/usr/local",
+	"sysroot": "/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu",
+	"sysroot_src": "/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library",
 	"crates": [
 		{
 			"root_module": "kernel.rs",

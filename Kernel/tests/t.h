@@ -35,5 +35,7 @@ void __early_playground();
 void __late_playground();
 void test_kernel_fb_speed();
 
+extern "C" void rust_run_tests(void);
+
 #endif // DEBUG
 #endif // !__FENNIX_KERNEL_non_constructor_tests_H__

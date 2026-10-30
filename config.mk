@@ -37,7 +37,7 @@ BUILD_BOOTLOADER = 0
 BUILD_USERSPACE = 0
 BUILD_DRIVERS = 0
 
-QUIET_BUILD = 0
+QUIET_BUILD = 1
 
 # The path of the cross-compiler.
 #   Default: /usr/local/bin

@@ -58,6 +58,18 @@ RUN python3 -m pip install meson --break-system-packages
 RUN apt-get -y install --no-install-recommends \
 	npm
 
+# Install rustfmt
+RUN RUSTUP_HOME=/usr/local/rustup \
+	CARGO_HOME=/usr/local/cargo \
+	/usr/local/cargo/bin/rustup component add rustfmt \
+	--toolchain stable-x86_64-unknown-linux-gnu
+
+# Install rust-src
+RUN RUSTUP_HOME=/usr/local/rustup \
+	CARGO_HOME=/usr/local/cargo \
+	/usr/local/cargo/bin/rustup component add rust-src \
+	--toolchain stable-x86_64-unknown-linux-gnu
+
 # Configure git
 RUN <<EOF
 git config --system advice.detachedHead false

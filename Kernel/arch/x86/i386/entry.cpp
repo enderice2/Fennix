@@ -29,6 +29,7 @@ extern struct BootInfo bInfo;
 extern bool DebuggerIsAttached;
 
 void Test_stl();
+extern "C" void rust_run_tests(void);
 void TestMemoryAllocation();
 int main();
 extern "C" int _init();
@@ -116,6 +117,7 @@ extern "C" __no_stack_protector nif cold void KernelEntry(BootInfo *Info)
 	 */
 	TestMemoryAllocation();
 	Test_stl();
+	rust_run_tests();
 #endif // DEBUG
 	main();
 }

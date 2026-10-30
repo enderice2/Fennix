@@ -22,7 +22,8 @@
 				"maziac.hex-hover-converter",
 				"ms-vscode.makefile-tools",
 				"github.vscode-github-actions",
-				"rust-lang.rust-analyzer"
+				"rust-lang.rust-analyzer",
+				"ms-vscode.cpptools"
 			]
 		}
 	},
