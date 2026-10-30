@@ -10,7 +10,7 @@
 			"targetArchitecture": "x64",
 			"MIMode": "gdb",
 			"miDebuggerServerAddress": "/tmp/gdb-fennix",
-			"miDebuggerPath": "${workspaceFolder}/../tools/cross/bin/x86_64-fennix-gdb",
+			"miDebuggerPath": "x86_64-fennix-gdb",
 			"externalConsole": false,
 			"internalConsoleOptions": "neverOpen",
 			"setupCommands": [
@@ -43,7 +43,7 @@
 			"targetArchitecture": "x86",
 			"MIMode": "gdb",
 			"miDebuggerServerAddress": "/tmp/gdb-fennix",
-			"miDebuggerPath": "${workspaceFolder}/../tools/cross/bin/i386-fennix-gdb",
+			"miDebuggerPath": "i386-fennix-gdb",
 			"externalConsole": false,
 			"internalConsoleOptions": "neverOpen",
 			"setupCommands": [
@@ -76,7 +76,7 @@
 			"targetArchitecture": "arm64",
 			"MIMode": "gdb",
 			"miDebuggerServerAddress": "/tmp/gdb-fennix",
-			"miDebuggerPath": "${workspaceFolder}/../tools/cross/bin/aarch64-fennix-gdb",
+			"miDebuggerPath": "aarch64-fennix-gdb",
 			"externalConsole": false,
 			"internalConsoleOptions": "neverOpen",
 			"setupCommands": [
@@ -109,7 +109,7 @@
 			"targetArchitecture": "arm",
 			"MIMode": "gdb",
 			"miDebuggerServerAddress": "/tmp/gdb-fennix",
-			"miDebuggerPath": "${workspaceFolder}/../tools/cross/bin/arm-fennix-gdb",
+			"miDebuggerPath": "arm-fennix-gdb",
 			"externalConsole": false,
 			"internalConsoleOptions": "neverOpen",
 			"setupCommands": [
@@ -142,7 +142,7 @@
 			"remote": true,
 			"cwd": "${workspaceRoot}",
 			"valuesFormatting": "parseText",
-			"gdbpath": "${workspaceFolder}/../tools/cross/bin/x86_64-fennix-gdb",
+			"gdbpath": "x86_64-fennix-gdb",
 			"autorun": [
 				"set auto-load safe-path ${workspaceFolder}",
 				"source ${workspaceFolder}/../tools/.gdbinit",

@@ -174,9 +174,7 @@ RUST_FLAGS := \
 	--crate-name fennix_kernel \
 	--crate-type staticlib \
 	--edition 2024 \
-	-C panic=abort \
-	-C debuginfo=2 \
-	-C opt-level=0
+	-C panic=abort
 
 CFLAGS   += $(WARNFLAGS)
 CXXFLAGS += $(WARNFLAGS)
@@ -219,6 +217,7 @@ CFLAGS   += $(GLOB_CFLAGS)
 CXXFLAGS += $(GLOB_CFLAGS)
 LDFLAGS  += -ggdb3 -O0
 ASFLAGS  += -g --gdwarf-5
+RUST_FLAGS += -C debuginfo=2 -C opt-level=0
 endif
 
 # -----------------------------------------------------------------------------

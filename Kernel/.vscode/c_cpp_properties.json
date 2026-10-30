@@ -15,7 +15,7 @@
 			"forcedInclude": [
 				"${workspaceFolder}/.vscode/preinclude.h"
 			],
-			"compilerPath": "${workspaceFolder}/../tools/cross/bin/x86_64-fennix-gcc",
+			"compilerPath": "x86_64-fennix-gcc",
 			"cStandard": "c17",
 			"cppStandard": "c++20",
 			"intelliSenseMode": "gcc-x64",
@@ -82,7 +82,7 @@
 			"defines": [
 				"DEBUG=\"1\""
 			],
-			"compilerPath": "${workspaceFolder}/../tools/cross/bin/i386-fennix-gcc",
+			"compilerPath": "i386-fennix-gcc",
 			"cStandard": "c17",
 			"cppStandard": "c++20",
 			"intelliSenseMode": "gcc-x86",
@@ -152,7 +152,7 @@
 			"defines": [
 				"DEBUG=\"1\""
 			],
-			"compilerPath": "${workspaceFolder}/../tools/cross/bin/arm-fennix-gcc",
+			"compilerPath": "arm-fennix-gcc",
 			"cStandard": "c17",
 			"cppStandard": "c++20",
 			"intelliSenseMode": "linux-gcc-arm",
@@ -179,7 +179,7 @@
 			"defines": [
 				"DEBUG=\"1\""
 			],
-			"compilerPath": "${workspaceFolder}/../tools/cross/bin/aarch64-fennix-gcc",
+			"compilerPath": "aarch64-fennix-gcc",
 			"cStandard": "c17",
 			"cppStandard": "c++20",
 			"intelliSenseMode": "linux-gcc-arm64",
