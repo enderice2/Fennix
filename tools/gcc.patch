@@ -11,11 +11,24 @@ index 38f3d037a..e15a98ae9 100755
  		;;
  	# This one is extra strict with allowed versions
  	sco3.2v2 | sco3.2v[4-9]* | sco5v6*)
+diff --git a/fixincludes/mkfixinc.sh b/fixincludes/mkfixinc.sh
+index 7112f4dcd..b18071ed4 100755
+--- a/fixincludes/mkfixinc.sh
++++ b/fixincludes/mkfixinc.sh
+@@ -19,6 +19,8 @@ case $machine in
+     powerpcle-*-eabisim* | \
+     powerpcle-*-eabi* | \
+     *-*-vxworks7* | \
++    *-fennix* | \
++    *-*-fennix* | \
+     *-musl* )
+ 	#  IF there is no include fixing,
+ 	#  THEN create a no-op fixer and exit
 diff --git a/gcc/config.gcc b/gcc/config.gcc
-index 95c91ee02..c887980e0 100644
+index 743421768..5c6729717 100644
 --- a/gcc/config.gcc
 +++ b/gcc/config.gcc
-@@ -825,6 +825,15 @@ case ${target} in
+@@ -879,6 +879,15 @@ case ${target} in
    rust_target_objs="${rust_target_objs} dragonfly-rust.o"
    target_has_targetrustm=yes
    ;;
@@ -31,7 +44,7 @@ index 95c91ee02..c887980e0 100644
  *-*-freebsd*)
    # This is the generic ELF configuration of FreeBSD.  Later
    # machine-specific sections may refine and add to this
-@@ -1227,6 +1236,16 @@ aarch64*-*-elf | aarch64*-*-fuchsia* | aarch64*-*-rtems*)
+@@ -1274,6 +1283,16 @@ aarch64*-*-elf | aarch64*-*-fuchsia* | aarch64*-*-rtems*)
  	done
  	TM_MULTILIB_CONFIG=`echo $TM_MULTILIB_CONFIG | sed 's/^,//'`
  	;;
@@ -48,7 +61,7 @@ index 95c91ee02..c887980e0 100644
  aarch64*-*-freebsd*)
  	tm_file="${tm_file} elfos.h ${fbsd_tm_file}"
  	tm_file="${tm_file} aarch64/aarch64-elf.h aarch64/aarch64-errata.h aarch64/aarch64-freebsd.h"
-@@ -1358,6 +1377,30 @@ arm-wrs-vxworks7*)
+@@ -1437,6 +1456,30 @@ arm-wrs-vxworks7*)
  	target_cpu_cname="generic-armv7-a"
  	need_64bit_hwint=yes
  	;;
@@ -79,7 +92,7 @@ index 95c91ee02..c887980e0 100644
  arm*-*-freebsd*)                # ARM FreeBSD EABI
  	tm_file="elfos.h ${fbsd_tm_file} arm/elf.h"
  	case $target in
-@@ -1953,6 +1996,14 @@ x86_64-*-dragonfly*)
+@@ -2033,6 +2076,14 @@ x86_64-*-dragonfly*)
  	tm_file="${tm_file} i386/unix.h i386/att.h elfos.h dragonfly.h dragonfly-stdint.h i386/x86-64.h i386/dragonfly.h"
  	tmake_file="${tmake_file} i386/t-crtstuff"
  	;;
@@ -291,11 +304,11 @@ index 000000000..632634dac
 +MULTILIB_OPTIONS += mno-red-zone
 +MULTILIB_DIRNAMES += no-red-zone
 diff --git a/libgcc/config.host b/libgcc/config.host
-index e75a7af64..10d8017b0 100644
+index ac10ccc43..c00a6a555 100644
 --- a/libgcc/config.host
 +++ b/libgcc/config.host
-@@ -418,6 +418,15 @@ aarch64*-*-elf | aarch64*-*-rtems*)
- 	tmake_file="${tmake_file} t-dfprules"
+@@ -399,6 +399,16 @@ aarch64*-*-elf | aarch64*-*-rtems*)
+ 	md_unwind_def_header=aarch64/aarch64-unwind-def.h
  	md_unwind_header=aarch64/aarch64-unwind.h
  	;;
 +aarch64*-*-fennix*)
@@ -305,12 +318,13 @@ index e75a7af64..10d8017b0 100644
 +	tmake_file="${tmake_file} ${cpu_type}/t-lse t-slibgcc-libgcc"
 +	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
 +	tmake_file="${tmake_file} t-dfprules"
++	md_unwind_def_header=aarch64/aarch64-unwind-def.h
 +	md_unwind_header=aarch64/aarch64-unwind.h
 +	;;
  aarch64*-*-freebsd*)
  	extra_parts="$extra_parts crtfastmath.o"
  	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
-@@ -512,6 +521,13 @@ arm-wrs-vxworks7*)
+@@ -517,6 +527,13 @@ arm-wrs-vxworks7*)
  	unwind_header=config/arm/unwind-arm.h
  	extra_parts="$extra_parts crti.o crtn.o"
  	;;
@@ -324,7 +338,7 @@ index e75a7af64..10d8017b0 100644
  arm*-*-freebsd*)                # ARM FreeBSD EABI
  	tmake_file="${tmake_file} arm/t-arm t-fixedpoint-gnu-prefix arm/t-elf"
  	tmake_file="${tmake_file} arm/t-bpabi arm/t-freebsd"
-@@ -760,6 +776,14 @@ x86_64-*-dragonfly*)
+@@ -765,6 +782,14 @@ x86_64-*-dragonfly*)
  	tmake_file="${tmake_file} i386/t-dragonfly i386/t-crtstuff"
  	md_unwind_header=i386/dragonfly-unwind.h
  	;;
@@ -340,10 +354,10 @@ index e75a7af64..10d8017b0 100644
  	tmake_file="${tmake_file} i386/t-freebsd i386/t-crtstuff"
  	md_unwind_header=i386/freebsd-unwind.h
 diff --git a/libstdc++-v3/configure b/libstdc++-v3/configure
-index 21abaeb07..8dcc519be 100755
+index bc9dce5e2..5e01c342e 100755
 --- a/libstdc++-v3/configure
 +++ b/libstdc++-v3/configure
-@@ -38122,6 +38122,3224 @@ done
+@@ -38498,6 +38498,3227 @@ done
  
      ;;
  
@@ -431,6 +445,7 @@ index 21abaeb07..8dcc519be 100755
 +  # does some of this, but throws away the result.
 +  glibcxx_ld_is_gold=no
 +  glibcxx_ld_is_mold=no
++  glibcxx_ld_is_wild=no
 +  if test x"$with_gnu_ld" = x"yes"; then
 +    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ld version" >&5
 +$as_echo_n "checking for ld version... " >&6; }
@@ -439,6 +454,8 @@ index 21abaeb07..8dcc519be 100755
 +      glibcxx_ld_is_gold=yes
 +    elif $LD --version 2>/dev/null | grep 'mold' >/dev/null 2>&1; then
 +      glibcxx_ld_is_mold=yes
++    elif $LD --version 2>/dev/null | grep 'Wild' >/dev/null 2>&1; then
++      glibcxx_ld_is_wild=yes
 +    fi
 +    ldver=`$LD --version 2>/dev/null |
 +	   sed -e 's/[. ][0-9]\{8\}$//;s/.* \([^ ]\{1,\}\)$/\1/; q'`
@@ -451,7 +468,7 @@ index 21abaeb07..8dcc519be 100755
 +
 +  # Set --gc-sections.
 +  glibcxx_have_gc_sections=no
-+  if test "$glibcxx_ld_is_gold" = "yes" || test "$glibcxx_ld_is_mold" = "yes" ; then
++  if test "$glibcxx_ld_is_gold" = "yes" || test "$glibcxx_ld_is_mold" = "yes" || test "$glibcxx_ld_is_wild" = "yes" ; then
 +    if $LD --help 2>/dev/null | grep gc-sections >/dev/null 2>&1; then
 +      glibcxx_have_gc_sections=yes
 +    fi
@@ -3568,6 +3585,15 @@ index 21abaeb07..8dcc519be 100755
    *-freebsd*)
      SECTION_FLAGS='-ffunction-sections -fdata-sections'
  
+@@ -54156,7 +57377,7 @@ $as_echo "$glibcxx_cv_libbacktrace_atomics" >&6; }
+     CXXFLAGS='-O0 -S'
+ 
+     cat > conftest.$ac_ext << EOF
+-#line 54159 "configure"
++#line 57380 "configure"
+ #include <stddef.h>
+ int main()
+ {
 diff --git a/libstdc++-v3/crossconfig.m4 b/libstdc++-v3/crossconfig.m4
 index b3269cb88..de1f886b9 100644
 --- a/libstdc++-v3/crossconfig.m4

@@ -3,8 +3,8 @@ WORKING_DIR = $(CURDIR)
 CROSS_DIR=/usr/local
 export PATH := $(CROSS_DIR):$(PATH)
 
-BINUTILS_TAG = binutils-2_43_1
-GCC_TAG = releases/gcc-14.2.0
+BINUTILS_TAG = binutils-2_47
+GCC_TAG = releases/gcc-16.2.0
 QEMU_TAG = v11.1.2
 
 QEMU_CLONE_PATH = /tmp/qemu
@@ -33,21 +33,11 @@ ifeq ("$(wildcard ./limine)", "")
 	git clone https://github.com/limine-bootloader/limine.git --branch=v9.x-binary --depth=1 limine
 endif
 
-__clone_qemu:
-ifeq ("$(wildcard $(QEMU_CLONE_PATH))", "")
-	git clone --depth 1 -b ${QEMU_TAG} --single-branch https://gitlab.com/qemu-project/qemu.git $(QEMU_CLONE_PATH)
-else
-	$(info > TOOLS: Reseting qemu...)
-	cd $(QEMU_CLONE_PATH) && \
-	git fetch origin --tags && \
-	git reset --hard ${QEMU_TAG} && \
-	git clean -dfx
-endif
-
-.PHONY: all clean __clone_binutils __clone_gcc __prep_cross __patch_cross __patch_cross_binutils __patch_cross_gcc
+.PHONY: all clean __clone_binutils __clone_gcc __prep_cross __patch_cross_binutils __patch_cross_gcc
 
 __clone_binutils:
-ifeq ("$(wildcard $(BINUTILS_CLONE_PATH))", "")
+ifeq ("$(wildcard $(BINUTILS_CLONE_PATH)/.git)", "")
+	rm -rf $(BINUTILS_CLONE_PATH)
 	git clone --depth 1 -b $(BINUTILS_TAG) --single-branch git://sourceware.org/git/binutils-gdb.git $(BINUTILS_CLONE_PATH)
 else
 	$(info > TOOLS: Reseting binutils-gdb...)
@@ -58,13 +48,26 @@ else
 endif
 
 __clone_gcc:
-ifeq ("$(wildcard $(GCC_CLONE_PATH))", "")
+ifeq ("$(wildcard $(GCC_CLONE_PATH)/.git)", "")
+	rm -rf $(GCC_CLONE_PATH)
 	git clone --depth 1 -b $(GCC_TAG) --single-branch git://gcc.gnu.org/git/gcc.git $(GCC_CLONE_PATH)
 else
 	$(info > TOOLS: Reseting gcc...)
 	cd $(GCC_CLONE_PATH) && \
 	git fetch origin --tags && \
 	git reset --hard $(GCC_TAG) && \
+	git clean -dfx
+endif
+
+__clone_qemu:
+ifeq ("$(wildcard $(QEMU_CLONE_PATH)/.git)", "")
+	rm -rf $(QEMU_CLONE_PATH)
+	git clone --depth 1 -b ${QEMU_TAG} --single-branch https://gitlab.com/qemu-project/qemu.git $(QEMU_CLONE_PATH)
+else
+	$(info > TOOLS: Reseting qemu...)
+	cd $(QEMU_CLONE_PATH) && \
+	git fetch origin --tags && \
+	git reset --hard ${QEMU_TAG} && \
 	git clean -dfx
 endif
 
@@ -85,12 +88,12 @@ __patch_cross_qemu: __clone_qemu
 	$(info > TOOLS: Patching qemu)
 	cd $(QEMU_CLONE_PATH) && git apply $(CURDIR)/qemu.patch
 
-__patch_cross: __patch_cross_binutils __patch_cross_gcc
-
 __prep_cross:
-	mkdir -p cross
+	mkdir -p $(CROSS_DIR)
 	mkdir -p $(BINUTILS_CLONE_PATH)/__build
+	rm -rf $(BINUTILS_CLONE_PATH)/__build/*
 	mkdir -p $(GCC_CLONE_PATH)/__build
+	rm -rf $(GCC_CLONE_PATH)/__build/*
 
 __clone_all_no_qemu: __clone_binutils __clone_gcc
 
@@ -133,10 +136,7 @@ ifneq ("$(wildcard $(QEMU_CLONE_PATH))", "")
 	git diff --cached > $(CURDIR)/qemu.patch
 endif
 
-__do_binutils:
-	mkdir -p $(BINUTILS_CLONE_PATH)/__build
-	$(MAKE) __patch_cross_binutils
-	$(MAKE) __prep_cross
+__do_binutils: __prep_cross
 	cd $(BINUTILS_CLONE_PATH)/__build && \
 	../configure --target=$(BUILD_TARGET) --prefix="$(CROSS_DIR)" --quiet \
 	--disable-nls \
@@ -153,10 +153,7 @@ __do_binutils:
 	$(MAKE) --quiet all -j$(shell nproc) && \
 	sudo $(MAKE) --quiet install
 
-__do_gcc:
-	mkdir -p $(GCC_CLONE_PATH)/__build
-	$(MAKE) __patch_cross_gcc
-	$(MAKE) __prep_cross
+__do_gcc: __prep_cross
 	cd $(GCC_CLONE_PATH)/__build && \
 	../configure --target=$(BUILD_TARGET) --prefix="$(CROSS_DIR)" --quiet \
 	--disable-nls \
@@ -181,21 +178,19 @@ __do_gcc:
 	sudo $(MAKE) --quiet install-target-libgcc -j$(shell nproc) && \
 	sudo $(MAKE) --quiet install-target-libstdc++-v3 -j$(shell nproc)
 
-do_binutils:
+do_binutils: __patch_cross_binutils
 	$(MAKE) __do_binutils BUILD_TARGET="x86_64-fennix"
 	$(MAKE) __do_binutils BUILD_TARGET="i386-fennix"
 	$(MAKE) __do_binutils BUILD_TARGET="arm-fennix"
 	$(MAKE) __do_binutils BUILD_TARGET="aarch64-fennix"
 
-do_gcc:
+do_gcc: __patch_cross_gcc
 	$(MAKE) __do_gcc BUILD_TARGET="x86_64-fennix"
 	$(MAKE) __do_gcc BUILD_TARGET="i386-fennix"
 	$(MAKE) __do_gcc BUILD_TARGET="arm-fennix"
 	$(MAKE) __do_gcc BUILD_TARGET="aarch64-fennix"
 
-do_qemu:
-	$(MAKE) __patch_cross_qemu
-	$(MAKE) __prep_cross
+do_qemu: __patch_cross_qemu
 	cd $(QEMU_CLONE_PATH) && \
 	bash ./configure --target-list=x86_64-softmmu,i386-softmmu,arm-softmmu,aarch64-softmmu \
 	--prefix="$(CROSS_DIR)" \

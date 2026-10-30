@@ -108,7 +108,15 @@ RUN wget https://launchpad.net/ubuntu/+archive/primary/+files/autoconf_2.69-11.1
 	./configure && make -j"$(nproc)" && make install && \
 	rm -rf /tmp/autoconf.deb /tmp/automake.tar.gz /tmp/automake-1.15.1
 
-COPY tools/Makefile tools/ReadEthernetPackets.c tools/ErrorParser.cpp tools/binutils-gdb.patch tools/gcc.patch tools/qemu.patch /tmp/fennix-tools/
-RUN make -C /tmp/fennix-tools all && \
-	make -C /tmp/fennix-tools clean && \
-	rm -rf /tmp/fennix-tools
+COPY tools/Makefile /tmp/fennix-tools/Makefile
+
+COPY tools/binutils-gdb.patch /tmp/fennix-tools/
+RUN make -C /tmp/fennix-tools do_binutils
+
+COPY tools/gcc.patch /tmp/fennix-tools/
+RUN make -C /tmp/fennix-tools do_gcc
+
+COPY tools/qemu.patch /tmp/fennix-tools/
+RUN make -C /tmp/fennix-tools do_qemu
+
+RUN make -C /tmp/fennix-tools clean && rm -rf /tmp/fennix-tools

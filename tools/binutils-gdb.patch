@@ -1,11 +1,11 @@
 diff --git a/bfd/config.bfd b/bfd/config.bfd
-index 6553aac1..39008568 100644
+index 02a1a685..e0e302e5 100644
 --- a/bfd/config.bfd
 +++ b/bfd/config.bfd
-@@ -1502,6 +1502,31 @@ case "${targ}" in
+@@ -586,6 +586,30 @@ case "${targ}" in
+     targ_defvec=i386_aout_bsd_vec
+     targ_underscore=yes
      ;;
- #endif
- 
 +  i[3-7]86-*-fennix*)
 +    targ_defvec=i386_elf32_vec
 +    targ_selvecs=
@@ -30,15 +30,14 @@ index 6553aac1..39008568 100644
 +    want64=true
 +    ;;
 +#endif
-+
- # END OF targmatch.h
-   bpf-*-*)
-     echo "*** Configuration $targ is not fully supported." >&2
+   i[3-7]86-*-freebsd* | i[3-7]86-*-kfreebsd*-gnu)
+     targ_defvec=i386_elf32_fbsd_vec
+     targ_selvecs="i386_elf32_vec i386_pei_vec i386_coff_vec"
 diff --git a/binutils/readelf.c b/binutils/readelf.c
-index 5d1cf9c3..f09b448f 100644
+index 1f7a90e7..03a920b9 100644
 --- a/binutils/readelf.c
 +++ b/binutils/readelf.c
-@@ -20909,6 +20909,30 @@ get_gnu_elf_note_type (unsigned e_type)
+@@ -22213,6 +22213,30 @@ get_gnu_elf_note_type (unsigned e_type)
      }
  }
  
@@ -69,7 +68,7 @@ index 5d1cf9c3..f09b448f 100644
  static void
  decode_x86_compat_isa (unsigned int bitmask)
  {
-@@ -21646,6 +21670,91 @@ print_gnu_note (Filedata * filedata, Elf_Internal_Note *pnote)
+@@ -22999,6 +23023,91 @@ print_gnu_note (Filedata * filedata, Elf_Internal_Note *pnote)
    return true;
  }
  
@@ -161,7 +160,7 @@ index 5d1cf9c3..f09b448f 100644
  static const char *
  get_v850_elf_note_type (enum v850_notes n_type)
  {
-@@ -22925,6 +23034,10 @@ process_note (Elf_Internal_Note *  pnote,
+@@ -24283,6 +24392,10 @@ process_note (Elf_Internal_Note *  pnote,
      /* GNU-specific object file notes.  */
      nt = get_gnu_elf_note_type (pnote->type);
  
@@ -172,7 +171,7 @@ index 5d1cf9c3..f09b448f 100644
    else if (startswith (pnote->namedata, "AMDGPU"))
      /* AMDGPU-specific object file notes.  */
      nt = get_amdgpu_elf_note_type (pnote->type);
-@@ -22992,6 +23105,8 @@ process_note (Elf_Internal_Note *  pnote,
+@@ -24350,6 +24463,8 @@ process_note (Elf_Internal_Note *  pnote,
      return print_ia64_vms_note (pnote);
    else if (startswith (pnote->namedata, "GNU"))
      return print_gnu_note (filedata, pnote);
@@ -182,20 +181,19 @@ index 5d1cf9c3..f09b448f 100644
      return print_stapsdt_note (pnote);
    else if (startswith (pnote->namedata, "CORE"))
 diff --git a/config.sub b/config.sub
-index 2c6a07ab..d279b50d 100755
+index 3d35cde1..23570814 100755
 --- a/config.sub
 +++ b/config.sub
-@@ -1768,7 +1768,7 @@ case $os in
- 	     | onefs* | tirtos* | phoenix* | fuchsia* | redox* | bme* \
- 	     | midnightbsd* | amdhsa* | unleashed* | emscripten* | wasi* \
- 	     | nsk* | powerunix* | genode* | zvmoe* | qnx* | emx* | zephyr* \
--	     | fiwix* | mlibc* | cos* | mbr* | ironclad* )
-+	     | fiwix* | mlibc* | cos* | mbr* | ironclad* | fennix* )
- 		;;
- 	# This one is extra strict with allowed versions
- 	sco3.2v2 | sco3.2v[4-9]* | sco5v6*)
+@@ -2010,6 +2010,7 @@ case $os in
+ 	| emscripten* \
+ 	| emx* \
+ 	| es* \
++	| fennix* \
+ 	| fiwix* \
+ 	| freebsd* \
+ 	| fuchsia* \
 diff --git a/gas/configure.tgt b/gas/configure.tgt
-index d58f2187..bd76e187 100644
+index 7a5645fd..60d53914 100644
 --- a/gas/configure.tgt
 +++ b/gas/configure.tgt
 @@ -127,6 +127,7 @@ generic_target=${cpu_type}-$vendor-$os
@@ -219,14 +217,14 @@ index d58f2187..bd76e187 100644
    i386-*-rdos*)				fmt=elf ;;
    i386-*-darwin*)			fmt=macho ;;
 +  i386-*-fennix*)			fmt=elf em=gnu ;;
+   i386-*-phoenix*)			fmt=elf ;;
  
    ia16-*-elf*)				fmt=elf ;;
- 
 diff --git a/include/elf/common.h b/include/elf/common.h
-index c9920e77..a714bb2a 100644
+index f811b8da..4e7677b1 100644
 --- a/include/elf/common.h
 +++ b/include/elf/common.h
-@@ -859,6 +859,15 @@
+@@ -885,6 +885,15 @@
  #define NT_ARCH		2		/* Contains an architecture string.  */
  #define NT_GO_BUILDID	4		/* Contains GO buildid data.  */
  
@@ -234,7 +232,7 @@ index c9920e77..a714bb2a 100644
 +#define NT_FNX_ABI_TAG	1
 +#define NT_FNX_VERSION	2
 +#define NT_FNX_BUILD_ID	3
-+#define NT_FNX_ARCH		4
++#define NT_FNX_ARCH	4
 +
 +/* Values used in FNX .note.ABI-tag notes (NT_FNX_ABI_TAG).  */
 +#define FNX_ABI_TAG_FENNIX 0
@@ -243,10 +241,10 @@ index c9920e77..a714bb2a 100644
  
  #define NT_GNU_ABI_TAG		1
 diff --git a/ld/Makefile.am b/ld/Makefile.am
-index 6a9833e5..bf4c134d 100644
+index 3ae3d7f1..f7903c3e 100644
 --- a/ld/Makefile.am
 +++ b/ld/Makefile.am
-@@ -165,6 +165,7 @@ ALL_EMULATION_SOURCES = \
+@@ -166,6 +166,7 @@ ALL_EMULATION_SOURCES = \
  	earcv2elfx.c \
  	earm_wince_pe.c \
  	earmelf.c \
@@ -254,15 +252,15 @@ index 6a9833e5..bf4c134d 100644
  	earmelf_fbsd.c \
  	earmelf_fuchsia.c \
  	earmelf_haiku.c \
-@@ -279,6 +280,7 @@ ALL_EMULATION_SOURCES = \
+@@ -277,6 +278,7 @@ ALL_EMULATION_SOURCES = \
+ 	eelf32z80.c \
  	eelf_i386.c \
  	eelf_i386_be.c \
- 	eelf_i386_fbsd.c \
 +	eelf_i386_fennix.c \
+ 	eelf_i386_fbsd.c \
  	eelf_i386_haiku.c \
- 	eelf_i386_ldso.c \
  	eelf_i386_sol2.c \
-@@ -383,6 +385,7 @@ ALL_64_EMULATION_SOURCES = \
+@@ -377,6 +379,7 @@ ALL_64_EMULATION_SOURCES = \
  	eaarch64elf32.c \
  	eaarch64elf32b.c \
  	eaarch64elfb.c \
@@ -270,19 +268,19 @@ index 6a9833e5..bf4c134d 100644
  	eaarch64fbsd.c \
  	eaarch64fbsdb.c \
  	eaarch64haiku.c \
-@@ -463,6 +466,7 @@ ALL_64_EMULATION_SOURCES = \
+@@ -455,6 +458,7 @@ ALL_64_EMULATION_SOURCES = \
+ 	eelf64tilegx_be.c \
+ 	eelf_mipsel_haiku.c \
  	eelf_x86_64.c \
- 	eelf_x86_64_cloudabi.c \
- 	eelf_x86_64_fbsd.c \
 +	eelf_x86_64_fennix.c \
+ 	eelf_x86_64_fbsd.c \
  	eelf_x86_64_haiku.c \
  	eelf_x86_64_sol2.c \
- 	ehppa64linux.c \
 diff --git a/ld/Makefile.in b/ld/Makefile.in
-index 8639e782..24738803 100644
+index d879f04a..ae7e48fa 100644
 --- a/ld/Makefile.in
 +++ b/ld/Makefile.in
-@@ -676,6 +676,7 @@ ALL_EMULATION_SOURCES = \
+@@ -681,6 +681,7 @@ ALL_EMULATION_SOURCES = \
  	earcv2elfx.c \
  	earm_wince_pe.c \
  	earmelf.c \
@@ -290,15 +288,15 @@ index 8639e782..24738803 100644
  	earmelf_fbsd.c \
  	earmelf_fuchsia.c \
  	earmelf_haiku.c \
-@@ -790,6 +791,7 @@ ALL_EMULATION_SOURCES = \
+@@ -792,6 +793,7 @@ ALL_EMULATION_SOURCES = \
+ 	eelf32z80.c \
  	eelf_i386.c \
  	eelf_i386_be.c \
- 	eelf_i386_fbsd.c \
 +	eelf_i386_fennix.c \
+ 	eelf_i386_fbsd.c \
  	eelf_i386_haiku.c \
- 	eelf_i386_ldso.c \
  	eelf_i386_sol2.c \
-@@ -893,6 +895,7 @@ ALL_64_EMULATION_SOURCES = \
+@@ -891,6 +893,7 @@ ALL_64_EMULATION_SOURCES = \
  	eaarch64elf32.c \
  	eaarch64elf32b.c \
  	eaarch64elfb.c \
@@ -306,15 +304,15 @@ index 8639e782..24738803 100644
  	eaarch64fbsd.c \
  	eaarch64fbsdb.c \
  	eaarch64haiku.c \
-@@ -973,6 +976,7 @@ ALL_64_EMULATION_SOURCES = \
+@@ -969,6 +972,7 @@ ALL_64_EMULATION_SOURCES = \
+ 	eelf64tilegx_be.c \
+ 	eelf_mipsel_haiku.c \
  	eelf_x86_64.c \
- 	eelf_x86_64_cloudabi.c \
- 	eelf_x86_64_fbsd.c \
 +	eelf_x86_64_fennix.c \
+ 	eelf_x86_64_fbsd.c \
  	eelf_x86_64_haiku.c \
  	eelf_x86_64_sol2.c \
- 	ehppa64linux.c \
-@@ -1279,6 +1283,7 @@ distclean-compile:
+@@ -1270,6 +1274,7 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64elfb.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64fbsd.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64fbsdb.Po@am__quote@
@@ -322,7 +320,7 @@ index 8639e782..24738803 100644
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64haiku.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64linux.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eaarch64linux32.Po@am__quote@
-@@ -1301,6 +1306,7 @@ distclean-compile:
+@@ -1292,6 +1297,7 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earm_wince_pe.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earmelf.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earmelf_fbsd.Po@am__quote@
@@ -330,29 +328,29 @@ index 8639e782..24738803 100644
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earmelf_fuchsia.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earmelf_haiku.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/earmelf_linux.Po@am__quote@
-@@ -1480,6 +1486,7 @@ distclean-compile:
+@@ -1469,6 +1475,7 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_be.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_fbsd.Po@am__quote@
 +@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_fennix.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_haiku.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_ldso.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_sol2.Po@am__quote@
-@@ -1490,6 +1497,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_i386_vxworks.Po@am__quote@
+@@ -1477,6 +1484,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_s390.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_x86_64.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_x86_64_cloudabi.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_x86_64_fbsd.Po@am__quote@
 +@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_x86_64_fennix.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_x86_64_haiku.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eelf_x86_64_sol2.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eh8300elf.Po@am__quote@
 diff --git a/ld/configure.tgt b/ld/configure.tgt
-index f937f78b..01cfcec9 100644
+index 60b62e69..c4b5eead 100644
 --- a/ld/configure.tgt
 +++ b/ld/configure.tgt
-@@ -92,6 +92,9 @@ aarch64-*-elf | aarch64-*-rtems* | aarch64-*-genode*)
- aarch64-*-cloudabi*)	targ_emul=aarch64cloudabi
- 			targ_extra_emuls=aarch64cloudabib
+@@ -89,6 +89,9 @@ aarch64-*-elf | aarch64-*-rtems* | aarch64-*-genode*)
+ 			targ_emul=aarch64elf
+ 			targ_extra_emuls="aarch64elf32 aarch64elf32b aarch64elfb armelf armelfb"
  			;;
 +aarch64-*-fennix*)	targ_emul=aarch64fennix
 +			targ_extra_emuls="aarch64fennixb aarch64elf"
@@ -360,7 +358,7 @@ index f937f78b..01cfcec9 100644
  aarch64-*-freebsd*)	targ_emul=aarch64fbsd
  			targ_extra_emuls="aarch64fbsdb aarch64elf"
  			;;
-@@ -183,6 +186,10 @@ arm-wince-pe | arm-*-wince | arm*-*-mingw32ce*)
+@@ -181,6 +184,10 @@ arm-wince-pe | arm-*-wince | arm*-*-mingw32ce*)
  arm-*-pe)		targ_emul=armpe
  			targ_extra_ofiles="deffilep.o pe-dll.o"
  			;;
@@ -371,9 +369,9 @@ index f937f78b..01cfcec9 100644
  arm*b-*-freebsd*)	targ_emul=armelfb_fbsd
  			targ_extra_emuls="armelf_fbsd armelf"
  			;;
-@@ -409,6 +416,11 @@ i[3-7]86-*-elf* | i[3-7]86-*-rtems* | i[3-7]86-*-genode*)
+@@ -385,6 +392,11 @@ i[3-7]86-*-elf* | i[3-7]86-*-rtems* | i[3-7]86-*-genode*)
  i[3-7]86-*-dragonfly*)	targ_emul=elf_i386
- 			targ_extra_emuls="elf_iamcu i386bsd"
+ 			targ_extra_emuls="i386bsd"
  			;;
 +i[3-7]86-*-fennix*)
 +			targ_emul=elf_i386_fennix
@@ -382,18 +380,18 @@ index f937f78b..01cfcec9 100644
 +			;;
  i[3-7]86-*-freebsd* | i[3-7]86-*-kfreebsd*-gnu)
  			targ_emul=elf_i386_fbsd
- 			targ_extra_emuls="elf_i386 elf_iamcu i386bsd"
-@@ -1045,6 +1057,9 @@ x86_64-*-elf* | x86_64-*-rtems* | x86_64-*-fuchsia* | x86_64-*-genode*)
+ 			targ_extra_emuls="elf_i386 i386bsd"
+@@ -972,6 +984,9 @@ x86_64-*-elf* | x86_64-*-rtems* | x86_64-*-fuchsia* | x86_64-*-genode*)
  x86_64-*-dragonfly*)	targ_emul=elf_x86_64
- 			targ_extra_emuls="elf_i386 elf_iamcu"
+ 			targ_extra_emuls="elf_i386"
  			;;
 +x86_64-*-fennix*)	targ_emul=elf_x86_64_fennix
 +			targ_extra_emuls="elf_i386_fennix elf_x86_64 elf_i386"
 +			;;
  x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu)
  			targ_emul=elf_x86_64_fbsd
- 			targ_extra_emuls="elf_i386_fbsd elf_x86_64 elf_i386 elf_iamcu"
-@@ -1112,6 +1127,10 @@ case "${target}" in
+ 			targ_extra_emuls="elf_x86_64 elf_i386"
+@@ -1038,6 +1053,10 @@ case "${target}" in
    NATIVE_LIB_DIRS='/lib /usr/lib /usr/pkg/lib /usr/local/lib'
    ;;
  
@@ -402,7 +400,7 @@ index f937f78b..01cfcec9 100644
 +  ;;
 +
  *-*-freebsd*)
-   NATIVE_LIB_DIRS='/lib /usr/lib /usr/local/lib'
+   NATIVE_LIB_DIRS='/lib /usr/lib /usr/local/lib /usr/lib32'
    ;;
 diff --git a/ld/emulparams/aarch64fennix.sh b/ld/emulparams/aarch64fennix.sh
 new file mode 100644
