@@ -134,6 +134,7 @@ namespace Interrupt
 
 		/* Corrupted Frame */
 		assert(ctrl->TranslateToLine(Frame->InterruptNumber) <= numof(RegisteredLines));
+		// debug("Dispatching IRQ %u", ctrl->TranslateToLine(Frame->InterruptNumber));
 
 		bool dispatched = false;
 		auto &line = RegisteredLines[ctrl->TranslateToLine(Frame->InterruptNumber)];

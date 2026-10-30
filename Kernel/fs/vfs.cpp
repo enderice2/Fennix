@@ -19,6 +19,14 @@
 
 #include "../kernel.h"
 
+// #define ENABLE_LOGGING 1
+
+#ifdef ENABLE_LOGGING
+#define dbg_vfs(...) debug(__VA_ARGS__)
+#else
+#define dbg_vfs(...) (void)0
+#endif
+
 namespace vfs
 {
 	eNode Virtual::Convert(Inode *inode)
@@ -100,7 +108,7 @@ namespace vfs
 		}
 		else
 		{
-			debug("Root %ld already exists", Index);
+			dbg_vfs("Root %ld already exists", Index);
 			return EEXIST;
 		}
 	}
@@ -136,7 +144,7 @@ namespace vfs
 	{
 		assert(Parent != nullptr);
 
-		debug("looking up \"%s\" in \"%s\"", Path.c_str(), Parent->Path.c_str());
+		dbg_vfs("looking up \"%s\" in \"%s\"", Path.c_str(), Parent->Path.c_str());
 
 		if (Path == ".")
 			return {Parent, 0};
@@ -151,14 +159,14 @@ namespace vfs
 				base = base->Parent;
 		}
 
-		debug("base is \"%s\" and path is \"%s\"  %d", base->Path.c_str(), Path.c_str(), absolute);
+		dbg_vfs("base is \"%s\" and path is \"%s\"  %d", base->Path.c_str(), Path.c_str(), absolute);
 		Path = this->NormalizePath(base, Path, !absolute);
-		debug("after normalizing, path is \"%s\" %d", Path.c_str(), absolute);
+		dbg_vfs("after normalizing, path is \"%s\" %d", Path.c_str(), absolute);
 
 		struct cwk_segment segment;
 		if (!cwk_path_get_first_segment(Path.c_str(), &segment))
 		{
-			debug("%s no segments; %d", Path.c_str(), absolute);
+			dbg_vfs("%s no segments; %d", Path.c_str(), absolute);
 			if (Path == "/")
 				return {base, 0};
 
@@ -171,9 +179,9 @@ namespace vfs
 		{
 			while (node->Parent)
 			{
-				debug("current parent \"%s\"", node->Parent->Path.c_str());
+				dbg_vfs("current parent \"%s\"", node->Parent->Path.c_str());
 				node = node->Parent;
-				debug("new parent \"%s\"", node->Parent ? node->Parent->Path.c_str() : "<null>");
+				dbg_vfs("new parent \"%s\"", node->Parent ? node->Parent->Path.c_str() : "<null>");
 			}
 		}
 
@@ -184,12 +192,12 @@ namespace vfs
 		do
 		{
 			std::string segmentStr(segment.begin, segment.size);
-			debug("Current segment is \"%s\"", segmentStr.c_str());
+			dbg_vfs("Current segment is \"%s\"", segmentStr.c_str());
 
 			eNode ret = node->CachedSearch(segmentStr);
 			if (ret == false)
 			{
-				debug("cache miss for \"%s\"", segmentStr.c_str());
+				dbg_vfs("cache miss for \"%s\"", segmentStr.c_str());
 
 				if (node->fsi->Ops.Lookup == nullptr)
 					return {nullptr, ENOTSUP};
@@ -210,7 +218,7 @@ namespace vfs
 			}
 			else
 			{
-				debug("cache hit for \"%s\"", segmentStr.c_str());
+				dbg_vfs("cache hit for \"%s\"", segmentStr.c_str());
 				node = ret;
 				if (currentPath == "/")
 					currentPath += segmentStr;
@@ -232,7 +240,7 @@ namespace vfs
 
 			/* I should handle this in a better way */
 			assert((exists.Value->inode->Mode & S_IFMT) == (Mode & S_IFMT));
-			debug("File \"%s\" already exists in cache", Name.c_str());
+			dbg_vfs("File \"%s\" already exists in cache", Name.c_str());
 			return exists;
 		}
 
@@ -437,7 +445,7 @@ namespace vfs
 					kdirent *ent = (kdirent *)(buf.get() + pos);
 					if (ent->d_reclen == 0)
 						break;
-					debug("%s", ent->d_name);
+					dbg_vfs("%s", ent->d_name);
 					if (strcmp(ent->d_name, ".") == 0 || strcmp(ent->d_name, "..") == 0)
 					{
 						pos += ent->d_reclen;
@@ -530,17 +538,17 @@ namespace vfs
 		{
 			if (i.second->SuperOps.Probe == nullptr)
 			{
-				debug("%s does not support probing", i.second->Name);
+				dbg_vfs("%s does not support probing", i.second->Name);
 				continue;
 			}
 
 			int ret = i.second->SuperOps.Probe(Device);
 			if (ret == 0)
 				return i.second;
-			debug("%s returned %d", i.second->Name, ret);
+			dbg_vfs("%s returned %d", i.second->Name, ret);
 		}
 
-		debug("No filesystems matched");
+		dbg_vfs("No filesystems matched");
 		return nullptr;
 	}
 
@@ -586,7 +594,7 @@ namespace vfs
 	{
 		if (!node->Flags.MountPoint)
 		{
-			debug("node %s is not a mountpoint", node->Path.c_str());
+			dbg_vfs("node %s is not a mountpoint", node->Path.c_str());
 			return -EINVAL;
 		}
 
@@ -601,7 +609,7 @@ namespace vfs
 		eNode node = Parent->CachedSearch(Name);
 		if (!node)
 		{
-			debug("mountpoint %s not found: %s", Name.c_str(), node.what());
+			dbg_vfs("mountpoint %s not found: %s", Name.c_str(), node.what());
 			return -node.Error;
 		}
 

@@ -76,6 +76,14 @@ namespace Driver
 		auto &be = __kernel_builtin_drivers_end;
 		for (const BuiltInDriver *drv = bs; drv < be; ++drv)
 		{
+#ifdef DEBUG
+			// const char *whitelistDriver = "aip";
+			// if (strcmp(drv->Name, whitelistDriver) != 0)
+			// {
+			// 	debug("Skipping built-in driver %s (not in whitelist)", drv->Name);
+			// 	continue;
+			// }
+#endif
 			debug("Loading built-in driver %s", drv->Name);
 
 			DriverObject drvObj = {};

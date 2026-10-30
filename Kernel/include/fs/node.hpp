@@ -164,10 +164,10 @@ public:
 				continue;
 			}
 
-			debug("comparing \"%s\" with \"%s\"", (*it)->Name.c_str(), Name.c_str());
+			// debug("comparing \"%s\" with \"%s\"", (*it)->Name.c_str(), Name.c_str());
 			if ((*it)->Name == Name)
 			{
-				debug("\"%s\" found", Name.c_str());
+				// debug("\"%s\" found", Name.c_str());
 				return {*it, 0};
 			}
 		}
