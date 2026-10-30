@@ -175,7 +175,8 @@ RUST_FLAGS := \
 	--crate-type staticlib \
 	--edition 2024 \
 	-C panic=abort \
-	-C opt-level=2
+	-C debuginfo=2 \
+	-C opt-level=0
 
 CFLAGS   += $(WARNFLAGS)
 CXXFLAGS += $(WARNFLAGS)
