@@ -15,7 +15,7 @@ KERNEL_VERSION ?= 0.0.1
 
 KERNEL_NAME     ?= Fennix
 KERNEL_ARCH     ?= amd64
-KERNEL_DEBUG    ?= 0
+KERNEL_DEBUG    ?= 1
 
 KERNEL_BUILD_TYPE ?= $(if $(filter 1,$(KERNEL_DEBUG)),debug,release)
 

@@ -33,6 +33,7 @@ void StressKernel();
 void coroutineTest();
 void __early_playground();
 void __late_playground();
+void test_kernel_fb_speed();
 
 #endif // DEBUG
 #endif // !__FENNIX_KERNEL_non_constructor_tests_H__

@@ -7,7 +7,7 @@
 				"${workspaceFolder}/include/**",
 				"${workspaceFolder}/include_std",
 				"${workspaceFolder}/include_std/**",
-				"${workspaceFolder}/arch/amd64/include"
+				"${workspaceFolder}/arch/x86/amd64/include"
 			],
 			"defines": [
 				"DEBUG=\"1\""
@@ -74,7 +74,7 @@
 				"${workspaceFolder}/include/**",
 				"${workspaceFolder}/include_std",
 				"${workspaceFolder}/include_std/**",
-				"${workspaceFolder}/arch/i386/include"
+				"${workspaceFolder}/arch/x86/i386/include"
 			],
 			"forcedInclude": [
 				"${workspaceFolder}/.vscode/preinclude.h"
