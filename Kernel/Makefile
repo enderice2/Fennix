@@ -96,7 +96,8 @@ EXCLUDE_DIRS := \
 	./arch \
 	./.vscode \
 	./include \
-	./include_std
+	./include_std \
+	./include_stl
 
 FIND_PRUNE := $(foreach d,$(EXCLUDE_DIRS),-path $(d) -prune -o)
 
@@ -132,6 +133,7 @@ DEPS := $(patsubst $(OBJROOT)/%.o,$(DEPROOT)/%.d,$(C_OBJS) $(CPP_OBJS) $(S_OBJS)
 CPPFLAGS += \
 	-Iinclude \
 	-Iinclude_std \
+	-Iinclude_stl \
 	-I$(ARCH_DIR)/include \
 	-D__kernel__=1 \
 	-DKERNEL_NAME='"$(KERNEL_NAME)"' \

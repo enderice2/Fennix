@@ -3,10 +3,9 @@
 		{
 			"name": "Fennix x64 (Linux, GCC, debug)",
 			"includePath": [
-				"${workspaceFolder}/include",
 				"${workspaceFolder}/include/**",
-				"${workspaceFolder}/include_std",
 				"${workspaceFolder}/include_std/**",
+				"${workspaceFolder}/include_stl/**",
 				"${workspaceFolder}/arch/x86/amd64/include"
 			],
 			"defines": [
@@ -70,10 +69,9 @@
 		{
 			"name": "Fennix x32 (Linux, GCC, debug)",
 			"includePath": [
-				"${workspaceFolder}/include",
 				"${workspaceFolder}/include/**",
-				"${workspaceFolder}/include_std",
 				"${workspaceFolder}/include_std/**",
+				"${workspaceFolder}/include_stl/**",
 				"${workspaceFolder}/arch/x86/i386/include"
 			],
 			"forcedInclude": [
@@ -140,10 +138,9 @@
 		{
 			"name": "Fennix Arm (Linux, GCC, debug)",
 			"includePath": [
-				"${workspaceFolder}/include",
 				"${workspaceFolder}/include/**",
-				"${workspaceFolder}/include_std",
 				"${workspaceFolder}/include_std/**",
+				"${workspaceFolder}/include_stl/**",
 				"${workspaceFolder}/arch/aarch64/include"
 			],
 			"forcedInclude": [
@@ -167,10 +164,9 @@
 		{
 			"name": "Fennix Aarch64 (Linux, GCC, debug)",
 			"includePath": [
-				"${workspaceFolder}/include",
 				"${workspaceFolder}/include/**",
-				"${workspaceFolder}/include_std",
 				"${workspaceFolder}/include_std/**",
+				"${workspaceFolder}/include_stl/**",
 				"${workspaceFolder}/arch/aarch64/include"
 			],
 			"forcedInclude": [
