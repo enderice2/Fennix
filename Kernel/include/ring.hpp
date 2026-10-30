@@ -30,7 +30,7 @@ template <typename T>
 class RingBuffer
 {
 private:
-	spin_lock *Lock;
+	LockClass Lock;
 	T *Buffer;
 	size_t BufferSize;
 	size_t BufferCount;
@@ -47,7 +47,7 @@ public:
 	 * @param Size Initial size (capacity) of the buffer.
 	 */
 	RingBuffer(size_t Size = 16)
-		: Lock(new spin_lock()),
+		: Lock(),
 		  Buffer(new T[Size]),
 		  BufferSize(Size),
 		  BufferCount(0),
@@ -61,7 +61,7 @@ public:
 	 */
 	~RingBuffer()
 	{
-		delete Lock;
+		SmartCriticalSection(Lock);
 		delete[] Buffer;
 	}
 
@@ -77,7 +77,7 @@ public:
 	 */
 	size_t Write(const T *Data, size_t nReads)
 	{
-		sl_guard(*Lock);
+		SmartCriticalSection(Lock);
 
 		size_t written = 0;
 		while (nReads > 0)
@@ -107,7 +107,7 @@ public:
 	 */
 	size_t Read(T *Data, size_t nReads)
 	{
-		sl_guard(*Lock);
+		SmartCriticalSection(Lock);
 
 		size_t read = 0;
 		while (nReads > 0)
@@ -137,7 +137,7 @@ public:
 	 */
 	size_t Peek(T *Data, size_t nReads)
 	{
-		sl_guard(*Lock);
+		SmartCriticalSection(Lock);
 
 		size_t read = 0;
 		size_t tail = Tail;
@@ -162,7 +162,7 @@ public:
 	 */
 	size_t Count()
 	{
-		sl_guard(*Lock);
+		SmartCriticalSection(Lock);
 		return BufferCount;
 	}
 
@@ -173,7 +173,7 @@ public:
 	 */
 	size_t Free()
 	{
-		sl_guard(*Lock);
+		SmartCriticalSection(Lock);
 		return BufferSize - BufferCount;
 	}
 };
