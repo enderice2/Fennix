@@ -290,6 +290,7 @@ namespace Driver::VMwareToolBox
 		}
 
 		PS2_STATUSES Status = {.Raw = inb(PS2_STATUS)};
+		UNUSED(Status);
 	}
 
 	void PS2WriteCommand(uint8_t Command)
