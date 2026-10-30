@@ -1,0 +1,16 @@
+{
+	"sysroot": "/usr/local",
+	"crates": [
+		{
+			"root_module": "kernel.rs",
+			"edition": "2024",
+			"deps": [],
+			"cfg": [
+				"target_os=\"none\"",
+				"target_arch=\"x86_64\""
+			],
+			"env": {},
+			"is_workspace_member": true
+		}
+	]
+}
