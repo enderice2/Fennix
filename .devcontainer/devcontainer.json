@@ -21,7 +21,8 @@
 				"ms-vsliveshare.vsliveshare",
 				"maziac.hex-hover-converter",
 				"ms-vscode.makefile-tools",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"rust-lang.rust-analyzer"
 			]
 		}
 	},
