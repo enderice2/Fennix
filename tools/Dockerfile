@@ -15,6 +15,7 @@ RUN apt-get -y install --no-install-recommends \
 	wget \
 	curl \
 	git \
+	nano \
 	gnupg \
 	ca-certificates \
 	lsb-release \
